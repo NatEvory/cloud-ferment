@@ -1,0 +1,20 @@
+{
+  "name": "typescript-starter",
+  "version": "0.0.1",
+  "description": "A starter project for a typescript library",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
