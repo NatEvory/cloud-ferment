@@ -1,7 +1,7 @@
 {
-  "name": "typescript-starter",
+  "name": "cloud-ferment",
   "version": "0.0.1",
-  "description": "A starter project for a typescript library",
+  "description": "A library to make AWS Cloud Formation easier",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "private": true,
