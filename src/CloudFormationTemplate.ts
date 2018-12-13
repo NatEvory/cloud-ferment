@@ -1,4 +1,3 @@
-import { CloudFormationFunctionResult } from './CloudFormationFunction';
 import { AWSResource, AWSStringProperty, AWSStringListProperty } from './AWSResource';
 
 export class CloudFormationTemplate{
