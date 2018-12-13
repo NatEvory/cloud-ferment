@@ -16,8 +16,8 @@ function generateResourceNamespace(namespace, spec) {
         'import { CloudFormationFunctionResult } from \'../../CloudFormationFunction\'\n\n';
     var resourceType = spec.ResourceTypes[namespace];
     var propertyTypes = findNamespacePropertyTypes(namespace, spec);
-    output += generateResourceClass(getResourceTypeName(namespace), namespace, spec) + "\n";
-    output += generateResourceInterface(resourceType, getResourceTypeName(namespace)) + "\n";
+    output += generateResourceClass(getServiceName(namespace), namespace, spec) + "\n";
+    output += generateResourceInterface(resourceType, getServiceName(namespace)) + "\n";
     propertyTypes.forEach(function (propertyType) {
         output += generatePropertyTypeInterface(propertyType.propertyType, propertyType.propertyTypeName, propertyType.resourceTypeName, namespace) + "\n";
     });
@@ -29,8 +29,8 @@ function findNamespacePropertyTypes(namespace, spec) {
     var namespacePropertyTypeNames = propertyTypeNames.filter(function (name) { return name.startsWith(namespace + '.'); });
     return namespacePropertyTypeNames.map(function (propertyTypeName) {
         return {
-            resourceTypeName: getResourceTypeName(propertyTypeName),
-            propertyTypeName: getPropertyTypeName(propertyTypeName),
+            resourceTypeName: getServiceName(propertyTypeName),
+            propertyTypeName: getResourceTypeName(propertyTypeName),
             propertyType: spec.PropertyTypes[propertyTypeName]
         };
     });
@@ -40,22 +40,43 @@ function findNamespaceResourceTypes(namespace, spec) {
     var namespaceResourceTypeNames = resourceTypeNames.filter(function (name) { return name.startsWith("AWS::" + namespace); });
     return namespaceResourceTypeNames.map(function (resourceTypeName) {
         return {
-            resourceTypeName: getResourceTypeName(resourceTypeName),
+            resourceTypeName: getServiceName(resourceTypeName),
             resourceType: spec.ResourceTypes[resourceTypeName]
         };
     });
 }
-function getPropertyTypeName(propertyTypeName) {
-    var result = /AWS::[^:]*::[^.]*.(\w*)/g.exec(propertyTypeName);
+function getResourceTypeName(fullyQualifiedResourceName) {
+    if (fullyQualifiedResourceName.startsWith("Alexa")) {
+        return getAlexaResourceTypeName(fullyQualifiedResourceName);
+    }
+    var result = /AWS::[^:]*::[^.]*.(\w*)/g.exec(fullyQualifiedResourceName);
     if (result && result.length >= 2)
         return result[1];
     return '';
 }
-function getResourceTypeName(typeName) {
-    var result = /AWS::[^:]*::([\w]*)/g.exec(typeName);
+exports.getResourceTypeName = getResourceTypeName;
+function getAlexaResourceTypeName(fullyQualifiedResourceName) {
+    var result = /Alexa::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
+    if (result && result.length >= 2)
+        return "Alexa" + result[1];
+    throw new Error("Unable to get Resource Type Name, Invalid Alexa Fully Qualified Resource Name:" + fullyQualifiedResourceName);
+}
+function getServiceName(fullyQualifiedResourceName) {
+    if (fullyQualifiedResourceName.startsWith("Alexa")) {
+        return getAlexaServiceName(fullyQualifiedResourceName);
+    }
+    var result = /AWS::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
     if (result && result.length >= 2)
         return result[1];
     return '';
+}
+exports.getServiceName = getServiceName;
+function getAlexaServiceName(fullyQualifiedResourceName) {
+    var result = /Alexa::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
+    if (result && result.length >= 2) {
+        return "Alexa" + result[1];
+    }
+    throw new Error("Unable to get Service Name, Invalid Alexa Fully Qualified Resource Name:" + fullyQualifiedResourceName);
 }
 function generateResourceInterface(resourceType, resourceTypeName) {
     var interfaceDeclaration = "export interface " + resourceTypeName + "_ResourceProperties extends AWSResourceProperties {\n" + generateResourceDeclarationList(resourceType, resourceTypeName) + "\n}";

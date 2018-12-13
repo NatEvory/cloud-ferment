@@ -67,17 +67,36 @@ var ResourceNamespace = /** @class */ (function () {
         this.serviceName = this.getServiceName(fullyQualifiedResourceName);
     }
     ResourceNamespace.prototype.getServiceName = function (fullyQualifiedResourceName) {
+        if (fullyQualifiedResourceName.startsWith("Alexa")) {
+            return this.getAlexaServiceName(fullyQualifiedResourceName);
+        }
         var result = /AWS::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
         if (result && result.length >= 2) {
             return result[1];
         }
         throw new Error("Unable to get Service Name, Invalid Fully Qualified Resource Name:" + fullyQualifiedResourceName);
     };
+    ResourceNamespace.prototype.getAlexaServiceName = function (fullyQualifiedResourceName) {
+        var result = /Alexa::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
+        if (result && result.length >= 2) {
+            return "Alexa" + result[1];
+        }
+        throw new Error("Unable to get Service Name, Invalid Alexa Fully Qualified Resource Name:" + fullyQualifiedResourceName);
+    };
     ResourceNamespace.prototype.getResourceTypeName = function (fullyQualifiedResourceName) {
+        if (fullyQualifiedResourceName.startsWith("Alexa")) {
+            return this.getAlexaResourceTypeName(fullyQualifiedResourceName);
+        }
         var result = /AWS::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
         if (result && result.length >= 2)
             return result[1];
         throw new Error("Unable to get Resource Type Name, Invalid Fully Qualified Resource Name:" + fullyQualifiedResourceName);
+    };
+    ResourceNamespace.prototype.getAlexaResourceTypeName = function (fullyQualifiedResourceName) {
+        var result = /Alexa::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
+        if (result && result.length >= 2)
+            return "Alexa" + result[1];
+        throw new Error("Unable to get Resource Type Name, Invalid Alexa Fully Qualified Resource Name:" + fullyQualifiedResourceName);
     };
     return ResourceNamespace;
 }());

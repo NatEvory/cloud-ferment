@@ -1,5 +1,5 @@
 import { Specification, ResourceType, PropertyType } from '../CloudFormationSpecification';
-import { generateResourceNamespace } from './ResourceClassGenerator';
+import { generateResourceNamespace, getServiceName, getResourceTypeName } from './ResourceClassGenerator';
 
 import { mkdirSync, readFile, appendFileSync, writeFileSync, accessSync, statSync, Stats, constants } from 'fs';
 
@@ -28,18 +28,40 @@ class ResourceNamespace {
 	}
 
 	private getServiceName(fullyQualifiedResourceName:string):string{
+		if( fullyQualifiedResourceName.startsWith("Alexa") ){
+			return this.getAlexaServiceName(fullyQualifiedResourceName);
+		}
 		let result = /AWS::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
 		if(result && result.length>=2){
 			return result[1];
 		}
 		throw new Error(`Unable to get Service Name, Invalid Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
 	}
+
+	private getAlexaServiceName(fullyQualifiedResourceName:string){
+		let result = /Alexa::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
+		if(result && result.length>=2){
+			return "Alexa"+result[1];
+		}
+		throw new Error(`Unable to get Service Name, Invalid Alexa Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
+	}
+
 	private getResourceTypeName(fullyQualifiedResourceName:string):string{
+		if( fullyQualifiedResourceName.startsWith("Alexa") ){
+			return this.getAlexaResourceTypeName(fullyQualifiedResourceName);
+		}
 		let result = /AWS::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
 		if(result && result.length>=2)
 			return result[1];
 		throw new Error(`Unable to get Resource Type Name, Invalid Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
 	}
+	private getAlexaResourceTypeName(fullyQualifiedResourceName:string):string{
+		let result = /Alexa::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
+		if(result && result.length>=2)
+			return "Alexa"+result[1];
+		throw new Error(`Unable to get Resource Type Name, Invalid Alexa Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
+	}
+
 
 }
 export class SourceGenerator{
