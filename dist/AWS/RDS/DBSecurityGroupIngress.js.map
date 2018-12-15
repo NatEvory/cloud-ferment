@@ -1,0 +1,1 @@
+{"version":3,"file":"DBSecurityGroupIngress.js","sourceRoot":"","sources":["../../../src/AWS/RDS/DBSecurityGroupIngress.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAA4C,0CAAsD;IACjG,gCAAY,IAAW,EAAC,UAAoD;eAC3E,kBAAM,IAAI,EAAC,UAAU,EAAC,kCAAkC,CAAC;IAC1D,CAAC;IACF,6BAAC;AAAD,CAAC,AAJD,CAA4C,yBAAW,GAItD;AAJY,wDAAsB"}

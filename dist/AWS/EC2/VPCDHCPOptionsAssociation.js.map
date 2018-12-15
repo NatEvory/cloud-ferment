@@ -1,0 +1,1 @@
+{"version":3,"file":"VPCDHCPOptionsAssociation.js","sourceRoot":"","sources":["../../../src/AWS/EC2/VPCDHCPOptionsAssociation.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAA+C,6CAAyD;IACvG,mCAAY,IAAW,EAAC,UAAuD;eAC9E,kBAAM,IAAI,EAAC,UAAU,EAAC,qCAAqC,CAAC;IAC7D,CAAC;IACF,gCAAC;AAAD,CAAC,AAJD,CAA+C,yBAAW,GAIzD;AAJY,8DAAyB"}

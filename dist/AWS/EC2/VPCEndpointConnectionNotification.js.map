@@ -1,0 +1,1 @@
+{"version":3,"file":"VPCEndpointConnectionNotification.js","sourceRoot":"","sources":["../../../src/AWS/EC2/VPCEndpointConnectionNotification.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAAuD,qDAAiE;IACvH,2CAAY,IAAW,EAAC,UAA+D;eACtF,kBAAM,IAAI,EAAC,UAAU,EAAC,6CAA6C,CAAC;IACrE,CAAC;IACF,wCAAC;AAAD,CAAC,AAJD,CAAuD,yBAAW,GAIjE;AAJY,8EAAiC"}

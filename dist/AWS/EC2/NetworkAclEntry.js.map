@@ -1,0 +1,1 @@
+{"version":3,"file":"NetworkAclEntry.js","sourceRoot":"","sources":["../../../src/AWS/EC2/NetworkAclEntry.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAAqC,mCAA+C;IACnF,yBAAY,IAAW,EAAC,UAA6C;eACpE,kBAAM,IAAI,EAAC,UAAU,EAAC,2BAA2B,CAAC;IACnD,CAAC;IACF,sBAAC;AAAD,CAAC,AAJD,CAAqC,yBAAW,GAI/C;AAJY,0CAAe"}

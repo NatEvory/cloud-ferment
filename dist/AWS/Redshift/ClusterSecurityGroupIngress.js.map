@@ -1,0 +1,1 @@
+{"version":3,"file":"ClusterSecurityGroupIngress.js","sourceRoot":"","sources":["../../../src/AWS/Redshift/ClusterSecurityGroupIngress.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAAiD,+CAA2D;IAC3G,qCAAY,IAAW,EAAC,UAAyD;eAChF,kBAAM,IAAI,EAAC,UAAU,EAAC,4CAA4C,CAAC;IACpE,CAAC;IACF,kCAAC;AAAD,CAAC,AAJD,CAAiD,yBAAW,GAI3D;AAJY,kEAA2B"}

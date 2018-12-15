@@ -1,0 +1,1 @@
+{"version":3,"file":"ClusterSubnetGroup.js","sourceRoot":"","sources":["../../../src/AWS/Redshift/ClusterSubnetGroup.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAAwC,sCAAkD;IACzF,4BAAY,IAAW,EAAC,UAAgD;eACvE,kBAAM,IAAI,EAAC,UAAU,EAAC,mCAAmC,CAAC;IAC3D,CAAC;IACF,yBAAC;AAAD,CAAC,AAJD,CAAwC,yBAAW,GAIlD;AAJY,gDAAkB"}

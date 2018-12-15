@@ -1,98 +1,66 @@
 import { ResourceType, Property, PropertyType, Attribute, Specification} from '../CloudFormationSpecification';
+import { SpecificationNamespace } from './SpecificationNamespace';
 
 
 
-export function generateResourceClass(resourceTypeName:string,namespace:string, spec:Specification){
-	let rType:ResourceType = spec.ResourceTypes[resourceTypeName];
+export function generateResourceSourceCode( namespace:SpecificationNamespace, spec:Specification ){
+	let output:string = 'import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from \'../../AWSResource\';\n'+
+						'import { CloudFormationFunctionResult } from \'../../CloudFormationFunctionResult\'\n\n';
+	let resourceType = spec.ResourceTypes[namespace.fullyQualifiedNamespace];
+	let propertyList = findNamespacePropertyTypes(namespace,spec);
 
-	let className = resourceTypeName;
+	output += `${generateResourceClass(namespace,spec)}\n`
+
+	output+= `${generateResourceInterface(resourceType,namespace.getResource())}\n`
+
+	propertyList.forEach(property=>{
+		output+=`${generatePropertyTypeInterface(property.propertyType,property.namespace)}\n`
+	})
+	return output;
+}
+
+export function generateResourceClass(resourceNamespace:SpecificationNamespace, spec:Specification){
+	let resourceType:ResourceType = spec.ResourceTypes[resourceNamespace.fullyQualifiedNamespace];
+
+	let className = resourceNamespace.getResource();
 	let classOut =
 	`export class ${className} extends AWSResource<${className}_ResourceProperties> {\n`+
 
 		`\tconstructor(name:string,properties:${className}_ResourceProperties){\n`+
-			`\t\tsuper(name,properties,"${namespace}");\n`+
+			`\t\tsuper(name,properties,"${resourceNamespace.fullyQualifiedNamespace}");\n`+
 		`\t}\n`+
 	'}\n'
 	return classOut;
 }
 
-export function generateResourceNamespace( namespace:string, spec:Specification ){
-	let output:string = 'import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from \'../../AWSResource\';\n'+
-						'import { CloudFormationFunctionResult } from \'../../CloudFormationFunction\'\n\n';
-	let resourceType = spec.ResourceTypes[namespace];
-	let propertyTypes = findNamespacePropertyTypes(namespace,spec);
 
-	output += `${generateResourceClass(getServiceName(namespace),namespace,spec)}\n`
-
-	output+= `${generateResourceInterface(resourceType,getServiceName(namespace))}\n`
-
-	propertyTypes.forEach(propertyType=>{
-		output+=`${generatePropertyTypeInterface(propertyType.propertyType,propertyType.propertyTypeName,propertyType.resourceTypeName,namespace)}\n`
-	})
-	return output;
-}
-
-function findNamespacePropertyTypes( namespace:string, spec:Specification ){
+//Gets all of the propertyTypes related to a given Resource
+function findNamespacePropertyTypes( resourcenNamespace:SpecificationNamespace, spec:Specification ){
 	let propertyTypeNames:string[] = Object.keys(spec.PropertyTypes);
-	let namespacePropertyTypeNames = propertyTypeNames.filter(name=>name.startsWith(namespace+'.'));
-	return namespacePropertyTypeNames.map(propertyTypeName=>{
+	let namespacePropertyTypeNames = propertyTypeNames.filter(name=>name.startsWith(resourcenNamespace.fullyQualifiedNamespace+'.'));
+	return namespacePropertyTypeNames.map(fullyQualifiedPropertyName=>{
+		let propertyNamespace:SpecificationNamespace = new SpecificationNamespace(fullyQualifiedPropertyName);
 		return {
-			resourceTypeName:getServiceName(propertyTypeName),
-			propertyTypeName:getResourceTypeName(propertyTypeName),
-			propertyType:spec.PropertyTypes[propertyTypeName]
+			namespace:propertyNamespace,
+			propertyType:spec.PropertyTypes[fullyQualifiedPropertyName]
 		}
 	});
 }
 
-function findNamespaceResourceTypes( namespace:string, spec:Specification ){
-	let resourceTypeNames:string[] = Object.keys(spec.ResourceTypes);
-	let namespaceResourceTypeNames = resourceTypeNames.filter(name=>name.startsWith(`AWS::${namespace}`));
-	return namespaceResourceTypeNames.map(resourceTypeName=>{
-		return {
-			resourceTypeName:getServiceName(resourceTypeName),
-			resourceType:spec.ResourceTypes[resourceTypeName]
-		}
-	});
-}
-
-export function getResourceTypeName(fullyQualifiedResourceName:string){
-	if( fullyQualifiedResourceName.startsWith("Alexa") ){
-		return getAlexaResourceTypeName(fullyQualifiedResourceName);
-	}
-	let result = /AWS::[^:]*::[^.]*.(\w*)/g.exec(fullyQualifiedResourceName);
-	if(result && result.length>=2)
-		return result[1];
-	return '';
-}
-
-function getAlexaResourceTypeName(fullyQualifiedResourceName:string):string{
-	let result = /Alexa::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
-	if(result && result.length>=2)
-		return "Alexa"+result[1];
-	throw new Error(`Unable to get Resource Type Name, Invalid Alexa Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
-}
-
-export function getServiceName(fullyQualifiedResourceName:string){
-	if( fullyQualifiedResourceName.startsWith("Alexa") ){
-		return getAlexaServiceName(fullyQualifiedResourceName);
-	}
-	let result = /AWS::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
-	if(result && result.length>=2)
-		return result[1];
-	return '';
-}
-
-function getAlexaServiceName(fullyQualifiedResourceName:string){
-	let result = /Alexa::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
-	if(result && result.length>=2){
-		return "Alexa"+result[1];
-	}
-	throw new Error(`Unable to get Service Name, Invalid Alexa Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
-}
+// function findNamespaceResourceTypes( resourceNamespace:SpecificationNamespace, spec:Specification ){
+// 	let resourceTypeNames:string[] = Object.keys(spec.ResourceTypes);
+// 	let namespaceResourceTypeNames = resourceTypeNames.filter(name=>name.startsWith(`${resourceNamespace.getRoot}::${resourceNamespace.getService()}`));
+// 	return namespaceResourceTypeNames.map(resourceTypeName=>{
+// 		return {
+// 			namespace:resourceNamespace,
+// 			resourceType:spec.ResourceTypes[resourceTypeName]
+// 		}
+// 	});
+// }
 
 
-export function generateResourceInterface( resourceType:ResourceType, resourceTypeName:string ){
-	let interfaceDeclaration =`export interface ${resourceTypeName}_ResourceProperties extends AWSResourceProperties {\n${generateResourceDeclarationList(resourceType,resourceTypeName)}\n}`;
+export function generateResourceInterface( resourceType:ResourceType, resourceName:string ){
+	let interfaceDeclaration =`export interface ${resourceName}_ResourceProperties extends AWSResourceProperties {\n${generateResourceDeclarationList(resourceType,resourceName)}\n}`;
 	return interfaceDeclaration;
 }
 
@@ -105,9 +73,9 @@ function generateResourceDeclarationList( resourceType:ResourceType, resourceTyp
 	return propertyDeclarations;
 }
 
-export function generatePropertyTypeInterface( propertyType:PropertyType, propertyTypeName:string, resourceTypeName:string, namespace:string ){
-	let propertyDeclarations = generatePropertyTypeDeclarationList(propertyType,resourceTypeName);
-	return `export interface ${resourceTypeName}_${propertyTypeName} {\n${propertyDeclarations}\n}`
+export function generatePropertyTypeInterface( propertyType:PropertyType,  namespace:SpecificationNamespace ){
+	let propertyDeclarations = generatePropertyTypeDeclarationList(propertyType,namespace.getResource());
+	return `export interface ${namespace.getResource()}_${namespace.getProperty()} {\n${propertyDeclarations}\n}`
 }
 
 function generatePropertyTypeDeclarationList( propertyType:PropertyType , resourceTypeName:string){

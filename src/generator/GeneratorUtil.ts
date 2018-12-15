@@ -1,5 +1,6 @@
 import { Specification, ResourceType, PropertyType } from '../CloudFormationSpecification';
-import { generateResourceNamespace, getServiceName, getResourceTypeName } from './ResourceClassGenerator';
+import { generateResourceSourceCode } from './ResourceClassGenerator';
+import { SpecificationNamespace } from './SpecificationNamespace';
 
 import { mkdirSync, readFile, appendFileSync, writeFileSync, accessSync, statSync, Stats, constants } from 'fs';
 
@@ -15,55 +16,6 @@ export async function generate(specificationFile = defaultSpecificationFile,srcD
 	generator.generate();
 }
 
-
-class ResourceNamespace {
-
-	resouceTypeName:string;
-	serviceName:string;
-
-
-	constructor(public fullyQualifiedResourceName:string ){
-		this.resouceTypeName = this.getResourceTypeName(fullyQualifiedResourceName);
-		this.serviceName = this.getServiceName(fullyQualifiedResourceName);
-	}
-
-	private getServiceName(fullyQualifiedResourceName:string):string{
-		if( fullyQualifiedResourceName.startsWith("Alexa") ){
-			return this.getAlexaServiceName(fullyQualifiedResourceName);
-		}
-		let result = /AWS::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
-		if(result && result.length>=2){
-			return result[1];
-		}
-		throw new Error(`Unable to get Service Name, Invalid Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
-	}
-
-	private getAlexaServiceName(fullyQualifiedResourceName:string){
-		let result = /Alexa::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
-		if(result && result.length>=2){
-			return "Alexa"+result[1];
-		}
-		throw new Error(`Unable to get Service Name, Invalid Alexa Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
-	}
-
-	private getResourceTypeName(fullyQualifiedResourceName:string):string{
-		if( fullyQualifiedResourceName.startsWith("Alexa") ){
-			return this.getAlexaResourceTypeName(fullyQualifiedResourceName);
-		}
-		let result = /AWS::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
-		if(result && result.length>=2)
-			return result[1];
-		throw new Error(`Unable to get Resource Type Name, Invalid Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
-	}
-	private getAlexaResourceTypeName(fullyQualifiedResourceName:string):string{
-		let result = /Alexa::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
-		if(result && result.length>=2)
-			return "Alexa"+result[1];
-		throw new Error(`Unable to get Resource Type Name, Invalid Alexa Fully Qualified Resource Name:${fullyQualifiedResourceName}`)
-	}
-
-
-}
 export class SourceGenerator{
 	serviceFolders:string[] = [];
 
@@ -76,9 +28,10 @@ export class SourceGenerator{
 		writeFileSync(fullRootSpecDir+"index.ts",`//AWS Exports\n`);
 		let resourceTypeNames = Object.keys(this.spec.ResourceTypes);
 		for( let resourceNamespace of resourceTypeNames){
-			let namespace = new ResourceNamespace(resourceNamespace);
-			this.createServiceDirectory(fullRootSpecDir,namespace.serviceName);
-			this.createResourceSrcFile(this.spec.ResourceTypes[namespace.fullyQualifiedResourceName],namespace,fullRootSpecDir+namespace.serviceName,this.spec);
+			let namespace = new SpecificationNamespace(resourceNamespace);
+			let resourceType = this.spec.ResourceTypes[namespace.getResource()];
+			this.createServiceDirectory(fullRootSpecDir,namespace.getService());
+			this.createResourceSrcFile(resourceType,namespace,fullRootSpecDir+namespace.getService(),this.spec);
 		}
 	}
 
@@ -90,10 +43,10 @@ export class SourceGenerator{
 		appendFileSync(parentDir+"index.ts",`import * as ${serviceName} from './${serviceName}';\nexport {${serviceName}};\n`);
 		this.serviceFolders.push(serviceName);
 	}
-	private createResourceSrcFile(resourceType:ResourceType, namespace:ResourceNamespace, serviceDir:string, spec:Specification){
-		let outfile = serviceDir+'/'+namespace.resouceTypeName+'.ts';
-		writeFileSync(outfile,generateResourceNamespace(namespace.fullyQualifiedResourceName,spec));
-		appendFileSync(serviceDir+'/index.ts',`export * from './${namespace.resouceTypeName}';\n`)
+	private createResourceSrcFile(resourceType:ResourceType, namespace:SpecificationNamespace, serviceDir:string, spec:Specification){
+		let outfile = serviceDir+'/'+namespace.getResource()+'.ts';
+		writeFileSync(outfile,generateResourceSourceCode(namespace,spec));
+		appendFileSync(serviceDir+'/index.ts',`export * from './${namespace.getResource()}';\n`)
 	}
 
 	private ensureDirectory(dir:string){

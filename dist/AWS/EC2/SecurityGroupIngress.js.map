@@ -1,0 +1,1 @@
+{"version":3,"file":"SecurityGroupIngress.js","sourceRoot":"","sources":["../../../src/AWS/EC2/SecurityGroupIngress.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAA0C,wCAAoD;IAC7F,8BAAY,IAAW,EAAC,UAAkD;eACzE,kBAAM,IAAI,EAAC,UAAU,EAAC,gCAAgC,CAAC;IACxD,CAAC;IACF,2BAAC;AAAD,CAAC,AAJD,CAA0C,yBAAW,GAIpD;AAJY,oDAAoB"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"Bucket.js","sourceRoot":"","sources":["../../../src/AWS/S3/Bucket.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAA4B,0BAAsC;IACjE,gBAAY,IAAW,EAAC,UAAoC;eAC3D,kBAAM,IAAI,EAAC,UAAU,EAAC,iBAAiB,CAAC;IACzC,CAAC;IACF,aAAC;AAAD,CAAC,AAJD,CAA4B,yBAAW,GAItC;AAJY,wBAAM"}

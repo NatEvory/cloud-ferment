@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ResourceClassGenerator_1 = require("./ResourceClassGenerator");
+var SpecificationNamespace_1 = require("./SpecificationNamespace");
 var fs_1 = require("fs");
 var defaultSrcDir = './src';
 var defaultRootSpecDir = '/AWS';
@@ -60,46 +61,6 @@ function generate(specificationFile, srcDir, rootSpecDir) {
     });
 }
 exports.generate = generate;
-var ResourceNamespace = /** @class */ (function () {
-    function ResourceNamespace(fullyQualifiedResourceName) {
-        this.fullyQualifiedResourceName = fullyQualifiedResourceName;
-        this.resouceTypeName = this.getResourceTypeName(fullyQualifiedResourceName);
-        this.serviceName = this.getServiceName(fullyQualifiedResourceName);
-    }
-    ResourceNamespace.prototype.getServiceName = function (fullyQualifiedResourceName) {
-        if (fullyQualifiedResourceName.startsWith("Alexa")) {
-            return this.getAlexaServiceName(fullyQualifiedResourceName);
-        }
-        var result = /AWS::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
-        if (result && result.length >= 2) {
-            return result[1];
-        }
-        throw new Error("Unable to get Service Name, Invalid Fully Qualified Resource Name:" + fullyQualifiedResourceName);
-    };
-    ResourceNamespace.prototype.getAlexaServiceName = function (fullyQualifiedResourceName) {
-        var result = /Alexa::([^:]*)::[\w]*/g.exec(fullyQualifiedResourceName);
-        if (result && result.length >= 2) {
-            return "Alexa" + result[1];
-        }
-        throw new Error("Unable to get Service Name, Invalid Alexa Fully Qualified Resource Name:" + fullyQualifiedResourceName);
-    };
-    ResourceNamespace.prototype.getResourceTypeName = function (fullyQualifiedResourceName) {
-        if (fullyQualifiedResourceName.startsWith("Alexa")) {
-            return this.getAlexaResourceTypeName(fullyQualifiedResourceName);
-        }
-        var result = /AWS::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
-        if (result && result.length >= 2)
-            return result[1];
-        throw new Error("Unable to get Resource Type Name, Invalid Fully Qualified Resource Name:" + fullyQualifiedResourceName);
-    };
-    ResourceNamespace.prototype.getAlexaResourceTypeName = function (fullyQualifiedResourceName) {
-        var result = /Alexa::[^:]*::([\w]*)/g.exec(fullyQualifiedResourceName);
-        if (result && result.length >= 2)
-            return "Alexa" + result[1];
-        throw new Error("Unable to get Resource Type Name, Invalid Alexa Fully Qualified Resource Name:" + fullyQualifiedResourceName);
-    };
-    return ResourceNamespace;
-}());
 var SourceGenerator = /** @class */ (function () {
     function SourceGenerator(srcDir, rootSpecDir, spec) {
         this.srcDir = srcDir;
@@ -109,7 +70,7 @@ var SourceGenerator = /** @class */ (function () {
     }
     SourceGenerator.prototype.generate = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var fullRootSpecDir, resourceTypeNames, _i, resourceTypeNames_1, resourceNamespace, namespace;
+            var fullRootSpecDir, resourceTypeNames, _i, resourceTypeNames_1, resourceNamespace, namespace, resourceType;
             return __generator(this, function (_a) {
                 this.serviceFolders = [];
                 this.ensureDirectory(this.srcDir + this.rootSpecDir);
@@ -118,9 +79,10 @@ var SourceGenerator = /** @class */ (function () {
                 resourceTypeNames = Object.keys(this.spec.ResourceTypes);
                 for (_i = 0, resourceTypeNames_1 = resourceTypeNames; _i < resourceTypeNames_1.length; _i++) {
                     resourceNamespace = resourceTypeNames_1[_i];
-                    namespace = new ResourceNamespace(resourceNamespace);
-                    this.createServiceDirectory(fullRootSpecDir, namespace.serviceName);
-                    this.createResourceSrcFile(this.spec.ResourceTypes[namespace.fullyQualifiedResourceName], namespace, fullRootSpecDir + namespace.serviceName, this.spec);
+                    namespace = new SpecificationNamespace_1.SpecificationNamespace(resourceNamespace);
+                    resourceType = this.spec.ResourceTypes[namespace.getResource()];
+                    this.createServiceDirectory(fullRootSpecDir, namespace.getService());
+                    this.createResourceSrcFile(resourceType, namespace, fullRootSpecDir + namespace.getService(), this.spec);
                 }
                 return [2 /*return*/];
             });
@@ -135,9 +97,9 @@ var SourceGenerator = /** @class */ (function () {
         this.serviceFolders.push(serviceName);
     };
     SourceGenerator.prototype.createResourceSrcFile = function (resourceType, namespace, serviceDir, spec) {
-        var outfile = serviceDir + '/' + namespace.resouceTypeName + '.ts';
-        fs_1.writeFileSync(outfile, ResourceClassGenerator_1.generateResourceNamespace(namespace.fullyQualifiedResourceName, spec));
-        fs_1.appendFileSync(serviceDir + '/index.ts', "export * from './" + namespace.resouceTypeName + "';\n");
+        var outfile = serviceDir + '/' + namespace.getResource() + '.ts';
+        fs_1.writeFileSync(outfile, ResourceClassGenerator_1.generateResourceSourceCode(namespace, spec));
+        fs_1.appendFileSync(serviceDir + '/index.ts', "export * from './" + namespace.getResource() + "';\n");
     };
     SourceGenerator.prototype.ensureDirectory = function (dir) {
         try {

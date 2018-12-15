@@ -1,0 +1,1 @@
+{"version":3,"file":"WaitCondition.js","sourceRoot":"","sources":["../../../src/AWS/CloudFormation/WaitCondition.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAAmC,iCAA6C;IAC/E,uBAAY,IAAW,EAAC,UAA2C;eAClE,kBAAM,IAAI,EAAC,UAAU,EAAC,oCAAoC,CAAC;IAC5D,CAAC;IACF,oBAAC;AAAD,CAAC,AAJD,CAAmC,yBAAW,GAI7C;AAJY,sCAAa"}

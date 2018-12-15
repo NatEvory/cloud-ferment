@@ -1,0 +1,1 @@
+{"version":3,"file":"ScalingPolicy.js","sourceRoot":"","sources":["../../../src/AWS/ApplicationAutoScaling/ScalingPolicy.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAAmC,iCAA6C;IAC/E,uBAAY,IAAW,EAAC,UAA2C;eAClE,kBAAM,IAAI,EAAC,UAAU,EAAC,4CAA4C,CAAC;IACpE,CAAC;IACF,oBAAC;AAAD,CAAC,AAJD,CAAmC,yBAAW,GAI7C;AAJY,sCAAa"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"SubnetRouteTableAssociation.js","sourceRoot":"","sources":["../../../src/AWS/EC2/SubnetRouteTableAssociation.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAAiD,+CAA2D;IAC3G,qCAAY,IAAW,EAAC,UAAyD;eAChF,kBAAM,IAAI,EAAC,UAAU,EAAC,uCAAuC,CAAC;IAC/D,CAAC;IACF,kCAAC;AAAD,CAAC,AAJD,CAAiD,yBAAW,GAI3D;AAJY,kEAA2B"}

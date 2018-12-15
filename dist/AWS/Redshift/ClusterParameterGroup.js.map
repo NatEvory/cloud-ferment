@@ -1,0 +1,1 @@
+{"version":3,"file":"ClusterParameterGroup.js","sourceRoot":"","sources":["../../../src/AWS/Redshift/ClusterParameterGroup.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iDAAsH;AAGtH;IAA2C,yCAAqD;IAC/F,+BAAY,IAAW,EAAC,UAAmD;eAC1E,kBAAM,IAAI,EAAC,UAAU,EAAC,sCAAsC,CAAC;IAC9D,CAAC;IACF,4BAAC;AAAD,CAAC,AAJD,CAA2C,yBAAW,GAIrD;AAJY,sDAAqB"}
