@@ -4,8 +4,8 @@ export interface AWSResourceProperties {
 export declare type AWSStringProperty = CloudFormationFunctionResult | string;
 export declare type AWSStringListProperty = (CloudFormationFunctionResult | string)[];
 export interface Tag {
-    key?: string;
-    value?: string;
+    Key?: string;
+    Value?: string;
 }
 export declare class AWSResource<T extends AWSResourceProperties> {
     name: string;
