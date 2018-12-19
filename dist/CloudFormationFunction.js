@@ -34,7 +34,7 @@ function Join(delimiter, parts) {
 exports.Join = Join;
 function ImportValue(name) {
     return {
-        "Fn:ImportValue": name
+        "Fn::ImportValue": name
     };
 }
 exports.ImportValue = ImportValue;

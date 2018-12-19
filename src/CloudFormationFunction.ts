@@ -34,7 +34,7 @@ export function Join( delimiter:string, parts:AWSStringListProperty ):CloudForma
 
 export function ImportValue(name:string){
 	return {
-		"Fn:ImportValue":name
+		"Fn::ImportValue":name
 	}
 }
 
