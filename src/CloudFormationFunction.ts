@@ -32,6 +32,12 @@ export function Join( delimiter:string, parts:AWSStringListProperty ):CloudForma
 	}
 }
 
+export function ImportValue(name:string){
+	return {
+		"Fn:ImportValue":name
+	}
+}
+
 export function Split( delimiter:string, value:AWSStringProperty ):CloudFormationFunctionResult {
 	return {
 		"Fn::Split":[delimiter,value]
