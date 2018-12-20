@@ -4,7 +4,7 @@ import { CloudFormationFunctionResult } from './CloudFormationFunctionResult';
 export interface AWSResourceProperties {}
 
 export type AWSStringProperty = CloudFormationFunctionResult|string;
-export type AWSStringListProperty = (CloudFormationFunctionResult|string)[];
+export type AWSStringListProperty = (CloudFormationFunctionResult|string)[] | CloudFormationFunctionResult;
 
 export interface Tag {
 	Key?:string;
