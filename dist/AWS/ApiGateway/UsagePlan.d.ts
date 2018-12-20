@@ -12,7 +12,9 @@ export interface UsagePlan_ResourceProperties extends AWSResourceProperties {
 export interface UsagePlan_ApiStage {
     ApiId?: AWSStringProperty;
     Stage?: AWSStringProperty;
-    Throttle?: Map<string, UsagePlan_ThrottleSettings>;
+    Throttle?: {
+        [key: string]: UsagePlan_ThrottleSettings;
+    };
 }
 export interface UsagePlan_ThrottleSettings {
     BurstLimit?: number;

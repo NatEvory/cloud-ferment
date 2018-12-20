@@ -4,7 +4,9 @@ export declare class Stack extends AWSResource<Stack_ResourceProperties> {
 }
 export interface Stack_ResourceProperties extends AWSResourceProperties {
     AgentVersion?: AWSStringProperty;
-    Attributes?: Map<string, AWSStringProperty>;
+    Attributes?: {
+        [key: string]: AWSStringProperty;
+    };
     ChefConfiguration?: Stack_ChefConfiguration;
     CloneAppIds?: AWSStringListProperty;
     ClonePermissions?: boolean;

@@ -8,8 +8,8 @@ export class GatewayResponse extends AWSResource<GatewayResponse_ResourcePropert
 }
 
 export interface GatewayResponse_ResourceProperties extends AWSResourceProperties {
-	ResponseParameters?:Map<string,AWSStringProperty>;
-	ResponseTemplates?:Map<string,AWSStringProperty>;
+	ResponseParameters?:{[key:string]:AWSStringProperty};
+	ResponseTemplates?:{[key:string]:AWSStringProperty};
 	ResponseType:AWSStringProperty;
 	RestApiId:AWSStringProperty;
 	StatusCode?:AWSStringProperty;

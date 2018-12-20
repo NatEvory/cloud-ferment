@@ -44,7 +44,7 @@ export interface Rule_RunCommandTarget {
 
 }
 export interface Rule_InputTransformer {
-	InputPathsMap?:Map<string,AWSStringProperty>;
+	InputPathsMap?:{[key:string]:AWSStringProperty};
 	InputTemplate:AWSStringProperty;
 
 }

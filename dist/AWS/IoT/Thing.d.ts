@@ -7,5 +7,7 @@ export interface Thing_ResourceProperties extends AWSResourceProperties {
     ThingName?: AWSStringProperty;
 }
 export interface Thing_AttributePayload {
-    Attributes?: Map<string, AWSStringProperty>;
+    Attributes?: {
+        [key: string]: AWSStringProperty;
+    };
 }

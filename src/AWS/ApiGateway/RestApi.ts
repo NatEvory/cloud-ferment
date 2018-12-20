@@ -18,7 +18,7 @@ export interface RestApi_ResourceProperties extends AWSResourceProperties {
 	FailOnWarnings?:boolean;
 	MinimumCompressionSize?:number;
 	Name?:AWSStringProperty;
-	Parameters?:Map<string,AWSStringProperty>;
+	Parameters?:{[key:string]:AWSStringProperty};
 	Policy?:any;
 
 }

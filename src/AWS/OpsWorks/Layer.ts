@@ -8,7 +8,7 @@ export class Layer extends AWSResource<Layer_ResourceProperties> {
 }
 
 export interface Layer_ResourceProperties extends AWSResourceProperties {
-	Attributes?:Map<string,AWSStringProperty>;
+	Attributes?:{[key:string]:AWSStringProperty};
 	AutoAssignElasticIps:boolean;
 	AutoAssignPublicIps:boolean;
 	CustomInstanceProfileArn?:AWSStringProperty;

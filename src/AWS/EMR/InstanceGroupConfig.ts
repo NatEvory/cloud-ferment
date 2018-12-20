@@ -27,7 +27,7 @@ export interface InstanceGroupConfig_EbsBlockDeviceConfig {
 }
 export interface InstanceGroupConfig_Configuration {
 	Classification?:AWSStringProperty;
-	ConfigurationProperties?:Map<string,AWSStringProperty>;
+	ConfigurationProperties?:{[key:string]:AWSStringProperty};
 	Configurations?:InstanceGroupConfig_Configuration[];
 
 }

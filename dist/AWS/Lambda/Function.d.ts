@@ -37,5 +37,7 @@ export interface Function_Code {
     ZipFile?: AWSStringProperty;
 }
 export interface Function_Environment {
-    Variables?: Map<string, AWSStringProperty>;
+    Variables?: {
+        [key: string]: AWSStringProperty;
+    };
 }

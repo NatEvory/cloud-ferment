@@ -5,5 +5,7 @@ export declare class ParameterGroup extends AWSResource<ParameterGroup_ResourceP
 export interface ParameterGroup_ResourceProperties extends AWSResourceProperties {
     CacheParameterGroupFamily: AWSStringProperty;
     Description: AWSStringProperty;
-    Properties?: Map<string, AWSStringProperty>;
+    Properties?: {
+        [key: string]: AWSStringProperty;
+    };
 }

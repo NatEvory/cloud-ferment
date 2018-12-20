@@ -15,7 +15,7 @@ export interface ListenerRule_ResourceProperties extends AWSResourceProperties {
 
 }
 export interface ListenerRule_AuthenticateOidcConfig {
-	AuthenticationRequestExtraParams?:Map<string,AWSStringProperty>;
+	AuthenticationRequestExtraParams?:{[key:string]:AWSStringProperty};
 	AuthorizationEndpoint:AWSStringProperty;
 	ClientId:AWSStringProperty;
 	ClientSecret:AWSStringProperty;
@@ -29,7 +29,7 @@ export interface ListenerRule_AuthenticateOidcConfig {
 
 }
 export interface ListenerRule_AuthenticateCognitoConfig {
-	AuthenticationRequestExtraParams?:Map<string,AWSStringProperty>;
+	AuthenticationRequestExtraParams?:{[key:string]:AWSStringProperty};
 	OnUnauthenticatedRequest?:AWSStringProperty;
 	Scope?:AWSStringProperty;
 	SessionCookieName?:AWSStringProperty;
