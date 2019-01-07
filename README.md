@@ -4,13 +4,28 @@ A project to generate AWS CloudFormation Templates with TypeScript.
 
 ## Example Usage
 
+This code does the following
+
+* Imports from cloud-ferment
+* Creates a new CloudFormationTemplate object
+* Adds a template parameter
+* Creates a new S3.Bucket Object, and adds it to the template
+* Adds a stack output
+* Outputs the template to the console
+
 ```javascript
-import { CloudformationTemplate, Ref, S3 } from 'cloud-ferment';
+import { CloudFormationTemplate, Ref, S3 } from 'cloud-ferment';
 
 let template:CloudFormationTemplate = new CloudFormationTemplate("Template Description Here");
 
-let myBucket = new S3.Bucket("myBucket",{
-    BucketName:"AUniqueBucketName",
+template.addParameter({
+    Type:"String",
+    Description:"A unique name for my bucket",
+    Name:"UniqueBucketName"
+})
+
+let myBucket = new S3.Bucket("MyBucket",{
+    BucketName:Ref("UniqueBucketName"),
     VersioningConfiguration:{
         Status:"Enabled"
     }
@@ -28,18 +43,25 @@ template.addOutput({
 console.log(JSON.stringify(template.templateOutput(),null,2));
 ````
 
-This will produce the following CloudFormation Template
+This will produce the following CloudFormation Template, which you can then deploy to AWS via the CloudFormation API or Console.
 
 ```
 {
   "Description": "Template Description Here",
-  "Parameters": {},
+  "Parameters": {
+    "UniqueBucketName": {
+      "Type": "String",
+      "Description": "A unique name for my bucket"
+    }
+  },
   "Mappings": {},
   "Resources": {
     "myBucket": {
       "Type": "AWS::S3::Bucket",
       "Properties": {
-        "BucketName": "AUniqueBucketName",
+        "BucketName": {
+          "Ref": "UniqueBucketName"
+        },
         "VersioningConfiguration": {
           "Status": "Enabled"
         }
