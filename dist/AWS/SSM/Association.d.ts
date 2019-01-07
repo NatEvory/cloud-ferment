@@ -8,7 +8,9 @@ export interface Association_ResourceProperties extends AWSResourceProperties {
     InstanceId?: AWSStringProperty;
     Name: AWSStringProperty;
     OutputLocation?: Association_InstanceAssociationOutputLocation;
-    Parameters?: Map<string, Association_ParameterValues>;
+    Parameters?: {
+        [key: string]: Association_ParameterValues;
+    };
     ScheduleExpression?: AWSStringProperty;
     Targets?: Association_Target[];
 }

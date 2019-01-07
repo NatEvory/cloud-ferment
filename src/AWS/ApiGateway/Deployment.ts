@@ -17,7 +17,7 @@ export interface Deployment_ResourceProperties extends AWSResourceProperties {
 }
 export interface Deployment_DeploymentCanarySettings {
 	PercentTraffic?:number;
-	StageVariableOverrides?:Map<string,AWSStringProperty>;
+	StageVariableOverrides?:{[key:string]:AWSStringProperty};
 	UseStageCache?:boolean;
 
 }
@@ -53,12 +53,12 @@ export interface Deployment_StageDescription {
 	ThrottlingBurstLimit?:number;
 	ThrottlingRateLimit?:number;
 	TracingEnabled?:boolean;
-	Variables?:Map<string,AWSStringProperty>;
+	Variables?:{[key:string]:AWSStringProperty};
 
 }
 export interface Deployment_CanarySetting {
 	PercentTraffic?:number;
-	StageVariableOverrides?:Map<string,AWSStringProperty>;
+	StageVariableOverrides?:{[key:string]:AWSStringProperty};
 	UseStageCache?:boolean;
 
 }

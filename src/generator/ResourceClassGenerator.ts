@@ -109,9 +109,9 @@ function getPropertyType(property:Property,resourceTypeName:string){
 		}
 	} else {
 		if(property.ItemType){
-			return `Map<string,${getFullItemType(property.ItemType,resourceTypeName)}>`;
+			return `{[key:string]:${getFullItemType(property.ItemType,resourceTypeName)}}`;
 		} else {
-			return 'Map<string,'+getPrimitiveType(property.PrimitiveItemType)+'>';
+			return `{[key:string]:${getPrimitiveType(property.PrimitiveItemType)}}`;
 		}
 	}
 }

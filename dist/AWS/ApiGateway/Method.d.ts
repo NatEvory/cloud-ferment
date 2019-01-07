@@ -11,15 +11,23 @@ export interface Method_ResourceProperties extends AWSResourceProperties {
     Integration?: Method_Integration;
     MethodResponses?: Method_MethodResponse[];
     OperationName?: AWSStringProperty;
-    RequestModels?: Map<string, AWSStringProperty>;
-    RequestParameters?: Map<string, boolean>;
+    RequestModels?: {
+        [key: string]: AWSStringProperty;
+    };
+    RequestParameters?: {
+        [key: string]: boolean;
+    };
     RequestValidatorId?: AWSStringProperty;
     ResourceId: AWSStringProperty;
     RestApiId: AWSStringProperty;
 }
 export interface Method_MethodResponse {
-    ResponseModels?: Map<string, AWSStringProperty>;
-    ResponseParameters?: Map<string, boolean>;
+    ResponseModels?: {
+        [key: string]: AWSStringProperty;
+    };
+    ResponseParameters?: {
+        [key: string]: boolean;
+    };
     StatusCode: AWSStringProperty;
 }
 export interface Method_Integration {
@@ -32,16 +40,24 @@ export interface Method_Integration {
     IntegrationHttpMethod?: AWSStringProperty;
     IntegrationResponses?: Method_IntegrationResponse[];
     PassthroughBehavior?: AWSStringProperty;
-    RequestParameters?: Map<string, AWSStringProperty>;
-    RequestTemplates?: Map<string, AWSStringProperty>;
+    RequestParameters?: {
+        [key: string]: AWSStringProperty;
+    };
+    RequestTemplates?: {
+        [key: string]: AWSStringProperty;
+    };
     TimeoutInMillis?: number;
     Type?: AWSStringProperty;
     Uri?: AWSStringProperty;
 }
 export interface Method_IntegrationResponse {
     ContentHandling?: AWSStringProperty;
-    ResponseParameters?: Map<string, AWSStringProperty>;
-    ResponseTemplates?: Map<string, AWSStringProperty>;
+    ResponseParameters?: {
+        [key: string]: AWSStringProperty;
+    };
+    ResponseTemplates?: {
+        [key: string]: AWSStringProperty;
+    };
     SelectionPattern?: AWSStringProperty;
     StatusCode: AWSStringProperty;
 }

@@ -92,7 +92,9 @@ export interface Cluster_SimpleScalingPolicyConfiguration {
     ScalingAdjustment: number;
 }
 export interface Cluster_Application {
-    AdditionalInfo?: Map<string, AWSStringProperty>;
+    AdditionalInfo?: {
+        [key: string]: AWSStringProperty;
+    };
     Args?: AWSStringListProperty;
     Name?: AWSStringProperty;
     Version?: AWSStringProperty;
@@ -106,7 +108,9 @@ export interface Cluster_PlacementType {
 }
 export interface Cluster_Configuration {
     Classification?: AWSStringProperty;
-    ConfigurationProperties?: Map<string, AWSStringProperty>;
+    ConfigurationProperties?: {
+        [key: string]: AWSStringProperty;
+    };
     Configurations?: Cluster_Configuration[];
 }
 export interface Cluster_ScriptBootstrapActionConfig {

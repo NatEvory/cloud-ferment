@@ -39,11 +39,25 @@ export interface Instance_EbsBlockDevice {
     VolumeType?: AWSStringProperty;
 }
 export interface Instance_TimeBasedAutoScaling {
-    Friday?: Map<string, AWSStringProperty>;
-    Monday?: Map<string, AWSStringProperty>;
-    Saturday?: Map<string, AWSStringProperty>;
-    Sunday?: Map<string, AWSStringProperty>;
-    Thursday?: Map<string, AWSStringProperty>;
-    Tuesday?: Map<string, AWSStringProperty>;
-    Wednesday?: Map<string, AWSStringProperty>;
+    Friday?: {
+        [key: string]: AWSStringProperty;
+    };
+    Monday?: {
+        [key: string]: AWSStringProperty;
+    };
+    Saturday?: {
+        [key: string]: AWSStringProperty;
+    };
+    Sunday?: {
+        [key: string]: AWSStringProperty;
+    };
+    Thursday?: {
+        [key: string]: AWSStringProperty;
+    };
+    Tuesday?: {
+        [key: string]: AWSStringProperty;
+    };
+    Wednesday?: {
+        [key: string]: AWSStringProperty;
+    };
 }

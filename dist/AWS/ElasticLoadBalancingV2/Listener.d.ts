@@ -11,7 +11,9 @@ export interface Listener_ResourceProperties extends AWSResourceProperties {
     SslPolicy?: AWSStringProperty;
 }
 export interface Listener_AuthenticateOidcConfig {
-    AuthenticationRequestExtraParams?: Map<string, AWSStringProperty>;
+    AuthenticationRequestExtraParams?: {
+        [key: string]: AWSStringProperty;
+    };
     AuthorizationEndpoint: AWSStringProperty;
     ClientId: AWSStringProperty;
     ClientSecret: AWSStringProperty;
@@ -24,7 +26,9 @@ export interface Listener_AuthenticateOidcConfig {
     UserInfoEndpoint: AWSStringProperty;
 }
 export interface Listener_AuthenticateCognitoConfig {
-    AuthenticationRequestExtraParams?: Map<string, AWSStringProperty>;
+    AuthenticationRequestExtraParams?: {
+        [key: string]: AWSStringProperty;
+    };
     OnUnauthenticatedRequest?: AWSStringProperty;
     Scope?: AWSStringProperty;
     SessionCookieName?: AWSStringProperty;

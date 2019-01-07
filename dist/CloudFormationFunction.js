@@ -32,6 +32,18 @@ function Join(delimiter, parts) {
     };
 }
 exports.Join = Join;
+function ImportValue(name) {
+    return {
+        "Fn::ImportValue": name
+    };
+}
+exports.ImportValue = ImportValue;
+function Split(delimiter, value) {
+    return {
+        "Fn::Split": [delimiter, value]
+    };
+}
+exports.Split = Split;
 function FindInMap(mapName, topKey, key) {
     return {
         "Fn::FindInMap": [mapName, topKey, key]

@@ -17,8 +17,12 @@ export interface TaskDefinition_ResourceProperties extends AWSResourceProperties
 export interface TaskDefinition_DockerVolumeConfiguration {
     Autoprovision?: boolean;
     Driver?: AWSStringProperty;
-    DriverOpts?: Map<string, AWSStringProperty>;
-    Labels?: Map<string, AWSStringProperty>;
+    DriverOpts?: {
+        [key: string]: AWSStringProperty;
+    };
+    Labels?: {
+        [key: string]: AWSStringProperty;
+    };
     Scope?: AWSStringProperty;
 }
 export interface TaskDefinition_ContainerDefinition {
@@ -27,7 +31,9 @@ export interface TaskDefinition_ContainerDefinition {
     DisableNetworking?: boolean;
     DnsSearchDomains?: AWSStringListProperty;
     DnsServers?: AWSStringListProperty;
-    DockerLabels?: Map<string, AWSStringProperty>;
+    DockerLabels?: {
+        [key: string]: AWSStringProperty;
+    };
     DockerSecurityOptions?: AWSStringListProperty;
     EntryPoint?: AWSStringListProperty;
     Environment?: TaskDefinition_KeyValuePair[];
@@ -54,7 +60,9 @@ export interface TaskDefinition_ContainerDefinition {
 }
 export interface TaskDefinition_LogConfiguration {
     LogDriver: AWSStringProperty;
-    Options?: Map<string, AWSStringProperty>;
+    Options?: {
+        [key: string]: AWSStringProperty;
+    };
 }
 export interface TaskDefinition_Device {
     ContainerPath?: AWSStringProperty;

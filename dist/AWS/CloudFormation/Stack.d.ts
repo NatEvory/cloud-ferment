@@ -4,7 +4,9 @@ export declare class Stack extends AWSResource<Stack_ResourceProperties> {
 }
 export interface Stack_ResourceProperties extends AWSResourceProperties {
     NotificationARNs?: AWSStringListProperty;
-    Parameters?: Map<string, AWSStringProperty>;
+    Parameters?: {
+        [key: string]: AWSStringProperty;
+    };
     Tags?: Tag[];
     TemplateURL: AWSStringProperty;
     TimeoutInMinutes?: number;

@@ -4,7 +4,9 @@ export declare class Domain extends AWSResource<Domain_ResourceProperties> {
 }
 export interface Domain_ResourceProperties extends AWSResourceProperties {
     AccessPolicies?: any;
-    AdvancedOptions?: Map<string, AWSStringProperty>;
+    AdvancedOptions?: {
+        [key: string]: AWSStringProperty;
+    };
     DomainName?: AWSStringProperty;
     EBSOptions?: Domain_EBSOptions;
     ElasticsearchClusterConfig?: Domain_ElasticsearchClusterConfig;

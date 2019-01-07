@@ -5,6 +5,8 @@ export declare class DBParameterGroup extends AWSResource<DBParameterGroup_Resou
 export interface DBParameterGroup_ResourceProperties extends AWSResourceProperties {
     Description: AWSStringProperty;
     Family: AWSStringProperty;
-    Parameters?: Map<string, AWSStringProperty>;
+    Parameters?: {
+        [key: string]: AWSStringProperty;
+    };
     Tags?: Tag[];
 }

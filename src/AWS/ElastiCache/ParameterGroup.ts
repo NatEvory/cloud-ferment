@@ -10,6 +10,6 @@ export class ParameterGroup extends AWSResource<ParameterGroup_ResourcePropertie
 export interface ParameterGroup_ResourceProperties extends AWSResourceProperties {
 	CacheParameterGroupFamily:AWSStringProperty;
 	Description:AWSStringProperty;
-	Properties?:Map<string,AWSStringProperty>;
+	Properties?:{[key:string]:AWSStringProperty};
 
 }

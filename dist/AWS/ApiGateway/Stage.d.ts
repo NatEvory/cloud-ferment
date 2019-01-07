@@ -16,7 +16,9 @@ export interface Stage_ResourceProperties extends AWSResourceProperties {
     StageName?: AWSStringProperty;
     Tags?: Tag[];
     TracingEnabled?: boolean;
-    Variables?: Map<string, AWSStringProperty>;
+    Variables?: {
+        [key: string]: AWSStringProperty;
+    };
 }
 export interface Stage_MethodSetting {
     CacheDataEncrypted?: boolean;
@@ -33,7 +35,9 @@ export interface Stage_MethodSetting {
 export interface Stage_CanarySetting {
     DeploymentId?: AWSStringProperty;
     PercentTraffic?: number;
-    StageVariableOverrides?: Map<string, AWSStringProperty>;
+    StageVariableOverrides?: {
+        [key: string]: AWSStringProperty;
+    };
     UseStageCache?: boolean;
 }
 export interface Stage_AccessLogSetting {

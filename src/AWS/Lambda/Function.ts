@@ -47,6 +47,6 @@ export interface Function_Code {
 
 }
 export interface Function_Environment {
-	Variables?:Map<string,AWSStringProperty>;
+	Variables?:{[key:string]:AWSStringProperty};
 
 }

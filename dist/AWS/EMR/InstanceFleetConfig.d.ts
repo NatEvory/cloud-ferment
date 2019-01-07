@@ -23,7 +23,9 @@ export interface InstanceFleetConfig_SpotProvisioningSpecification {
 }
 export interface InstanceFleetConfig_Configuration {
     Classification?: AWSStringProperty;
-    ConfigurationProperties?: Map<string, AWSStringProperty>;
+    ConfigurationProperties?: {
+        [key: string]: AWSStringProperty;
+    };
     Configurations?: InstanceFleetConfig_Configuration[];
 }
 export interface InstanceFleetConfig_EbsConfiguration {

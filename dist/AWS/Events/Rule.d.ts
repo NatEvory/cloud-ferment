@@ -34,7 +34,9 @@ export interface Rule_RunCommandTarget {
     Values: AWSStringListProperty;
 }
 export interface Rule_InputTransformer {
-    InputPathsMap?: Map<string, AWSStringProperty>;
+    InputPathsMap?: {
+        [key: string]: AWSStringProperty;
+    };
     InputTemplate: AWSStringProperty;
 }
 export interface Rule_KinesisParameters {

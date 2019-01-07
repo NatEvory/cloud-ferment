@@ -9,7 +9,7 @@ export class App extends AWSResource<App_ResourceProperties> {
 
 export interface App_ResourceProperties extends AWSResourceProperties {
 	AppSource?:App_Source;
-	Attributes?:Map<string,AWSStringProperty>;
+	Attributes?:{[key:string]:AWSStringProperty};
 	DataSources?:App_DataSource[];
 	Description?:AWSStringProperty;
 	Domains?:AWSStringListProperty;

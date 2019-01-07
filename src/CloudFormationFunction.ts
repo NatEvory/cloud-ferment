@@ -32,6 +32,18 @@ export function Join( delimiter:string, parts:AWSStringListProperty ):CloudForma
 	}
 }
 
+export function ImportValue(name:string){
+	return {
+		"Fn::ImportValue":name
+	}
+}
+
+export function Split( delimiter:string, value:AWSStringProperty ):CloudFormationFunctionResult {
+	return {
+		"Fn::Split":[delimiter,value]
+	}
+}
+
 export function FindInMap(mapName:string,topKey:AWSStringProperty,key:AWSStringProperty):CloudFormationFunctionResult{
 	return {
 		"Fn::FindInMap":[mapName,topKey,key]
