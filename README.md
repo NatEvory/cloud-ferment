@@ -1,5 +1,5 @@
 # Cloud-Ferment
-A project to generate AWS CloudFormation Templates with TypeScript.
+A project to generate AWS CloudFormation Templates with TypeScript. The classes and interfaces for AWS services are automatically generated from [Amazon's Resource Specification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-resource-specification.html) (currently us-east-1)
 
 
 ## Example Usage
