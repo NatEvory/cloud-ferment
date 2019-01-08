@@ -1,6 +1,6 @@
 {
   "name": "cloud-ferment",
-  "version": "0.0.2-SNAPSHOT",
+  "version": "0.0.2",
   "description": "A library to make AWS Cloud Formation easier",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
