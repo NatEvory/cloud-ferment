@@ -42,7 +42,7 @@ export class CloudFormationTemplate{
 			}
 			let dependsOn = resource.getDependencies();
 			if(dependsOn && dependsOn.length>0){
-				output.DependsOn = dependsOn;
+				output[resource.name].DependsOn = dependsOn;
 			}
 		})
 		return output;
