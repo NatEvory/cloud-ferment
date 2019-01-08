@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VPCGatewayAttachment = /** @class */ (function (_super) {
     __extends(VPCGatewayAttachment, _super);
-    function VPCGatewayAttachment(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::VPCGatewayAttachment") || this;
+    function VPCGatewayAttachment(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::VPCGatewayAttachment", dependsOn) || this;
     }
     return VPCGatewayAttachment;
 }(AWSResource_1.AWSResource));

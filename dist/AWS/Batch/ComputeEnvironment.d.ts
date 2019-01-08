@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ComputeEnvironment extends AWSResource<ComputeEnvironment_ResourceProperties> {
-    constructor(name: string, properties: ComputeEnvironment_ResourceProperties);
+    constructor(name: string, properties: ComputeEnvironment_ResourceProperties, dependsOn?: string[]);
 }
 export interface ComputeEnvironment_ResourceProperties extends AWSResourceProperties {
     Type: AWSStringProperty;

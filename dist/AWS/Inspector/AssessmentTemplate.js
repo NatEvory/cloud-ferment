@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var AssessmentTemplate = /** @class */ (function (_super) {
     __extends(AssessmentTemplate, _super);
-    function AssessmentTemplate(name, properties) {
-        return _super.call(this, name, properties, "AWS::Inspector::AssessmentTemplate") || this;
+    function AssessmentTemplate(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Inspector::AssessmentTemplate", dependsOn) || this;
     }
     return AssessmentTemplate;
 }(AWSResource_1.AWSResource));

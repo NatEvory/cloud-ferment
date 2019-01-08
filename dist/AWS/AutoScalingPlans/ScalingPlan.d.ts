@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ScalingPlan extends AWSResource<ScalingPlan_ResourceProperties> {
-    constructor(name: string, properties: ScalingPlan_ResourceProperties);
+    constructor(name: string, properties: ScalingPlan_ResourceProperties, dependsOn?: string[]);
 }
 export interface ScalingPlan_ResourceProperties extends AWSResourceProperties {
     ApplicationSource: ScalingPlan_ApplicationSource;

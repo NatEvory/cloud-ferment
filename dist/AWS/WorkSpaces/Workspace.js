@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Workspace = /** @class */ (function (_super) {
     __extends(Workspace, _super);
-    function Workspace(name, properties) {
-        return _super.call(this, name, properties, "AWS::WorkSpaces::Workspace") || this;
+    function Workspace(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::WorkSpaces::Workspace", dependsOn) || this;
     }
     return Workspace;
 }(AWSResource_1.AWSResource));

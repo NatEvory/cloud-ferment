@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var EventSubscription = /** @class */ (function (_super) {
     __extends(EventSubscription, _super);
-    function EventSubscription(name, properties) {
-        return _super.call(this, name, properties, "AWS::RDS::EventSubscription") || this;
+    function EventSubscription(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::RDS::EventSubscription", dependsOn) || this;
     }
     return EventSubscription;
 }(AWSResource_1.AWSResource));

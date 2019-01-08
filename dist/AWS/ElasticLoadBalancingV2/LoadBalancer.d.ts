@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class LoadBalancer extends AWSResource<LoadBalancer_ResourceProperties> {
-    constructor(name: string, properties: LoadBalancer_ResourceProperties);
+    constructor(name: string, properties: LoadBalancer_ResourceProperties, dependsOn?: string[]);
 }
 export interface LoadBalancer_ResourceProperties extends AWSResourceProperties {
     IpAddressType?: AWSStringProperty;

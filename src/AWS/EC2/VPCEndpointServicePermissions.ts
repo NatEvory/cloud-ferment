@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VPCEndpointServicePermissions extends AWSResource<VPCEndpointServicePermissions_ResourceProperties> {
-	constructor(name:string,properties:VPCEndpointServicePermissions_ResourceProperties){
-		super(name,properties,"AWS::EC2::VPCEndpointServicePermissions");
+	constructor(name:string,properties:VPCEndpointServicePermissions_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::VPCEndpointServicePermissions",dependsOn);
 	}
 }
 

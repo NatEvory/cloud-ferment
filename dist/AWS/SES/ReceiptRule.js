@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ReceiptRule = /** @class */ (function (_super) {
     __extends(ReceiptRule, _super);
-    function ReceiptRule(name, properties) {
-        return _super.call(this, name, properties, "AWS::SES::ReceiptRule") || this;
+    function ReceiptRule(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SES::ReceiptRule", dependsOn) || this;
     }
     return ReceiptRule;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ScalingPlan = /** @class */ (function (_super) {
     __extends(ScalingPlan, _super);
-    function ScalingPlan(name, properties) {
-        return _super.call(this, name, properties, "AWS::AutoScalingPlans::ScalingPlan") || this;
+    function ScalingPlan(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AutoScalingPlans::ScalingPlan", dependsOn) || this;
     }
     return ScalingPlan;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var LaunchConfiguration = /** @class */ (function (_super) {
     __extends(LaunchConfiguration, _super);
-    function LaunchConfiguration(name, properties) {
-        return _super.call(this, name, properties, "AWS::AutoScaling::LaunchConfiguration") || this;
+    function LaunchConfiguration(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AutoScaling::LaunchConfiguration", dependsOn) || this;
     }
     return LaunchConfiguration;
 }(AWSResource_1.AWSResource));

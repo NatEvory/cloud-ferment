@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Fleet = /** @class */ (function (_super) {
     __extends(Fleet, _super);
-    function Fleet(name, properties) {
-        return _super.call(this, name, properties, "AWS::GameLift::Fleet") || this;
+    function Fleet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::GameLift::Fleet", dependsOn) || this;
     }
     return Fleet;
 }(AWSResource_1.AWSResource));

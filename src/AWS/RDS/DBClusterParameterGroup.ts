@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DBClusterParameterGroup extends AWSResource<DBClusterParameterGroup_ResourceProperties> {
-	constructor(name:string,properties:DBClusterParameterGroup_ResourceProperties){
-		super(name,properties,"AWS::RDS::DBClusterParameterGroup");
+	constructor(name:string,properties:DBClusterParameterGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::RDS::DBClusterParameterGroup",dependsOn);
 	}
 }
 

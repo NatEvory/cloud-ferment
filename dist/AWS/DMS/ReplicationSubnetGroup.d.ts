@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ReplicationSubnetGroup extends AWSResource<ReplicationSubnetGroup_ResourceProperties> {
-    constructor(name: string, properties: ReplicationSubnetGroup_ResourceProperties);
+    constructor(name: string, properties: ReplicationSubnetGroup_ResourceProperties, dependsOn?: string[]);
 }
 export interface ReplicationSubnetGroup_ResourceProperties extends AWSResourceProperties {
     ReplicationSubnetGroupDescription: AWSStringProperty;

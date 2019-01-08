@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var RecordSet = /** @class */ (function (_super) {
     __extends(RecordSet, _super);
-    function RecordSet(name, properties) {
-        return _super.call(this, name, properties, "AWS::Route53::RecordSet") || this;
+    function RecordSet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Route53::RecordSet", dependsOn) || this;
     }
     return RecordSet;
 }(AWSResource_1.AWSResource));

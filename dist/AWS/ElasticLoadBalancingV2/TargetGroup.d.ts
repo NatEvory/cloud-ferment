@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class TargetGroup extends AWSResource<TargetGroup_ResourceProperties> {
-    constructor(name: string, properties: TargetGroup_ResourceProperties);
+    constructor(name: string, properties: TargetGroup_ResourceProperties, dependsOn?: string[]);
 }
 export interface TargetGroup_ResourceProperties extends AWSResourceProperties {
     HealthCheckIntervalSeconds?: number;

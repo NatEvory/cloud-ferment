@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var MicrosoftAD = /** @class */ (function (_super) {
     __extends(MicrosoftAD, _super);
-    function MicrosoftAD(name, properties) {
-        return _super.call(this, name, properties, "AWS::DirectoryService::MicrosoftAD") || this;
+    function MicrosoftAD(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::DirectoryService::MicrosoftAD", dependsOn) || this;
     }
     return MicrosoftAD;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Authorizer extends AWSResource<Authorizer_ResourceProperties> {
-	constructor(name:string,properties:Authorizer_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::Authorizer");
+	constructor(name:string,properties:Authorizer_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::Authorizer",dependsOn);
 	}
 }
 

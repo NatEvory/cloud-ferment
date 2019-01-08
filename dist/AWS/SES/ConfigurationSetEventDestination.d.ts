@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ConfigurationSetEventDestination extends AWSResource<ConfigurationSetEventDestination_ResourceProperties> {
-    constructor(name: string, properties: ConfigurationSetEventDestination_ResourceProperties);
+    constructor(name: string, properties: ConfigurationSetEventDestination_ResourceProperties, dependsOn?: string[]);
 }
 export interface ConfigurationSetEventDestination_ResourceProperties extends AWSResourceProperties {
     ConfigurationSetName: AWSStringProperty;

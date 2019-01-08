@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Association extends AWSResource<Association_ResourceProperties> {
-	constructor(name:string,properties:Association_ResourceProperties){
-		super(name,properties,"AWS::SSM::Association");
+	constructor(name:string,properties:Association_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SSM::Association",dependsOn);
 	}
 }
 

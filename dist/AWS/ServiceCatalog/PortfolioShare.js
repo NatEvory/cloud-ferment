@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var PortfolioShare = /** @class */ (function (_super) {
     __extends(PortfolioShare, _super);
-    function PortfolioShare(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceCatalog::PortfolioShare") || this;
+    function PortfolioShare(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceCatalog::PortfolioShare", dependsOn) || this;
     }
     return PortfolioShare;
 }(AWSResource_1.AWSResource));

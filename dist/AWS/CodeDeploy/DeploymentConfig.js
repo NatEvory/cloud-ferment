@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DeploymentConfig = /** @class */ (function (_super) {
     __extends(DeploymentConfig, _super);
-    function DeploymentConfig(name, properties) {
-        return _super.call(this, name, properties, "AWS::CodeDeploy::DeploymentConfig") || this;
+    function DeploymentConfig(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CodeDeploy::DeploymentConfig", dependsOn) || this;
     }
     return DeploymentConfig;
 }(AWSResource_1.AWSResource));

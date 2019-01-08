@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ApplicationVersion extends AWSResource<ApplicationVersion_ResourceProperties> {
-	constructor(name:string,properties:ApplicationVersion_ResourceProperties){
-		super(name,properties,"AWS::ElasticBeanstalk::ApplicationVersion");
+	constructor(name:string,properties:ApplicationVersion_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElasticBeanstalk::ApplicationVersion",dependsOn);
 	}
 }
 

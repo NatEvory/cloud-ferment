@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DBSubnetGroup extends AWSResource<DBSubnetGroup_ResourceProperties> {
-	constructor(name:string,properties:DBSubnetGroup_ResourceProperties){
-		super(name,properties,"AWS::RDS::DBSubnetGroup");
+	constructor(name:string,properties:DBSubnetGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::RDS::DBSubnetGroup",dependsOn);
 	}
 }
 

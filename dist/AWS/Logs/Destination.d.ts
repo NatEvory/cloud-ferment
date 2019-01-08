@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Destination extends AWSResource<Destination_ResourceProperties> {
-    constructor(name: string, properties: Destination_ResourceProperties);
+    constructor(name: string, properties: Destination_ResourceProperties, dependsOn?: string[]);
 }
 export interface Destination_ResourceProperties extends AWSResourceProperties {
     DestinationName: AWSStringProperty;

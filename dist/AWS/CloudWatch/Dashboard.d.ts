@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Dashboard extends AWSResource<Dashboard_ResourceProperties> {
-    constructor(name: string, properties: Dashboard_ResourceProperties);
+    constructor(name: string, properties: Dashboard_ResourceProperties, dependsOn?: string[]);
 }
 export interface Dashboard_ResourceProperties extends AWSResourceProperties {
     DashboardName?: AWSStringProperty;

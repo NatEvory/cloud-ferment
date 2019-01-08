@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VPCCidrBlock = /** @class */ (function (_super) {
     __extends(VPCCidrBlock, _super);
-    function VPCCidrBlock(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::VPCCidrBlock") || this;
+    function VPCCidrBlock(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::VPCCidrBlock", dependsOn) || this;
     }
     return VPCCidrBlock;
 }(AWSResource_1.AWSResource));

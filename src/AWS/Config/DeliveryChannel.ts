@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DeliveryChannel extends AWSResource<DeliveryChannel_ResourceProperties> {
-	constructor(name:string,properties:DeliveryChannel_ResourceProperties){
-		super(name,properties,"AWS::Config::DeliveryChannel");
+	constructor(name:string,properties:DeliveryChannel_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Config::DeliveryChannel",dependsOn);
 	}
 }
 

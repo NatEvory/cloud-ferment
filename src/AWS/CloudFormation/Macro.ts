@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Macro extends AWSResource<Macro_ResourceProperties> {
-	constructor(name:string,properties:Macro_ResourceProperties){
-		super(name,properties,"AWS::CloudFormation::Macro");
+	constructor(name:string,properties:Macro_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudFormation::Macro",dependsOn);
 	}
 }
 

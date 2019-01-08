@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Template extends AWSResource<Template_ResourceProperties> {
-    constructor(name: string, properties: Template_ResourceProperties);
+    constructor(name: string, properties: Template_ResourceProperties, dependsOn?: string[]);
 }
 export interface Template_ResourceProperties extends AWSResourceProperties {
     Template?: Template_Template;

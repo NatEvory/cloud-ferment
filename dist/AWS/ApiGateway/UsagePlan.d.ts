@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class UsagePlan extends AWSResource<UsagePlan_ResourceProperties> {
-    constructor(name: string, properties: UsagePlan_ResourceProperties);
+    constructor(name: string, properties: UsagePlan_ResourceProperties, dependsOn?: string[]);
 }
 export interface UsagePlan_ResourceProperties extends AWSResourceProperties {
     ApiStages?: UsagePlan_ApiStage[];

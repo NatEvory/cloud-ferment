@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VPCPeeringConnection extends AWSResource<VPCPeeringConnection_ResourceProperties> {
-	constructor(name:string,properties:VPCPeeringConnection_ResourceProperties){
-		super(name,properties,"AWS::EC2::VPCPeeringConnection");
+	constructor(name:string,properties:VPCPeeringConnection_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::VPCPeeringConnection",dependsOn);
 	}
 }
 

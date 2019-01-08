@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Dataset extends AWSResource<Dataset_ResourceProperties> {
-	constructor(name:string,properties:Dataset_ResourceProperties){
-		super(name,properties,"AWS::IoTAnalytics::Dataset");
+	constructor(name:string,properties:Dataset_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoTAnalytics::Dataset",dependsOn);
 	}
 }
 

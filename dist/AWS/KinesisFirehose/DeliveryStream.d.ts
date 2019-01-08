@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class DeliveryStream extends AWSResource<DeliveryStream_ResourceProperties> {
-    constructor(name: string, properties: DeliveryStream_ResourceProperties);
+    constructor(name: string, properties: DeliveryStream_ResourceProperties, dependsOn?: string[]);
 }
 export interface DeliveryStream_ResourceProperties extends AWSResourceProperties {
     DeliveryStreamName?: AWSStringProperty;

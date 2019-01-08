@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var CloudFormationProvisionedProduct = /** @class */ (function (_super) {
     __extends(CloudFormationProvisionedProduct, _super);
-    function CloudFormationProvisionedProduct(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceCatalog::CloudFormationProvisionedProduct") || this;
+    function CloudFormationProvisionedProduct(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceCatalog::CloudFormationProvisionedProduct", dependsOn) || this;
     }
     return CloudFormationProvisionedProduct;
 }(AWSResource_1.AWSResource));

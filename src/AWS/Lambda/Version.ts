@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Version extends AWSResource<Version_ResourceProperties> {
-	constructor(name:string,properties:Version_ResourceProperties){
-		super(name,properties,"AWS::Lambda::Version");
+	constructor(name:string,properties:Version_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Lambda::Version",dependsOn);
 	}
 }
 

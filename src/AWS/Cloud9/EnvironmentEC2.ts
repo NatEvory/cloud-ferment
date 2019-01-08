@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class EnvironmentEC2 extends AWSResource<EnvironmentEC2_ResourceProperties> {
-	constructor(name:string,properties:EnvironmentEC2_ResourceProperties){
-		super(name,properties,"AWS::Cloud9::EnvironmentEC2");
+	constructor(name:string,properties:EnvironmentEC2_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Cloud9::EnvironmentEC2",dependsOn);
 	}
 }
 

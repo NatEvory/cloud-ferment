@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VpcLink extends AWSResource<VpcLink_ResourceProperties> {
-	constructor(name:string,properties:VpcLink_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::VpcLink");
+	constructor(name:string,properties:VpcLink_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::VpcLink",dependsOn);
 	}
 }
 

@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Table extends AWSResource<Table_ResourceProperties> {
-    constructor(name: string, properties: Table_ResourceProperties);
+    constructor(name: string, properties: Table_ResourceProperties, dependsOn?: string[]);
 }
 export interface Table_ResourceProperties extends AWSResourceProperties {
     AttributeDefinitions?: Table_AttributeDefinition[];

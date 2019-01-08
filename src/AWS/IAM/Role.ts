@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Role extends AWSResource<Role_ResourceProperties> {
-	constructor(name:string,properties:Role_ResourceProperties){
-		super(name,properties,"AWS::IAM::Role");
+	constructor(name:string,properties:Role_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IAM::Role",dependsOn);
 	}
 }
 

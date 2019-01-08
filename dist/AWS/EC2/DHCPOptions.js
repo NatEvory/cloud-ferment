@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DHCPOptions = /** @class */ (function (_super) {
     __extends(DHCPOptions, _super);
-    function DHCPOptions(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::DHCPOptions") || this;
+    function DHCPOptions(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::DHCPOptions", dependsOn) || this;
     }
     return DHCPOptions;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var GatewayResponse = /** @class */ (function (_super) {
     __extends(GatewayResponse, _super);
-    function GatewayResponse(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::GatewayResponse") || this;
+    function GatewayResponse(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::GatewayResponse", dependsOn) || this;
     }
     return GatewayResponse;
 }(AWSResource_1.AWSResource));

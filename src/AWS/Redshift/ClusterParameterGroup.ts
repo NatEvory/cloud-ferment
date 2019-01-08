@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ClusterParameterGroup extends AWSResource<ClusterParameterGroup_ResourceProperties> {
-	constructor(name:string,properties:ClusterParameterGroup_ResourceProperties){
-		super(name,properties,"AWS::Redshift::ClusterParameterGroup");
+	constructor(name:string,properties:ClusterParameterGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Redshift::ClusterParameterGroup",dependsOn);
 	}
 }
 

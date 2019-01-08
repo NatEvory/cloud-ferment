@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class RestApi extends AWSResource<RestApi_ResourceProperties> {
-	constructor(name:string,properties:RestApi_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::RestApi");
+	constructor(name:string,properties:RestApi_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::RestApi",dependsOn);
 	}
 }
 

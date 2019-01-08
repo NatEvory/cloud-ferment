@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Partition extends AWSResource<Partition_ResourceProperties> {
-	constructor(name:string,properties:Partition_ResourceProperties){
-		super(name,properties,"AWS::Glue::Partition");
+	constructor(name:string,properties:Partition_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::Partition",dependsOn);
 	}
 }
 

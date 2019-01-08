@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var AggregationAuthorization = /** @class */ (function (_super) {
     __extends(AggregationAuthorization, _super);
-    function AggregationAuthorization(name, properties) {
-        return _super.call(this, name, properties, "AWS::Config::AggregationAuthorization") || this;
+    function AggregationAuthorization(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Config::AggregationAuthorization", dependsOn) || this;
     }
     return AggregationAuthorization;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class CacheCluster extends AWSResource<CacheCluster_ResourceProperties> {
-	constructor(name:string,properties:CacheCluster_ResourceProperties){
-		super(name,properties,"AWS::ElastiCache::CacheCluster");
+	constructor(name:string,properties:CacheCluster_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElastiCache::CacheCluster",dependsOn);
 	}
 }
 

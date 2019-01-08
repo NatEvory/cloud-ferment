@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class FlowLog extends AWSResource<FlowLog_ResourceProperties> {
-	constructor(name:string,properties:FlowLog_ResourceProperties){
-		super(name,properties,"AWS::EC2::FlowLog");
+	constructor(name:string,properties:FlowLog_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::FlowLog",dependsOn);
 	}
 }
 

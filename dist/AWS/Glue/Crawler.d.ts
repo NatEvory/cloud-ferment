@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Crawler extends AWSResource<Crawler_ResourceProperties> {
-    constructor(name: string, properties: Crawler_ResourceProperties);
+    constructor(name: string, properties: Crawler_ResourceProperties, dependsOn?: string[]);
 }
 export interface Crawler_ResourceProperties extends AWSResourceProperties {
     Role: AWSStringProperty;

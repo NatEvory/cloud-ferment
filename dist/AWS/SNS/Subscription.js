@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Subscription = /** @class */ (function (_super) {
     __extends(Subscription, _super);
-    function Subscription(name, properties) {
-        return _super.call(this, name, properties, "AWS::SNS::Subscription") || this;
+    function Subscription(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SNS::Subscription", dependsOn) || this;
     }
     return Subscription;
 }(AWSResource_1.AWSResource));

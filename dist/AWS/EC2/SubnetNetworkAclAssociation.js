@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SubnetNetworkAclAssociation = /** @class */ (function (_super) {
     __extends(SubnetNetworkAclAssociation, _super);
-    function SubnetNetworkAclAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::SubnetNetworkAclAssociation") || this;
+    function SubnetNetworkAclAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::SubnetNetworkAclAssociation", dependsOn) || this;
     }
     return SubnetNetworkAclAssociation;
 }(AWSResource_1.AWSResource));

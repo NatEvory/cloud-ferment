@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Connection extends AWSResource<Connection_ResourceProperties> {
-    constructor(name: string, properties: Connection_ResourceProperties);
+    constructor(name: string, properties: Connection_ResourceProperties, dependsOn?: string[]);
 }
 export interface Connection_ResourceProperties extends AWSResourceProperties {
     ConnectionInput: Connection_ConnectionInput;

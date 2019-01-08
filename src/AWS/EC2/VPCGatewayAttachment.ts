@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VPCGatewayAttachment extends AWSResource<VPCGatewayAttachment_ResourceProperties> {
-	constructor(name:string,properties:VPCGatewayAttachment_ResourceProperties){
-		super(name,properties,"AWS::EC2::VPCGatewayAttachment");
+	constructor(name:string,properties:VPCGatewayAttachment_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::VPCGatewayAttachment",dependsOn);
 	}
 }
 

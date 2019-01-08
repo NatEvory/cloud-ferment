@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ReceiptRule extends AWSResource<ReceiptRule_ResourceProperties> {
-    constructor(name: string, properties: ReceiptRule_ResourceProperties);
+    constructor(name: string, properties: ReceiptRule_ResourceProperties, dependsOn?: string[]);
 }
 export interface ReceiptRule_ResourceProperties extends AWSResourceProperties {
     After?: AWSStringProperty;

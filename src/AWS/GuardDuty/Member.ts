@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Member extends AWSResource<Member_ResourceProperties> {
-	constructor(name:string,properties:Member_ResourceProperties){
-		super(name,properties,"AWS::GuardDuty::Member");
+	constructor(name:string,properties:Member_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::GuardDuty::Member",dependsOn);
 	}
 }
 

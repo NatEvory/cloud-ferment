@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Queue extends AWSResource<Queue_ResourceProperties> {
-    constructor(name: string, properties: Queue_ResourceProperties);
+    constructor(name: string, properties: Queue_ResourceProperties, dependsOn?: string[]);
 }
 export interface Queue_ResourceProperties extends AWSResourceProperties {
     ContentBasedDeduplication?: boolean;

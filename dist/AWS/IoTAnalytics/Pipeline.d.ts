@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Pipeline extends AWSResource<Pipeline_ResourceProperties> {
-    constructor(name: string, properties: Pipeline_ResourceProperties);
+    constructor(name: string, properties: Pipeline_ResourceProperties, dependsOn?: string[]);
 }
 export interface Pipeline_ResourceProperties extends AWSResourceProperties {
     PipelineName?: AWSStringProperty;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class StreamingDistribution extends AWSResource<StreamingDistribution_ResourceProperties> {
-	constructor(name:string,properties:StreamingDistribution_ResourceProperties){
-		super(name,properties,"AWS::CloudFront::StreamingDistribution");
+	constructor(name:string,properties:StreamingDistribution_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudFront::StreamingDistribution",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class EgressOnlyInternetGateway extends AWSResource<EgressOnlyInternetGateway_ResourceProperties> {
-	constructor(name:string,properties:EgressOnlyInternetGateway_ResourceProperties){
-		super(name,properties,"AWS::EC2::EgressOnlyInternetGateway");
+	constructor(name:string,properties:EgressOnlyInternetGateway_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::EgressOnlyInternetGateway",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var CustomActionType = /** @class */ (function (_super) {
     __extends(CustomActionType, _super);
-    function CustomActionType(name, properties) {
-        return _super.call(this, name, properties, "AWS::CodePipeline::CustomActionType") || this;
+    function CustomActionType(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CodePipeline::CustomActionType", dependsOn) || this;
     }
     return CustomActionType;
 }(AWSResource_1.AWSResource));

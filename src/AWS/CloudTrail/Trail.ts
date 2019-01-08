@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Trail extends AWSResource<Trail_ResourceProperties> {
-	constructor(name:string,properties:Trail_ResourceProperties){
-		super(name,properties,"AWS::CloudTrail::Trail");
+	constructor(name:string,properties:Trail_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudTrail::Trail",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var IdentityPoolRoleAttachment = /** @class */ (function (_super) {
     __extends(IdentityPoolRoleAttachment, _super);
-    function IdentityPoolRoleAttachment(name, properties) {
-        return _super.call(this, name, properties, "AWS::Cognito::IdentityPoolRoleAttachment") || this;
+    function IdentityPoolRoleAttachment(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Cognito::IdentityPoolRoleAttachment", dependsOn) || this;
     }
     return IdentityPoolRoleAttachment;
 }(AWSResource_1.AWSResource));

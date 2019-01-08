@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class GraphQLSchema extends AWSResource<GraphQLSchema_ResourceProperties> {
-	constructor(name:string,properties:GraphQLSchema_ResourceProperties){
-		super(name,properties,"AWS::AppSync::GraphQLSchema");
+	constructor(name:string,properties:GraphQLSchema_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AppSync::GraphQLSchema",dependsOn);
 	}
 }
 

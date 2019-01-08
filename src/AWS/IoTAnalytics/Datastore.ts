@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Datastore extends AWSResource<Datastore_ResourceProperties> {
-	constructor(name:string,properties:Datastore_ResourceProperties){
-		super(name,properties,"AWS::IoTAnalytics::Datastore");
+	constructor(name:string,properties:Datastore_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoTAnalytics::Datastore",dependsOn);
 	}
 }
 

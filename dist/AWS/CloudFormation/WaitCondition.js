@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var WaitCondition = /** @class */ (function (_super) {
     __extends(WaitCondition, _super);
-    function WaitCondition(name, properties) {
-        return _super.call(this, name, properties, "AWS::CloudFormation::WaitCondition") || this;
+    function WaitCondition(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CloudFormation::WaitCondition", dependsOn) || this;
     }
     return WaitCondition;
 }(AWSResource_1.AWSResource));

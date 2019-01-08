@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var PrivateDnsNamespace = /** @class */ (function (_super) {
     __extends(PrivateDnsNamespace, _super);
-    function PrivateDnsNamespace(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceDiscovery::PrivateDnsNamespace") || this;
+    function PrivateDnsNamespace(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceDiscovery::PrivateDnsNamespace", dependsOn) || this;
     }
     return PrivateDnsNamespace;
 }(AWSResource_1.AWSResource));

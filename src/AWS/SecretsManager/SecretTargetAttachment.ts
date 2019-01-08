@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SecretTargetAttachment extends AWSResource<SecretTargetAttachment_ResourceProperties> {
-	constructor(name:string,properties:SecretTargetAttachment_ResourceProperties){
-		super(name,properties,"AWS::SecretsManager::SecretTargetAttachment");
+	constructor(name:string,properties:SecretTargetAttachment_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SecretsManager::SecretTargetAttachment",dependsOn);
 	}
 }
 

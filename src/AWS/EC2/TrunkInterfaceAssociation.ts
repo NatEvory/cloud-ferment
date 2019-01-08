@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class TrunkInterfaceAssociation extends AWSResource<TrunkInterfaceAssociation_ResourceProperties> {
-	constructor(name:string,properties:TrunkInterfaceAssociation_ResourceProperties){
-		super(name,properties,"AWS::EC2::TrunkInterfaceAssociation");
+	constructor(name:string,properties:TrunkInterfaceAssociation_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::TrunkInterfaceAssociation",dependsOn);
 	}
 }
 

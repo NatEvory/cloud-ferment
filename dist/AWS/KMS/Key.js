@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Key = /** @class */ (function (_super) {
     __extends(Key, _super);
-    function Key(name, properties) {
-        return _super.call(this, name, properties, "AWS::KMS::Key") || this;
+    function Key(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::KMS::Key", dependsOn) || this;
     }
     return Key;
 }(AWSResource_1.AWSResource));

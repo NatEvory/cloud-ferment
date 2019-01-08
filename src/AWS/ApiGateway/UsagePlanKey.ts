@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class UsagePlanKey extends AWSResource<UsagePlanKey_ResourceProperties> {
-	constructor(name:string,properties:UsagePlanKey_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::UsagePlanKey");
+	constructor(name:string,properties:UsagePlanKey_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::UsagePlanKey",dependsOn);
 	}
 }
 

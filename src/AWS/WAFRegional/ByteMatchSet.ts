@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ByteMatchSet extends AWSResource<ByteMatchSet_ResourceProperties> {
-	constructor(name:string,properties:ByteMatchSet_ResourceProperties){
-		super(name,properties,"AWS::WAFRegional::ByteMatchSet");
+	constructor(name:string,properties:ByteMatchSet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::WAFRegional::ByteMatchSet",dependsOn);
 	}
 }
 

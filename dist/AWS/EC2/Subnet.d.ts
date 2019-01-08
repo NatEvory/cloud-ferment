@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Subnet extends AWSResource<Subnet_ResourceProperties> {
-    constructor(name: string, properties: Subnet_ResourceProperties);
+    constructor(name: string, properties: Subnet_ResourceProperties, dependsOn?: string[]);
 }
 export interface Subnet_ResourceProperties extends AWSResourceProperties {
     AssignIpv6AddressOnCreation?: boolean;

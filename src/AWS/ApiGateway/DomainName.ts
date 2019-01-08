@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DomainName extends AWSResource<DomainName_ResourceProperties> {
-	constructor(name:string,properties:DomainName_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::DomainName");
+	constructor(name:string,properties:DomainName_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::DomainName",dependsOn);
 	}
 }
 

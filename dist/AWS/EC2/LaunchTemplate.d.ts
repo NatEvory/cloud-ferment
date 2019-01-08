@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class LaunchTemplate extends AWSResource<LaunchTemplate_ResourceProperties> {
-    constructor(name: string, properties: LaunchTemplate_ResourceProperties);
+    constructor(name: string, properties: LaunchTemplate_ResourceProperties, dependsOn?: string[]);
 }
 export interface LaunchTemplate_ResourceProperties extends AWSResourceProperties {
     LaunchTemplateName?: AWSStringProperty;

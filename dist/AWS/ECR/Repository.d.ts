@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Repository extends AWSResource<Repository_ResourceProperties> {
-    constructor(name: string, properties: Repository_ResourceProperties);
+    constructor(name: string, properties: Repository_ResourceProperties, dependsOn?: string[]);
 }
 export interface Repository_ResourceProperties extends AWSResourceProperties {
     LifecyclePolicy?: Repository_LifecyclePolicy;

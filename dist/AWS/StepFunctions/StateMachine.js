@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var StateMachine = /** @class */ (function (_super) {
     __extends(StateMachine, _super);
-    function StateMachine(name, properties) {
-        return _super.call(this, name, properties, "AWS::StepFunctions::StateMachine") || this;
+    function StateMachine(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::StepFunctions::StateMachine", dependsOn) || this;
     }
     return StateMachine;
 }(AWSResource_1.AWSResource));

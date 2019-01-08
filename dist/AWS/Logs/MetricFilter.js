@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var MetricFilter = /** @class */ (function (_super) {
     __extends(MetricFilter, _super);
-    function MetricFilter(name, properties) {
-        return _super.call(this, name, properties, "AWS::Logs::MetricFilter") || this;
+    function MetricFilter(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Logs::MetricFilter", dependsOn) || this;
     }
     return MetricFilter;
 }(AWSResource_1.AWSResource));

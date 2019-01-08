@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var StreamingDistribution = /** @class */ (function (_super) {
     __extends(StreamingDistribution, _super);
-    function StreamingDistribution(name, properties) {
-        return _super.call(this, name, properties, "AWS::CloudFront::StreamingDistribution") || this;
+    function StreamingDistribution(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CloudFront::StreamingDistribution", dependsOn) || this;
     }
     return StreamingDistribution;
 }(AWSResource_1.AWSResource));

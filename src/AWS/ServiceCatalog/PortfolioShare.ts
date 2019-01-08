@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class PortfolioShare extends AWSResource<PortfolioShare_ResourceProperties> {
-	constructor(name:string,properties:PortfolioShare_ResourceProperties){
-		super(name,properties,"AWS::ServiceCatalog::PortfolioShare");
+	constructor(name:string,properties:PortfolioShare_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ServiceCatalog::PortfolioShare",dependsOn);
 	}
 }
 

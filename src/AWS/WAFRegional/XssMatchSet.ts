@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class XssMatchSet extends AWSResource<XssMatchSet_ResourceProperties> {
-	constructor(name:string,properties:XssMatchSet_ResourceProperties){
-		super(name,properties,"AWS::WAFRegional::XssMatchSet");
+	constructor(name:string,properties:XssMatchSet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::WAFRegional::XssMatchSet",dependsOn);
 	}
 }
 

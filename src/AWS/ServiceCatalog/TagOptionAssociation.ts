@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class TagOptionAssociation extends AWSResource<TagOptionAssociation_ResourceProperties> {
-	constructor(name:string,properties:TagOptionAssociation_ResourceProperties){
-		super(name,properties,"AWS::ServiceCatalog::TagOptionAssociation");
+	constructor(name:string,properties:TagOptionAssociation_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ServiceCatalog::TagOptionAssociation",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var StackFleetAssociation = /** @class */ (function (_super) {
     __extends(StackFleetAssociation, _super);
-    function StackFleetAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppStream::StackFleetAssociation") || this;
+    function StackFleetAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppStream::StackFleetAssociation", dependsOn) || this;
     }
     return StackFleetAssociation;
 }(AWSResource_1.AWSResource));

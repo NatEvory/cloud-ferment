@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Account = /** @class */ (function (_super) {
     __extends(Account, _super);
-    function Account(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::Account") || this;
+    function Account(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::Account", dependsOn) || this;
     }
     return Account;
 }(AWSResource_1.AWSResource));

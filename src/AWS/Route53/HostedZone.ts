@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class HostedZone extends AWSResource<HostedZone_ResourceProperties> {
-	constructor(name:string,properties:HostedZone_ResourceProperties){
-		super(name,properties,"AWS::Route53::HostedZone");
+	constructor(name:string,properties:HostedZone_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Route53::HostedZone",dependsOn);
 	}
 }
 

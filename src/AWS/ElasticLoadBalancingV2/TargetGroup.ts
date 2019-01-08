@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class TargetGroup extends AWSResource<TargetGroup_ResourceProperties> {
-	constructor(name:string,properties:TargetGroup_ResourceProperties){
-		super(name,properties,"AWS::ElasticLoadBalancingV2::TargetGroup");
+	constructor(name:string,properties:TargetGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElasticLoadBalancingV2::TargetGroup",dependsOn);
 	}
 }
 

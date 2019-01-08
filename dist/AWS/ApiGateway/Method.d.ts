@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Method extends AWSResource<Method_ResourceProperties> {
-    constructor(name: string, properties: Method_ResourceProperties);
+    constructor(name: string, properties: Method_ResourceProperties, dependsOn?: string[]);
 }
 export interface Method_ResourceProperties extends AWSResourceProperties {
     ApiKeyRequired?: boolean;

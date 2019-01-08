@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Environment extends AWSResource<Environment_ResourceProperties> {
-    constructor(name: string, properties: Environment_ResourceProperties);
+    constructor(name: string, properties: Environment_ResourceProperties, dependsOn?: string[]);
 }
 export interface Environment_ResourceProperties extends AWSResourceProperties {
     ApplicationName: AWSStringProperty;

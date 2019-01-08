@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Job = /** @class */ (function (_super) {
     __extends(Job, _super);
-    function Job(name, properties) {
-        return _super.call(this, name, properties, "AWS::Glue::Job") || this;
+    function Job(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Glue::Job", dependsOn) || this;
     }
     return Job;
 }(AWSResource_1.AWSResource));

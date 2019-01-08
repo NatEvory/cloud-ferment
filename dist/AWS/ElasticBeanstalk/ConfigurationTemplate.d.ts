@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class ConfigurationTemplate extends AWSResource<ConfigurationTemplate_ResourceProperties> {
-    constructor(name: string, properties: ConfigurationTemplate_ResourceProperties);
+    constructor(name: string, properties: ConfigurationTemplate_ResourceProperties, dependsOn?: string[]);
 }
 export interface ConfigurationTemplate_ResourceProperties extends AWSResourceProperties {
     ApplicationName: AWSStringProperty;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ConfigurationSetEventDestination extends AWSResource<ConfigurationSetEventDestination_ResourceProperties> {
-	constructor(name:string,properties:ConfigurationSetEventDestination_ResourceProperties){
-		super(name,properties,"AWS::SES::ConfigurationSetEventDestination");
+	constructor(name:string,properties:ConfigurationSetEventDestination_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SES::ConfigurationSetEventDestination",dependsOn);
 	}
 }
 

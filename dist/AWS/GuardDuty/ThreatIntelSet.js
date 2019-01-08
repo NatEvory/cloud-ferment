@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ThreatIntelSet = /** @class */ (function (_super) {
     __extends(ThreatIntelSet, _super);
-    function ThreatIntelSet(name, properties) {
-        return _super.call(this, name, properties, "AWS::GuardDuty::ThreatIntelSet") || this;
+    function ThreatIntelSet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::GuardDuty::ThreatIntelSet", dependsOn) || this;
     }
     return ThreatIntelSet;
 }(AWSResource_1.AWSResource));

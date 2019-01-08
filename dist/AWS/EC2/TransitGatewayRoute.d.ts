@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class TransitGatewayRoute extends AWSResource<TransitGatewayRoute_ResourceProperties> {
-    constructor(name: string, properties: TransitGatewayRoute_ResourceProperties);
+    constructor(name: string, properties: TransitGatewayRoute_ResourceProperties, dependsOn?: string[]);
 }
 export interface TransitGatewayRoute_ResourceProperties extends AWSResourceProperties {
     TransitGatewayRouteTableId: AWSStringProperty;

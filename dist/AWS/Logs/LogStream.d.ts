@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class LogStream extends AWSResource<LogStream_ResourceProperties> {
-    constructor(name: string, properties: LogStream_ResourceProperties);
+    constructor(name: string, properties: LogStream_ResourceProperties, dependsOn?: string[]);
 }
 export interface LogStream_ResourceProperties extends AWSResourceProperties {
     LogGroupName: AWSStringProperty;

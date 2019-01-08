@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Rule extends AWSResource<Rule_ResourceProperties> {
-	constructor(name:string,properties:Rule_ResourceProperties){
-		super(name,properties,"AWS::WAFRegional::Rule");
+	constructor(name:string,properties:Rule_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::WAFRegional::Rule",dependsOn);
 	}
 }
 

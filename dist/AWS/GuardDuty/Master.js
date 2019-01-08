@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Master = /** @class */ (function (_super) {
     __extends(Master, _super);
-    function Master(name, properties) {
-        return _super.call(this, name, properties, "AWS::GuardDuty::Master") || this;
+    function Master(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::GuardDuty::Master", dependsOn) || this;
     }
     return Master;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SqlInjectionMatchSet extends AWSResource<SqlInjectionMatchSet_ResourceProperties> {
-	constructor(name:string,properties:SqlInjectionMatchSet_ResourceProperties){
-		super(name,properties,"AWS::WAFRegional::SqlInjectionMatchSet");
+	constructor(name:string,properties:SqlInjectionMatchSet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::WAFRegional::SqlInjectionMatchSet",dependsOn);
 	}
 }
 

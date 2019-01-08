@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var LaunchTemplateConstraint = /** @class */ (function (_super) {
     __extends(LaunchTemplateConstraint, _super);
-    function LaunchTemplateConstraint(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceCatalog::LaunchTemplateConstraint") || this;
+    function LaunchTemplateConstraint(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceCatalog::LaunchTemplateConstraint", dependsOn) || this;
     }
     return LaunchTemplateConstraint;
 }(AWSResource_1.AWSResource));

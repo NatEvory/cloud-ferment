@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Permission = /** @class */ (function (_super) {
     __extends(Permission, _super);
-    function Permission(name, properties) {
-        return _super.call(this, name, properties, "AWS::Lambda::Permission") || this;
+    function Permission(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Lambda::Permission", dependsOn) || this;
     }
     return Permission;
 }(AWSResource_1.AWSResource));

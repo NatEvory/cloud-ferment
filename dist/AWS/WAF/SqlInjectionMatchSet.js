@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SqlInjectionMatchSet = /** @class */ (function (_super) {
     __extends(SqlInjectionMatchSet, _super);
-    function SqlInjectionMatchSet(name, properties) {
-        return _super.call(this, name, properties, "AWS::WAF::SqlInjectionMatchSet") || this;
+    function SqlInjectionMatchSet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::WAF::SqlInjectionMatchSet", dependsOn) || this;
     }
     return SqlInjectionMatchSet;
 }(AWSResource_1.AWSResource));

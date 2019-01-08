@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var StreamConsumer = /** @class */ (function (_super) {
     __extends(StreamConsumer, _super);
-    function StreamConsumer(name, properties) {
-        return _super.call(this, name, properties, "AWS::Kinesis::StreamConsumer") || this;
+    function StreamConsumer(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Kinesis::StreamConsumer", dependsOn) || this;
     }
     return StreamConsumer;
 }(AWSResource_1.AWSResource));

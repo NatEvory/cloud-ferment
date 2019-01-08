@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SubnetRouteTableAssociation extends AWSResource<SubnetRouteTableAssociation_ResourceProperties> {
-	constructor(name:string,properties:SubnetRouteTableAssociation_ResourceProperties){
-		super(name,properties,"AWS::EC2::SubnetRouteTableAssociation");
+	constructor(name:string,properties:SubnetRouteTableAssociation_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::SubnetRouteTableAssociation",dependsOn);
 	}
 }
 

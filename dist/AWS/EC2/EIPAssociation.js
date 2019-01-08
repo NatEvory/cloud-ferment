@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var EIPAssociation = /** @class */ (function (_super) {
     __extends(EIPAssociation, _super);
-    function EIPAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::EIPAssociation") || this;
+    function EIPAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::EIPAssociation", dependsOn) || this;
     }
     return EIPAssociation;
 }(AWSResource_1.AWSResource));

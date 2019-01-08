@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Listener extends AWSResource<Listener_ResourceProperties> {
-	constructor(name:string,properties:Listener_ResourceProperties){
-		super(name,properties,"AWS::ElasticLoadBalancingV2::Listener");
+	constructor(name:string,properties:Listener_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElasticLoadBalancingV2::Listener",dependsOn);
 	}
 }
 

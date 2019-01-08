@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ConfigurationRecorder extends AWSResource<ConfigurationRecorder_ResourceProperties> {
-    constructor(name: string, properties: ConfigurationRecorder_ResourceProperties);
+    constructor(name: string, properties: ConfigurationRecorder_ResourceProperties, dependsOn?: string[]);
 }
 export interface ConfigurationRecorder_ResourceProperties extends AWSResourceProperties {
     Name?: AWSStringProperty;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class UserPool extends AWSResource<UserPool_ResourceProperties> {
-	constructor(name:string,properties:UserPool_ResourceProperties){
-		super(name,properties,"AWS::Cognito::UserPool");
+	constructor(name:string,properties:UserPool_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Cognito::UserPool",dependsOn);
 	}
 }
 

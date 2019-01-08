@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class StateMachine extends AWSResource<StateMachine_ResourceProperties> {
-	constructor(name:string,properties:StateMachine_ResourceProperties){
-		super(name,properties,"AWS::StepFunctions::StateMachine");
+	constructor(name:string,properties:StateMachine_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::StepFunctions::StateMachine",dependsOn);
 	}
 }
 

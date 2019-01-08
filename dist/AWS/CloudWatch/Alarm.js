@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Alarm = /** @class */ (function (_super) {
     __extends(Alarm, _super);
-    function Alarm(name, properties) {
-        return _super.call(this, name, properties, "AWS::CloudWatch::Alarm") || this;
+    function Alarm(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CloudWatch::Alarm", dependsOn) || this;
     }
     return Alarm;
 }(AWSResource_1.AWSResource));

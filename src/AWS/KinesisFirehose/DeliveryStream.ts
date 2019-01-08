@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DeliveryStream extends AWSResource<DeliveryStream_ResourceProperties> {
-	constructor(name:string,properties:DeliveryStream_ResourceProperties){
-		super(name,properties,"AWS::KinesisFirehose::DeliveryStream");
+	constructor(name:string,properties:DeliveryStream_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::KinesisFirehose::DeliveryStream",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Connection = /** @class */ (function (_super) {
     __extends(Connection, _super);
-    function Connection(name, properties) {
-        return _super.call(this, name, properties, "AWS::Glue::Connection") || this;
+    function Connection(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Glue::Connection", dependsOn) || this;
     }
     return Connection;
 }(AWSResource_1.AWSResource));

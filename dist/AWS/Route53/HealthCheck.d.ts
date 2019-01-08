@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class HealthCheck extends AWSResource<HealthCheck_ResourceProperties> {
-    constructor(name: string, properties: HealthCheck_ResourceProperties);
+    constructor(name: string, properties: HealthCheck_ResourceProperties, dependsOn?: string[]);
 }
 export interface HealthCheck_ResourceProperties extends AWSResourceProperties {
     HealthCheckConfig: HealthCheck_HealthCheckConfig;

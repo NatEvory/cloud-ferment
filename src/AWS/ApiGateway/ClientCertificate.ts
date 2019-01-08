@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ClientCertificate extends AWSResource<ClientCertificate_ResourceProperties> {
-	constructor(name:string,properties:ClientCertificate_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::ClientCertificate");
+	constructor(name:string,properties:ClientCertificate_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::ClientCertificate",dependsOn);
 	}
 }
 

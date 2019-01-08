@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ResolverRule = /** @class */ (function (_super) {
     __extends(ResolverRule, _super);
-    function ResolverRule(name, properties) {
-        return _super.call(this, name, properties, "AWS::Route53Resolver::ResolverRule") || this;
+    function ResolverRule(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Route53Resolver::ResolverRule", dependsOn) || this;
     }
     return ResolverRule;
 }(AWSResource_1.AWSResource));

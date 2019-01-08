@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class MicrosoftAD extends AWSResource<MicrosoftAD_ResourceProperties> {
-	constructor(name:string,properties:MicrosoftAD_ResourceProperties){
-		super(name,properties,"AWS::DirectoryService::MicrosoftAD");
+	constructor(name:string,properties:MicrosoftAD_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::DirectoryService::MicrosoftAD",dependsOn);
 	}
 }
 

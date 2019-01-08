@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Stage extends AWSResource<Stage_ResourceProperties> {
-    constructor(name: string, properties: Stage_ResourceProperties);
+    constructor(name: string, properties: Stage_ResourceProperties, dependsOn?: string[]);
 }
 export interface Stage_ResourceProperties extends AWSResourceProperties {
     AccessLogSetting?: Stage_AccessLogSetting;

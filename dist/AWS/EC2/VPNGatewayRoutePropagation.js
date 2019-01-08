@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VPNGatewayRoutePropagation = /** @class */ (function (_super) {
     __extends(VPNGatewayRoutePropagation, _super);
-    function VPNGatewayRoutePropagation(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::VPNGatewayRoutePropagation") || this;
+    function VPNGatewayRoutePropagation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::VPNGatewayRoutePropagation", dependsOn) || this;
     }
     return VPNGatewayRoutePropagation;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ByteMatchSet = /** @class */ (function (_super) {
     __extends(ByteMatchSet, _super);
-    function ByteMatchSet(name, properties) {
-        return _super.call(this, name, properties, "AWS::WAFRegional::ByteMatchSet") || this;
+    function ByteMatchSet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::WAFRegional::ByteMatchSet", dependsOn) || this;
     }
     return ByteMatchSet;
 }(AWSResource_1.AWSResource));

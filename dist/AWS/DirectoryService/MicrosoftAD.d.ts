@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class MicrosoftAD extends AWSResource<MicrosoftAD_ResourceProperties> {
-    constructor(name: string, properties: MicrosoftAD_ResourceProperties);
+    constructor(name: string, properties: MicrosoftAD_ResourceProperties, dependsOn?: string[]);
 }
 export interface MicrosoftAD_ResourceProperties extends AWSResourceProperties {
     CreateAlias?: boolean;

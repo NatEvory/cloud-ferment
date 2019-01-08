@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DeploymentGroup extends AWSResource<DeploymentGroup_ResourceProperties> {
-	constructor(name:string,properties:DeploymentGroup_ResourceProperties){
-		super(name,properties,"AWS::CodeDeploy::DeploymentGroup");
+	constructor(name:string,properties:DeploymentGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CodeDeploy::DeploymentGroup",dependsOn);
 	}
 }
 

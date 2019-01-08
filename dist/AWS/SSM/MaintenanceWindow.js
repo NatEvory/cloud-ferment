@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var MaintenanceWindow = /** @class */ (function (_super) {
     __extends(MaintenanceWindow, _super);
-    function MaintenanceWindow(name, properties) {
-        return _super.call(this, name, properties, "AWS::SSM::MaintenanceWindow") || this;
+    function MaintenanceWindow(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SSM::MaintenanceWindow", dependsOn) || this;
     }
     return MaintenanceWindow;
 }(AWSResource_1.AWSResource));

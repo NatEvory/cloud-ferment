@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class LifecyclePolicy extends AWSResource<LifecyclePolicy_ResourceProperties> {
-	constructor(name:string,properties:LifecyclePolicy_ResourceProperties){
-		super(name,properties,"AWS::DLM::LifecyclePolicy");
+	constructor(name:string,properties:LifecyclePolicy_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::DLM::LifecyclePolicy",dependsOn);
 	}
 }
 

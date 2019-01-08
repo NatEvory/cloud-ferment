@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ClusterSecurityGroupIngress extends AWSResource<ClusterSecurityGroupIngress_ResourceProperties> {
-	constructor(name:string,properties:ClusterSecurityGroupIngress_ResourceProperties){
-		super(name,properties,"AWS::Redshift::ClusterSecurityGroupIngress");
+	constructor(name:string,properties:ClusterSecurityGroupIngress_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Redshift::ClusterSecurityGroupIngress",dependsOn);
 	}
 }
 

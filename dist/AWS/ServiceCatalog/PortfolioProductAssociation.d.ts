@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class PortfolioProductAssociation extends AWSResource<PortfolioProductAssociation_ResourceProperties> {
-    constructor(name: string, properties: PortfolioProductAssociation_ResourceProperties);
+    constructor(name: string, properties: PortfolioProductAssociation_ResourceProperties, dependsOn?: string[]);
 }
 export interface PortfolioProductAssociation_ResourceProperties extends AWSResourceProperties {
     SourcePortfolioId?: AWSStringProperty;

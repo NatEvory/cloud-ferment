@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SimpleAD = /** @class */ (function (_super) {
     __extends(SimpleAD, _super);
-    function SimpleAD(name, properties) {
-        return _super.call(this, name, properties, "AWS::DirectoryService::SimpleAD") || this;
+    function SimpleAD(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::DirectoryService::SimpleAD", dependsOn) || this;
     }
     return SimpleAD;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ReplicationInstance = /** @class */ (function (_super) {
     __extends(ReplicationInstance, _super);
-    function ReplicationInstance(name, properties) {
-        return _super.call(this, name, properties, "AWS::DMS::ReplicationInstance") || this;
+    function ReplicationInstance(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::DMS::ReplicationInstance", dependsOn) || this;
     }
     return ReplicationInstance;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var PatchBaseline = /** @class */ (function (_super) {
     __extends(PatchBaseline, _super);
-    function PatchBaseline(name, properties) {
-        return _super.call(this, name, properties, "AWS::SSM::PatchBaseline") || this;
+    function PatchBaseline(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SSM::PatchBaseline", dependsOn) || this;
     }
     return PatchBaseline;
 }(AWSResource_1.AWSResource));

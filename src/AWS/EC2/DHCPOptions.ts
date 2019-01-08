@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DHCPOptions extends AWSResource<DHCPOptions_ResourceProperties> {
-	constructor(name:string,properties:DHCPOptions_ResourceProperties){
-		super(name,properties,"AWS::EC2::DHCPOptions");
+	constructor(name:string,properties:DHCPOptions_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::DHCPOptions",dependsOn);
 	}
 }
 

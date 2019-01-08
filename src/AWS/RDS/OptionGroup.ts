@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class OptionGroup extends AWSResource<OptionGroup_ResourceProperties> {
-	constructor(name:string,properties:OptionGroup_ResourceProperties){
-		super(name,properties,"AWS::RDS::OptionGroup");
+	constructor(name:string,properties:OptionGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::RDS::OptionGroup",dependsOn);
 	}
 }
 

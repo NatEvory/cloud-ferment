@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var EnvironmentEC2 = /** @class */ (function (_super) {
     __extends(EnvironmentEC2, _super);
-    function EnvironmentEC2(name, properties) {
-        return _super.call(this, name, properties, "AWS::Cloud9::EnvironmentEC2") || this;
+    function EnvironmentEC2(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Cloud9::EnvironmentEC2", dependsOn) || this;
     }
     return EnvironmentEC2;
 }(AWSResource_1.AWSResource));

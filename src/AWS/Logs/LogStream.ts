@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class LogStream extends AWSResource<LogStream_ResourceProperties> {
-	constructor(name:string,properties:LogStream_ResourceProperties){
-		super(name,properties,"AWS::Logs::LogStream");
+	constructor(name:string,properties:LogStream_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Logs::LogStream",dependsOn);
 	}
 }
 

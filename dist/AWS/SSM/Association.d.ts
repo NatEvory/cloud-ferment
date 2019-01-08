@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Association extends AWSResource<Association_ResourceProperties> {
-    constructor(name: string, properties: Association_ResourceProperties);
+    constructor(name: string, properties: Association_ResourceProperties, dependsOn?: string[]);
 }
 export interface Association_ResourceProperties extends AWSResourceProperties {
     AssociationName?: AWSStringProperty;

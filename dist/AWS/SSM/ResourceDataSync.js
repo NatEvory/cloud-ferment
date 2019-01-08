@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ResourceDataSync = /** @class */ (function (_super) {
     __extends(ResourceDataSync, _super);
-    function ResourceDataSync(name, properties) {
-        return _super.call(this, name, properties, "AWS::SSM::ResourceDataSync") || this;
+    function ResourceDataSync(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SSM::ResourceDataSync", dependsOn) || this;
     }
     return ResourceDataSync;
 }(AWSResource_1.AWSResource));

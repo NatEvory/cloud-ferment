@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var HealthCheck = /** @class */ (function (_super) {
     __extends(HealthCheck, _super);
-    function HealthCheck(name, properties) {
-        return _super.call(this, name, properties, "AWS::Route53::HealthCheck") || this;
+    function HealthCheck(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Route53::HealthCheck", dependsOn) || this;
     }
     return HealthCheck;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class InternetGateway extends AWSResource<InternetGateway_ResourceProperties> {
-	constructor(name:string,properties:InternetGateway_ResourceProperties){
-		super(name,properties,"AWS::EC2::InternetGateway");
+	constructor(name:string,properties:InternetGateway_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::InternetGateway",dependsOn);
 	}
 }
 

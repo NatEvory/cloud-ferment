@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var HostedZone = /** @class */ (function (_super) {
     __extends(HostedZone, _super);
-    function HostedZone(name, properties) {
-        return _super.call(this, name, properties, "AWS::Route53::HostedZone") || this;
+    function HostedZone(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Route53::HostedZone", dependsOn) || this;
     }
     return HostedZone;
 }(AWSResource_1.AWSResource));

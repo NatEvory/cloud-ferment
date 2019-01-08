@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var InstanceProfile = /** @class */ (function (_super) {
     __extends(InstanceProfile, _super);
-    function InstanceProfile(name, properties) {
-        return _super.call(this, name, properties, "AWS::IAM::InstanceProfile") || this;
+    function InstanceProfile(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IAM::InstanceProfile", dependsOn) || this;
     }
     return InstanceProfile;
 }(AWSResource_1.AWSResource));

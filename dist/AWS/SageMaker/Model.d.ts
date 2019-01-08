@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Model extends AWSResource<Model_ResourceProperties> {
-    constructor(name: string, properties: Model_ResourceProperties);
+    constructor(name: string, properties: Model_ResourceProperties, dependsOn?: string[]);
 }
 export interface Model_ResourceProperties extends AWSResourceProperties {
     ExecutionRoleArn: AWSStringProperty;

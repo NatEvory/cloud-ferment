@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VPCDHCPOptionsAssociation extends AWSResource<VPCDHCPOptionsAssociation_ResourceProperties> {
-	constructor(name:string,properties:VPCDHCPOptionsAssociation_ResourceProperties){
-		super(name,properties,"AWS::EC2::VPCDHCPOptionsAssociation");
+	constructor(name:string,properties:VPCDHCPOptionsAssociation_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::VPCDHCPOptionsAssociation",dependsOn);
 	}
 }
 

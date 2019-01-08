@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class TransitGateway extends AWSResource<TransitGateway_ResourceProperties> {
-	constructor(name:string,properties:TransitGateway_ResourceProperties){
-		super(name,properties,"AWS::EC2::TransitGateway");
+	constructor(name:string,properties:TransitGateway_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::TransitGateway",dependsOn);
 	}
 }
 

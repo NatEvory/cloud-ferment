@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Domain = /** @class */ (function (_super) {
     __extends(Domain, _super);
-    function Domain(name, properties) {
-        return _super.call(this, name, properties, "AWS::Elasticsearch::Domain") || this;
+    function Domain(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Elasticsearch::Domain", dependsOn) || this;
     }
     return Domain;
 }(AWSResource_1.AWSResource));

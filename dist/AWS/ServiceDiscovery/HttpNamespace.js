@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var HttpNamespace = /** @class */ (function (_super) {
     __extends(HttpNamespace, _super);
-    function HttpNamespace(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceDiscovery::HttpNamespace") || this;
+    function HttpNamespace(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceDiscovery::HttpNamespace", dependsOn) || this;
     }
     return HttpNamespace;
 }(AWSResource_1.AWSResource));

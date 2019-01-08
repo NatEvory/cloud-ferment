@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var WebACLAssociation = /** @class */ (function (_super) {
     __extends(WebACLAssociation, _super);
-    function WebACLAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::WAFRegional::WebACLAssociation") || this;
+    function WebACLAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::WAFRegional::WebACLAssociation", dependsOn) || this;
     }
     return WebACLAssociation;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Skill = /** @class */ (function (_super) {
     __extends(Skill, _super);
-    function Skill(name, properties) {
-        return _super.call(this, name, properties, "Alexa::ASK::Skill") || this;
+    function Skill(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "Alexa::ASK::Skill", dependsOn) || this;
     }
     return Skill;
 }(AWSResource_1.AWSResource));

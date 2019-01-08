@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Listener extends AWSResource<Listener_ResourceProperties> {
-    constructor(name: string, properties: Listener_ResourceProperties);
+    constructor(name: string, properties: Listener_ResourceProperties, dependsOn?: string[]);
 }
 export interface Listener_ResourceProperties extends AWSResourceProperties {
     Certificates?: Listener_Certificate[];

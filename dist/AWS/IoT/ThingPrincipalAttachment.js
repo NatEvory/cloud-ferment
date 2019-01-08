@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ThingPrincipalAttachment = /** @class */ (function (_super) {
     __extends(ThingPrincipalAttachment, _super);
-    function ThingPrincipalAttachment(name, properties) {
-        return _super.call(this, name, properties, "AWS::IoT::ThingPrincipalAttachment") || this;
+    function ThingPrincipalAttachment(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IoT::ThingPrincipalAttachment", dependsOn) || this;
     }
     return ThingPrincipalAttachment;
 }(AWSResource_1.AWSResource));

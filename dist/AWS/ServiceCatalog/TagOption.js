@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var TagOption = /** @class */ (function (_super) {
     __extends(TagOption, _super);
-    function TagOption(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceCatalog::TagOption") || this;
+    function TagOption(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceCatalog::TagOption", dependsOn) || this;
     }
     return TagOption;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SizeConstraintSet extends AWSResource<SizeConstraintSet_ResourceProperties> {
-	constructor(name:string,properties:SizeConstraintSet_ResourceProperties){
-		super(name,properties,"AWS::WAFRegional::SizeConstraintSet");
+	constructor(name:string,properties:SizeConstraintSet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::WAFRegional::SizeConstraintSet",dependsOn);
 	}
 }
 

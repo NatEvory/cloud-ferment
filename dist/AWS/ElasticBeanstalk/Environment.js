@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Environment = /** @class */ (function (_super) {
     __extends(Environment, _super);
-    function Environment(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElasticBeanstalk::Environment") || this;
+    function Environment(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElasticBeanstalk::Environment", dependsOn) || this;
     }
     return Environment;
 }(AWSResource_1.AWSResource));

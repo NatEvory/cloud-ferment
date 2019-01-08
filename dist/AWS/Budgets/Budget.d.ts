@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Budget extends AWSResource<Budget_ResourceProperties> {
-    constructor(name: string, properties: Budget_ResourceProperties);
+    constructor(name: string, properties: Budget_ResourceProperties, dependsOn?: string[]);
 }
 export interface Budget_ResourceProperties extends AWSResourceProperties {
     NotificationsWithSubscribers?: Budget_NotificationWithSubscribers[];

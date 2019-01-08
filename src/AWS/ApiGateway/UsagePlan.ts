@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class UsagePlan extends AWSResource<UsagePlan_ResourceProperties> {
-	constructor(name:string,properties:UsagePlan_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::UsagePlan");
+	constructor(name:string,properties:UsagePlan_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::UsagePlan",dependsOn);
 	}
 }
 

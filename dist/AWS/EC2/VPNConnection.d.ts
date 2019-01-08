@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class VPNConnection extends AWSResource<VPNConnection_ResourceProperties> {
-    constructor(name: string, properties: VPNConnection_ResourceProperties);
+    constructor(name: string, properties: VPNConnection_ResourceProperties, dependsOn?: string[]);
 }
 export interface VPNConnection_ResourceProperties extends AWSResourceProperties {
     CustomerGatewayId: AWSStringProperty;

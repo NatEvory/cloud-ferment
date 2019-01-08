@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Server extends AWSResource<Server_ResourceProperties> {
-    constructor(name: string, properties: Server_ResourceProperties);
+    constructor(name: string, properties: Server_ResourceProperties, dependsOn?: string[]);
 }
 export interface Server_ResourceProperties extends AWSResourceProperties {
     KeyPair?: AWSStringProperty;

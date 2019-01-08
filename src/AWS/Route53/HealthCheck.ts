@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class HealthCheck extends AWSResource<HealthCheck_ResourceProperties> {
-	constructor(name:string,properties:HealthCheck_ResourceProperties){
-		super(name,properties,"AWS::Route53::HealthCheck");
+	constructor(name:string,properties:HealthCheck_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Route53::HealthCheck",dependsOn);
 	}
 }
 

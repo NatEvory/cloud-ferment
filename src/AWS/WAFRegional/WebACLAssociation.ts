@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class WebACLAssociation extends AWSResource<WebACLAssociation_ResourceProperties> {
-	constructor(name:string,properties:WebACLAssociation_ResourceProperties){
-		super(name,properties,"AWS::WAFRegional::WebACLAssociation");
+	constructor(name:string,properties:WebACLAssociation_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::WAFRegional::WebACLAssociation",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ResourcePolicy extends AWSResource<ResourcePolicy_ResourceProperties> {
-	constructor(name:string,properties:ResourcePolicy_ResourceProperties){
-		super(name,properties,"AWS::SecretsManager::ResourcePolicy");
+	constructor(name:string,properties:ResourcePolicy_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SecretsManager::ResourcePolicy",dependsOn);
 	}
 }
 

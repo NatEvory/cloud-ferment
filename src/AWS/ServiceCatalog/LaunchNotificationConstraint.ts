@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class LaunchNotificationConstraint extends AWSResource<LaunchNotificationConstraint_ResourceProperties> {
-	constructor(name:string,properties:LaunchNotificationConstraint_ResourceProperties){
-		super(name,properties,"AWS::ServiceCatalog::LaunchNotificationConstraint");
+	constructor(name:string,properties:LaunchNotificationConstraint_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ServiceCatalog::LaunchNotificationConstraint",dependsOn);
 	}
 }
 

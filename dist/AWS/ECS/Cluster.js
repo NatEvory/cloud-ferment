@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Cluster = /** @class */ (function (_super) {
     __extends(Cluster, _super);
-    function Cluster(name, properties) {
-        return _super.call(this, name, properties, "AWS::ECS::Cluster") || this;
+    function Cluster(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ECS::Cluster", dependsOn) || this;
     }
     return Cluster;
 }(AWSResource_1.AWSResource));

@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Distribution extends AWSResource<Distribution_ResourceProperties> {
-    constructor(name: string, properties: Distribution_ResourceProperties);
+    constructor(name: string, properties: Distribution_ResourceProperties, dependsOn?: string[]);
 }
 export interface Distribution_ResourceProperties extends AWSResourceProperties {
     DistributionConfig: Distribution_DistributionConfig;

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Detector = /** @class */ (function (_super) {
     __extends(Detector, _super);
-    function Detector(name, properties) {
-        return _super.call(this, name, properties, "AWS::GuardDuty::Detector") || this;
+    function Detector(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::GuardDuty::Detector", dependsOn) || this;
     }
     return Detector;
 }(AWSResource_1.AWSResource));

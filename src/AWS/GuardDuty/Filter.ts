@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Filter extends AWSResource<Filter_ResourceProperties> {
-	constructor(name:string,properties:Filter_ResourceProperties){
-		super(name,properties,"AWS::GuardDuty::Filter");
+	constructor(name:string,properties:Filter_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::GuardDuty::Filter",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var NetworkInterface = /** @class */ (function (_super) {
     __extends(NetworkInterface, _super);
-    function NetworkInterface(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::NetworkInterface") || this;
+    function NetworkInterface(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::NetworkInterface", dependsOn) || this;
     }
     return NetworkInterface;
 }(AWSResource_1.AWSResource));

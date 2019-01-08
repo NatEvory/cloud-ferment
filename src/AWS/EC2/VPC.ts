@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VPC extends AWSResource<VPC_ResourceProperties> {
-	constructor(name:string,properties:VPC_ResourceProperties){
-		super(name,properties,"AWS::EC2::VPC");
+	constructor(name:string,properties:VPC_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::VPC",dependsOn);
 	}
 }
 

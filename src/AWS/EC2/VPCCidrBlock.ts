@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VPCCidrBlock extends AWSResource<VPCCidrBlock_ResourceProperties> {
-	constructor(name:string,properties:VPCCidrBlock_ResourceProperties){
-		super(name,properties,"AWS::EC2::VPCCidrBlock");
+	constructor(name:string,properties:VPCCidrBlock_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::VPCCidrBlock",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var PortfolioProductAssociation = /** @class */ (function (_super) {
     __extends(PortfolioProductAssociation, _super);
-    function PortfolioProductAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceCatalog::PortfolioProductAssociation") || this;
+    function PortfolioProductAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceCatalog::PortfolioProductAssociation", dependsOn) || this;
     }
     return PortfolioProductAssociation;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ApiKey extends AWSResource<ApiKey_ResourceProperties> {
-	constructor(name:string,properties:ApiKey_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::ApiKey");
+	constructor(name:string,properties:ApiKey_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::ApiKey",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class JobQueue extends AWSResource<JobQueue_ResourceProperties> {
-	constructor(name:string,properties:JobQueue_ResourceProperties){
-		super(name,properties,"AWS::Batch::JobQueue");
+	constructor(name:string,properties:JobQueue_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Batch::JobQueue",dependsOn);
 	}
 }
 

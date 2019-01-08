@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DBInstance = /** @class */ (function (_super) {
     __extends(DBInstance, _super);
-    function DBInstance(name, properties) {
-        return _super.call(this, name, properties, "AWS::Neptune::DBInstance") || this;
+    function DBInstance(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Neptune::DBInstance", dependsOn) || this;
     }
     return DBInstance;
 }(AWSResource_1.AWSResource));

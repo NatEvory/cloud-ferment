@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Queue = /** @class */ (function (_super) {
     __extends(Queue, _super);
-    function Queue(name, properties) {
-        return _super.call(this, name, properties, "AWS::SQS::Queue") || this;
+    function Queue(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SQS::Queue", dependsOn) || this;
     }
     return Queue;
 }(AWSResource_1.AWSResource));

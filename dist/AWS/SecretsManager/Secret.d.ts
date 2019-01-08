@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Secret extends AWSResource<Secret_ResourceProperties> {
-    constructor(name: string, properties: Secret_ResourceProperties);
+    constructor(name: string, properties: Secret_ResourceProperties, dependsOn?: string[]);
 }
 export interface Secret_ResourceProperties extends AWSResourceProperties {
     Description?: AWSStringProperty;

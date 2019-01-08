@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class SizeConstraintSet extends AWSResource<SizeConstraintSet_ResourceProperties> {
-    constructor(name: string, properties: SizeConstraintSet_ResourceProperties);
+    constructor(name: string, properties: SizeConstraintSet_ResourceProperties, dependsOn?: string[]);
 }
 export interface SizeConstraintSet_ResourceProperties extends AWSResourceProperties {
     SizeConstraints?: SizeConstraintSet_SizeConstraint[];

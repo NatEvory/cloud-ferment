@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Step = /** @class */ (function (_super) {
     __extends(Step, _super);
-    function Step(name, properties) {
-        return _super.call(this, name, properties, "AWS::EMR::Step") || this;
+    function Step(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EMR::Step", dependsOn) || this;
     }
     return Step;
 }(AWSResource_1.AWSResource));

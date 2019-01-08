@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Subnet = /** @class */ (function (_super) {
     __extends(Subnet, _super);
-    function Subnet(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::Subnet") || this;
+    function Subnet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::Subnet", dependsOn) || this;
     }
     return Subnet;
 }(AWSResource_1.AWSResource));

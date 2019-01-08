@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Thing = /** @class */ (function (_super) {
     __extends(Thing, _super);
-    function Thing(name, properties) {
-        return _super.call(this, name, properties, "AWS::IoT::Thing") || this;
+    function Thing(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IoT::Thing", dependsOn) || this;
     }
     return Thing;
 }(AWSResource_1.AWSResource));

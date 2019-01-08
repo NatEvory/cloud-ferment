@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class NetworkAcl extends AWSResource<NetworkAcl_ResourceProperties> {
-	constructor(name:string,properties:NetworkAcl_ResourceProperties){
-		super(name,properties,"AWS::EC2::NetworkAcl");
+	constructor(name:string,properties:NetworkAcl_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::NetworkAcl",dependsOn);
 	}
 }
 

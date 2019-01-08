@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class ThreatIntelSet extends AWSResource<ThreatIntelSet_ResourceProperties> {
-    constructor(name: string, properties: ThreatIntelSet_ResourceProperties);
+    constructor(name: string, properties: ThreatIntelSet_ResourceProperties, dependsOn?: string[]);
 }
 export interface ThreatIntelSet_ResourceProperties extends AWSResourceProperties {
     Format: AWSStringProperty;

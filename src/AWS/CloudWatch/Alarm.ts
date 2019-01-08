@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Alarm extends AWSResource<Alarm_ResourceProperties> {
-	constructor(name:string,properties:Alarm_ResourceProperties){
-		super(name,properties,"AWS::CloudWatch::Alarm");
+	constructor(name:string,properties:Alarm_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudWatch::Alarm",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class AccessKey extends AWSResource<AccessKey_ResourceProperties> {
-	constructor(name:string,properties:AccessKey_ResourceProperties){
-		super(name,properties,"AWS::IAM::AccessKey");
+	constructor(name:string,properties:AccessKey_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IAM::AccessKey",dependsOn);
 	}
 }
 

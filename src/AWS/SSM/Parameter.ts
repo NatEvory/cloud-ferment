@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Parameter extends AWSResource<Parameter_ResourceProperties> {
-	constructor(name:string,properties:Parameter_ResourceProperties){
-		super(name,properties,"AWS::SSM::Parameter");
+	constructor(name:string,properties:Parameter_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SSM::Parameter",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var FileSystem = /** @class */ (function (_super) {
     __extends(FileSystem, _super);
-    function FileSystem(name, properties) {
-        return _super.call(this, name, properties, "AWS::EFS::FileSystem") || this;
+    function FileSystem(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EFS::FileSystem", dependsOn) || this;
     }
     return FileSystem;
 }(AWSResource_1.AWSResource));

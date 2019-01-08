@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DirectoryConfig extends AWSResource<DirectoryConfig_ResourceProperties> {
-	constructor(name:string,properties:DirectoryConfig_ResourceProperties){
-		super(name,properties,"AWS::AppStream::DirectoryConfig");
+	constructor(name:string,properties:DirectoryConfig_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AppStream::DirectoryConfig",dependsOn);
 	}
 }
 

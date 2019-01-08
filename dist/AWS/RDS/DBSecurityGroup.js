@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DBSecurityGroup = /** @class */ (function (_super) {
     __extends(DBSecurityGroup, _super);
-    function DBSecurityGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::RDS::DBSecurityGroup") || this;
+    function DBSecurityGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::RDS::DBSecurityGroup", dependsOn) || this;
     }
     return DBSecurityGroup;
 }(AWSResource_1.AWSResource));

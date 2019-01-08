@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class LifecyclePolicy extends AWSResource<LifecyclePolicy_ResourceProperties> {
-    constructor(name: string, properties: LifecyclePolicy_ResourceProperties);
+    constructor(name: string, properties: LifecyclePolicy_ResourceProperties, dependsOn?: string[]);
 }
 export interface LifecyclePolicy_ResourceProperties extends AWSResourceProperties {
     ExecutionRoleArn?: AWSStringProperty;

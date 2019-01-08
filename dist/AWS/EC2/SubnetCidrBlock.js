@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SubnetCidrBlock = /** @class */ (function (_super) {
     __extends(SubnetCidrBlock, _super);
-    function SubnetCidrBlock(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::SubnetCidrBlock") || this;
+    function SubnetCidrBlock(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::SubnetCidrBlock", dependsOn) || this;
     }
     return SubnetCidrBlock;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Model extends AWSResource<Model_ResourceProperties> {
-	constructor(name:string,properties:Model_ResourceProperties){
-		super(name,properties,"AWS::SageMaker::Model");
+	constructor(name:string,properties:Model_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SageMaker::Model",dependsOn);
 	}
 }
 

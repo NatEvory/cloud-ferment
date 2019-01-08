@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ReplicationGroup extends AWSResource<ReplicationGroup_ResourceProperties> {
-	constructor(name:string,properties:ReplicationGroup_ResourceProperties){
-		super(name,properties,"AWS::ElastiCache::ReplicationGroup");
+	constructor(name:string,properties:ReplicationGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElastiCache::ReplicationGroup",dependsOn);
 	}
 }
 

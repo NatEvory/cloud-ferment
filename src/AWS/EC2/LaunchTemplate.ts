@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class LaunchTemplate extends AWSResource<LaunchTemplate_ResourceProperties> {
-	constructor(name:string,properties:LaunchTemplate_ResourceProperties){
-		super(name,properties,"AWS::EC2::LaunchTemplate");
+	constructor(name:string,properties:LaunchTemplate_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::LaunchTemplate",dependsOn);
 	}
 }
 

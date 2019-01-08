@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Endpoint extends AWSResource<Endpoint_ResourceProperties> {
-	constructor(name:string,properties:Endpoint_ResourceProperties){
-		super(name,properties,"AWS::SageMaker::Endpoint");
+	constructor(name:string,properties:Endpoint_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SageMaker::Endpoint",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DocumentationVersion = /** @class */ (function (_super) {
     __extends(DocumentationVersion, _super);
-    function DocumentationVersion(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::DocumentationVersion") || this;
+    function DocumentationVersion(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::DocumentationVersion", dependsOn) || this;
     }
     return DocumentationVersion;
 }(AWSResource_1.AWSResource));

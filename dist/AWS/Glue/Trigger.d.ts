@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Trigger extends AWSResource<Trigger_ResourceProperties> {
-    constructor(name: string, properties: Trigger_ResourceProperties);
+    constructor(name: string, properties: Trigger_ResourceProperties, dependsOn?: string[]);
 }
 export interface Trigger_ResourceProperties extends AWSResourceProperties {
     Type: AWSStringProperty;

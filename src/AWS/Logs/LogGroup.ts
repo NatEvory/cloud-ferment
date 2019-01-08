@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class LogGroup extends AWSResource<LogGroup_ResourceProperties> {
-	constructor(name:string,properties:LogGroup_ResourceProperties){
-		super(name,properties,"AWS::Logs::LogGroup");
+	constructor(name:string,properties:LogGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Logs::LogGroup",dependsOn);
 	}
 }
 

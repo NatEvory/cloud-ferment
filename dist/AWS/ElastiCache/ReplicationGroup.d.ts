@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ReplicationGroup extends AWSResource<ReplicationGroup_ResourceProperties> {
-    constructor(name: string, properties: ReplicationGroup_ResourceProperties);
+    constructor(name: string, properties: ReplicationGroup_ResourceProperties, dependsOn?: string[]);
 }
 export interface ReplicationGroup_ResourceProperties extends AWSResourceProperties {
     AtRestEncryptionEnabled?: boolean;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class InstanceFleetConfig extends AWSResource<InstanceFleetConfig_ResourceProperties> {
-	constructor(name:string,properties:InstanceFleetConfig_ResourceProperties){
-		super(name,properties,"AWS::EMR::InstanceFleetConfig");
+	constructor(name:string,properties:InstanceFleetConfig_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EMR::InstanceFleetConfig",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class EventBusPolicy extends AWSResource<EventBusPolicy_ResourceProperties> {
-	constructor(name:string,properties:EventBusPolicy_ResourceProperties){
-		super(name,properties,"AWS::Events::EventBusPolicy");
+	constructor(name:string,properties:EventBusPolicy_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Events::EventBusPolicy",dependsOn);
 	}
 }
 

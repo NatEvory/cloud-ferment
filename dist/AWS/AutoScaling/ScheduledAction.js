@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ScheduledAction = /** @class */ (function (_super) {
     __extends(ScheduledAction, _super);
-    function ScheduledAction(name, properties) {
-        return _super.call(this, name, properties, "AWS::AutoScaling::ScheduledAction") || this;
+    function ScheduledAction(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AutoScaling::ScheduledAction", dependsOn) || this;
     }
     return ScheduledAction;
 }(AWSResource_1.AWSResource));

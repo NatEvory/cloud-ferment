@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class FunctionConfiguration extends AWSResource<FunctionConfiguration_ResourceProperties> {
-    constructor(name: string, properties: FunctionConfiguration_ResourceProperties);
+    constructor(name: string, properties: FunctionConfiguration_ResourceProperties, dependsOn?: string[]);
 }
 export interface FunctionConfiguration_ResourceProperties extends AWSResourceProperties {
     ResponseMappingTemplateS3Location?: AWSStringProperty;

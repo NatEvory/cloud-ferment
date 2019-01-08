@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class RotationSchedule extends AWSResource<RotationSchedule_ResourceProperties> {
-    constructor(name: string, properties: RotationSchedule_ResourceProperties);
+    constructor(name: string, properties: RotationSchedule_ResourceProperties, dependsOn?: string[]);
 }
 export interface RotationSchedule_ResourceProperties extends AWSResourceProperties {
     SecretId: AWSStringProperty;

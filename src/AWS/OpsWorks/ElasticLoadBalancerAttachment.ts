@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ElasticLoadBalancerAttachment extends AWSResource<ElasticLoadBalancerAttachment_ResourceProperties> {
-	constructor(name:string,properties:ElasticLoadBalancerAttachment_ResourceProperties){
-		super(name,properties,"AWS::OpsWorks::ElasticLoadBalancerAttachment");
+	constructor(name:string,properties:ElasticLoadBalancerAttachment_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::OpsWorks::ElasticLoadBalancerAttachment",dependsOn);
 	}
 }
 

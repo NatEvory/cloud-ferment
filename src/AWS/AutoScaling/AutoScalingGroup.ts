@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class AutoScalingGroup extends AWSResource<AutoScalingGroup_ResourceProperties> {
-	constructor(name:string,properties:AutoScalingGroup_ResourceProperties){
-		super(name,properties,"AWS::AutoScaling::AutoScalingGroup");
+	constructor(name:string,properties:AutoScalingGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AutoScaling::AutoScalingGroup",dependsOn);
 	}
 }
 

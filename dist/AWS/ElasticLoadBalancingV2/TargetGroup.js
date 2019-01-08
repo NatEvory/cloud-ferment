@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var TargetGroup = /** @class */ (function (_super) {
     __extends(TargetGroup, _super);
-    function TargetGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElasticLoadBalancingV2::TargetGroup") || this;
+    function TargetGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElasticLoadBalancingV2::TargetGroup", dependsOn) || this;
     }
     return TargetGroup;
 }(AWSResource_1.AWSResource));

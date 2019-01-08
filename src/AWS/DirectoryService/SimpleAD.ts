@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SimpleAD extends AWSResource<SimpleAD_ResourceProperties> {
-	constructor(name:string,properties:SimpleAD_ResourceProperties){
-		super(name,properties,"AWS::DirectoryService::SimpleAD");
+	constructor(name:string,properties:SimpleAD_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::DirectoryService::SimpleAD",dependsOn);
 	}
 }
 

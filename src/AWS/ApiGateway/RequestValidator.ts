@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class RequestValidator extends AWSResource<RequestValidator_ResourceProperties> {
-	constructor(name:string,properties:RequestValidator_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::RequestValidator");
+	constructor(name:string,properties:RequestValidator_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::RequestValidator",dependsOn);
 	}
 }
 

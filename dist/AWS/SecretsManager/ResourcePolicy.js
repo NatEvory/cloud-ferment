@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ResourcePolicy = /** @class */ (function (_super) {
     __extends(ResourcePolicy, _super);
-    function ResourcePolicy(name, properties) {
-        return _super.call(this, name, properties, "AWS::SecretsManager::ResourcePolicy") || this;
+    function ResourcePolicy(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SecretsManager::ResourcePolicy", dependsOn) || this;
     }
     return ResourcePolicy;
 }(AWSResource_1.AWSResource));

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class HostedZone extends AWSResource<HostedZone_ResourceProperties> {
-    constructor(name: string, properties: HostedZone_ResourceProperties);
+    constructor(name: string, properties: HostedZone_ResourceProperties, dependsOn?: string[]);
 }
 export interface HostedZone_ResourceProperties extends AWSResourceProperties {
     HostedZoneConfig?: HostedZone_HostedZoneConfig;

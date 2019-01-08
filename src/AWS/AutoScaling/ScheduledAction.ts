@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ScheduledAction extends AWSResource<ScheduledAction_ResourceProperties> {
-	constructor(name:string,properties:ScheduledAction_ResourceProperties){
-		super(name,properties,"AWS::AutoScaling::ScheduledAction");
+	constructor(name:string,properties:ScheduledAction_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AutoScaling::ScheduledAction",dependsOn);
 	}
 }
 

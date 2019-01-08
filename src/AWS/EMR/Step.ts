@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Step extends AWSResource<Step_ResourceProperties> {
-	constructor(name:string,properties:Step_ResourceProperties){
-		super(name,properties,"AWS::EMR::Step");
+	constructor(name:string,properties:Step_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EMR::Step",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ReplicationSubnetGroup = /** @class */ (function (_super) {
     __extends(ReplicationSubnetGroup, _super);
-    function ReplicationSubnetGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::DMS::ReplicationSubnetGroup") || this;
+    function ReplicationSubnetGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::DMS::ReplicationSubnetGroup", dependsOn) || this;
     }
     return ReplicationSubnetGroup;
 }(AWSResource_1.AWSResource));

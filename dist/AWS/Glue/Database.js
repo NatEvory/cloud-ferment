@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Database = /** @class */ (function (_super) {
     __extends(Database, _super);
-    function Database(name, properties) {
-        return _super.call(this, name, properties, "AWS::Glue::Database") || this;
+    function Database(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Glue::Database", dependsOn) || this;
     }
     return Database;
 }(AWSResource_1.AWSResource));

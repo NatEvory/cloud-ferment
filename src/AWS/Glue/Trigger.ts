@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Trigger extends AWSResource<Trigger_ResourceProperties> {
-	constructor(name:string,properties:Trigger_ResourceProperties){
-		super(name,properties,"AWS::Glue::Trigger");
+	constructor(name:string,properties:Trigger_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::Trigger",dependsOn);
 	}
 }
 

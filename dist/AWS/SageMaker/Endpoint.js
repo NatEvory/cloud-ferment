@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Endpoint = /** @class */ (function (_super) {
     __extends(Endpoint, _super);
-    function Endpoint(name, properties) {
-        return _super.call(this, name, properties, "AWS::SageMaker::Endpoint") || this;
+    function Endpoint(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SageMaker::Endpoint", dependsOn) || this;
     }
     return Endpoint;
 }(AWSResource_1.AWSResource));

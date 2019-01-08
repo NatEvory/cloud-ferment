@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var NotebookInstance = /** @class */ (function (_super) {
     __extends(NotebookInstance, _super);
-    function NotebookInstance(name, properties) {
-        return _super.call(this, name, properties, "AWS::SageMaker::NotebookInstance") || this;
+    function NotebookInstance(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SageMaker::NotebookInstance", dependsOn) || this;
     }
     return NotebookInstance;
 }(AWSResource_1.AWSResource));

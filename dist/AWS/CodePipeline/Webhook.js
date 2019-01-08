@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Webhook = /** @class */ (function (_super) {
     __extends(Webhook, _super);
-    function Webhook(name, properties) {
-        return _super.call(this, name, properties, "AWS::CodePipeline::Webhook") || this;
+    function Webhook(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CodePipeline::Webhook", dependsOn) || this;
     }
     return Webhook;
 }(AWSResource_1.AWSResource));

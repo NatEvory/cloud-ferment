@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Macro = /** @class */ (function (_super) {
     __extends(Macro, _super);
-    function Macro(name, properties) {
-        return _super.call(this, name, properties, "AWS::CloudFormation::Macro") || this;
+    function Macro(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CloudFormation::Macro", dependsOn) || this;
     }
     return Macro;
 }(AWSResource_1.AWSResource));

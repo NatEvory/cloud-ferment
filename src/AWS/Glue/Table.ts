@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Table extends AWSResource<Table_ResourceProperties> {
-	constructor(name:string,properties:Table_ResourceProperties){
-		super(name,properties,"AWS::Glue::Table");
+	constructor(name:string,properties:Table_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::Table",dependsOn);
 	}
 }
 

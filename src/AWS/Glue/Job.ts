@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Job extends AWSResource<Job_ResourceProperties> {
-	constructor(name:string,properties:Job_ResourceProperties){
-		super(name,properties,"AWS::Glue::Job");
+	constructor(name:string,properties:Job_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::Job",dependsOn);
 	}
 }
 

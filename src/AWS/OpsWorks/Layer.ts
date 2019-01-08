@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Layer extends AWSResource<Layer_ResourceProperties> {
-	constructor(name:string,properties:Layer_ResourceProperties){
-		super(name,properties,"AWS::OpsWorks::Layer");
+	constructor(name:string,properties:Layer_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::OpsWorks::Layer",dependsOn);
 	}
 }
 

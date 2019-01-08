@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class UserPool extends AWSResource<UserPool_ResourceProperties> {
-    constructor(name: string, properties: UserPool_ResourceProperties);
+    constructor(name: string, properties: UserPool_ResourceProperties, dependsOn?: string[]);
 }
 export interface UserPool_ResourceProperties extends AWSResourceProperties {
     UserPoolTags?: any;

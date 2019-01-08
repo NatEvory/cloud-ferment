@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ImageBuilder extends AWSResource<ImageBuilder_ResourceProperties> {
-    constructor(name: string, properties: ImageBuilder_ResourceProperties);
+    constructor(name: string, properties: ImageBuilder_ResourceProperties, dependsOn?: string[]);
 }
 export interface ImageBuilder_ResourceProperties extends AWSResourceProperties {
     ImageName?: AWSStringProperty;

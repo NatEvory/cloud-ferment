@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Classifier extends AWSResource<Classifier_ResourceProperties> {
-	constructor(name:string,properties:Classifier_ResourceProperties){
-		super(name,properties,"AWS::Glue::Classifier");
+	constructor(name:string,properties:Classifier_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::Classifier",dependsOn);
 	}
 }
 

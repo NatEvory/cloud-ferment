@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ApplicationReferenceDataSource extends AWSResource<ApplicationReferenceDataSource_ResourceProperties> {
-	constructor(name:string,properties:ApplicationReferenceDataSource_ResourceProperties){
-		super(name,properties,"AWS::KinesisAnalytics::ApplicationReferenceDataSource");
+	constructor(name:string,properties:ApplicationReferenceDataSource_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::KinesisAnalytics::ApplicationReferenceDataSource",dependsOn);
 	}
 }
 

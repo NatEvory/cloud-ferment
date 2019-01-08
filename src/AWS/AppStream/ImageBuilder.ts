@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ImageBuilder extends AWSResource<ImageBuilder_ResourceProperties> {
-	constructor(name:string,properties:ImageBuilder_ResourceProperties){
-		super(name,properties,"AWS::AppStream::ImageBuilder");
+	constructor(name:string,properties:ImageBuilder_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AppStream::ImageBuilder",dependsOn);
 	}
 }
 

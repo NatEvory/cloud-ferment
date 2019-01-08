@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Placement extends AWSResource<Placement_ResourceProperties> {
-	constructor(name:string,properties:Placement_ResourceProperties){
-		super(name,properties,"AWS::IoT1Click::Placement");
+	constructor(name:string,properties:Placement_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoT1Click::Placement",dependsOn);
 	}
 }
 

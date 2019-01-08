@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ConfigRule extends AWSResource<ConfigRule_ResourceProperties> {
-	constructor(name:string,properties:ConfigRule_ResourceProperties){
-		super(name,properties,"AWS::Config::ConfigRule");
+	constructor(name:string,properties:ConfigRule_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Config::ConfigRule",dependsOn);
 	}
 }
 

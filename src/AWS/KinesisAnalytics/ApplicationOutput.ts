@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ApplicationOutput extends AWSResource<ApplicationOutput_ResourceProperties> {
-	constructor(name:string,properties:ApplicationOutput_ResourceProperties){
-		super(name,properties,"AWS::KinesisAnalytics::ApplicationOutput");
+	constructor(name:string,properties:ApplicationOutput_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::KinesisAnalytics::ApplicationOutput",dependsOn);
 	}
 }
 

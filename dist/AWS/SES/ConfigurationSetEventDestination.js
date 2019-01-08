@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ConfigurationSetEventDestination = /** @class */ (function (_super) {
     __extends(ConfigurationSetEventDestination, _super);
-    function ConfigurationSetEventDestination(name, properties) {
-        return _super.call(this, name, properties, "AWS::SES::ConfigurationSetEventDestination") || this;
+    function ConfigurationSetEventDestination(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SES::ConfigurationSetEventDestination", dependsOn) || this;
     }
     return ConfigurationSetEventDestination;
 }(AWSResource_1.AWSResource));

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class AutoScalingGroup extends AWSResource<AutoScalingGroup_ResourceProperties> {
-    constructor(name: string, properties: AutoScalingGroup_ResourceProperties);
+    constructor(name: string, properties: AutoScalingGroup_ResourceProperties, dependsOn?: string[]);
 }
 export interface AutoScalingGroup_ResourceProperties extends AWSResourceProperties {
     AutoScalingGroupName?: AWSStringProperty;

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ManagedPolicy = /** @class */ (function (_super) {
     __extends(ManagedPolicy, _super);
-    function ManagedPolicy(name, properties) {
-        return _super.call(this, name, properties, "AWS::IAM::ManagedPolicy") || this;
+    function ManagedPolicy(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IAM::ManagedPolicy", dependsOn) || this;
     }
     return ManagedPolicy;
 }(AWSResource_1.AWSResource));

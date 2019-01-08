@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Fleet extends AWSResource<Fleet_ResourceProperties> {
-    constructor(name: string, properties: Fleet_ResourceProperties);
+    constructor(name: string, properties: Fleet_ResourceProperties, dependsOn?: string[]);
 }
 export interface Fleet_ResourceProperties extends AWSResourceProperties {
     BuildId: AWSStringProperty;

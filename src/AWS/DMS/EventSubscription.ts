@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class EventSubscription extends AWSResource<EventSubscription_ResourceProperties> {
-	constructor(name:string,properties:EventSubscription_ResourceProperties){
-		super(name,properties,"AWS::DMS::EventSubscription");
+	constructor(name:string,properties:EventSubscription_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::DMS::EventSubscription",dependsOn);
 	}
 }
 

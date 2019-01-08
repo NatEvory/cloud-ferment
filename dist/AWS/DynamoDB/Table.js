@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Table = /** @class */ (function (_super) {
     __extends(Table, _super);
-    function Table(name, properties) {
-        return _super.call(this, name, properties, "AWS::DynamoDB::Table") || this;
+    function Table(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::DynamoDB::Table", dependsOn) || this;
     }
     return Table;
 }(AWSResource_1.AWSResource));

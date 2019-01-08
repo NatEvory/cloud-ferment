@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VPCEndpointConnectionNotification = /** @class */ (function (_super) {
     __extends(VPCEndpointConnectionNotification, _super);
-    function VPCEndpointConnectionNotification(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::VPCEndpointConnectionNotification") || this;
+    function VPCEndpointConnectionNotification(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::VPCEndpointConnectionNotification", dependsOn) || this;
     }
     return VPCEndpointConnectionNotification;
 }(AWSResource_1.AWSResource));

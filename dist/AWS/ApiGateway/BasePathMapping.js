@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var BasePathMapping = /** @class */ (function (_super) {
     __extends(BasePathMapping, _super);
-    function BasePathMapping(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::BasePathMapping") || this;
+    function BasePathMapping(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::BasePathMapping", dependsOn) || this;
     }
     return BasePathMapping;
 }(AWSResource_1.AWSResource));

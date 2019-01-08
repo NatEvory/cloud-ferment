@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class BasePathMapping extends AWSResource<BasePathMapping_ResourceProperties> {
-	constructor(name:string,properties:BasePathMapping_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::BasePathMapping");
+	constructor(name:string,properties:BasePathMapping_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::BasePathMapping",dependsOn);
 	}
 }
 

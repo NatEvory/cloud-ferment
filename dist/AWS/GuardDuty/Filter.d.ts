@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Filter extends AWSResource<Filter_ResourceProperties> {
-    constructor(name: string, properties: Filter_ResourceProperties);
+    constructor(name: string, properties: Filter_ResourceProperties, dependsOn?: string[]);
 }
 export interface Filter_ResourceProperties extends AWSResourceProperties {
     Action: AWSStringProperty;

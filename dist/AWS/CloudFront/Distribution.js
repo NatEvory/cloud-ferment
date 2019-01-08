@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Distribution = /** @class */ (function (_super) {
     __extends(Distribution, _super);
-    function Distribution(name, properties) {
-        return _super.call(this, name, properties, "AWS::CloudFront::Distribution") || this;
+    function Distribution(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CloudFront::Distribution", dependsOn) || this;
     }
     return Distribution;
 }(AWSResource_1.AWSResource));

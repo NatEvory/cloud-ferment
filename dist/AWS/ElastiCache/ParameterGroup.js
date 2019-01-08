@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ParameterGroup = /** @class */ (function (_super) {
     __extends(ParameterGroup, _super);
-    function ParameterGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElastiCache::ParameterGroup") || this;
+    function ParameterGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElastiCache::ParameterGroup", dependsOn) || this;
     }
     return ParameterGroup;
 }(AWSResource_1.AWSResource));

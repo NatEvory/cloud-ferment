@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Webhook extends AWSResource<Webhook_ResourceProperties> {
-	constructor(name:string,properties:Webhook_ResourceProperties){
-		super(name,properties,"AWS::CodePipeline::Webhook");
+	constructor(name:string,properties:Webhook_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CodePipeline::Webhook",dependsOn);
 	}
 }
 
