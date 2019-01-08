@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Stream extends AWSResource<Stream_ResourceProperties> {
-	constructor(name:string,properties:Stream_ResourceProperties){
-		super(name,properties,"AWS::Kinesis::Stream");
+	constructor(name:string,properties:Stream_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Kinesis::Stream",dependsOn);
 	}
 }
 

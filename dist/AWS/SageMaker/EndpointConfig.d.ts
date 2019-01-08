@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class EndpointConfig extends AWSResource<EndpointConfig_ResourceProperties> {
-    constructor(name: string, properties: EndpointConfig_ResourceProperties);
+    constructor(name: string, properties: EndpointConfig_ResourceProperties, dependsOn?: string[]);
 }
 export interface EndpointConfig_ResourceProperties extends AWSResourceProperties {
     ProductionVariants: EndpointConfig_ProductionVariant[];

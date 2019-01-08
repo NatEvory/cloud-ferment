@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Authorizer = /** @class */ (function (_super) {
     __extends(Authorizer, _super);
-    function Authorizer(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::Authorizer") || this;
+    function Authorizer(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::Authorizer", dependsOn) || this;
     }
     return Authorizer;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class JobDefinition extends AWSResource<JobDefinition_ResourceProperties> {
-	constructor(name:string,properties:JobDefinition_ResourceProperties){
-		super(name,properties,"AWS::Batch::JobDefinition");
+	constructor(name:string,properties:JobDefinition_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Batch::JobDefinition",dependsOn);
 	}
 }
 

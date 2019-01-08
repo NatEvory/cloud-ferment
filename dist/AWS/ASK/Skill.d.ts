@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Skill extends AWSResource<Skill_ResourceProperties> {
-    constructor(name: string, properties: Skill_ResourceProperties);
+    constructor(name: string, properties: Skill_ResourceProperties, dependsOn?: string[]);
 }
 export interface Skill_ResourceProperties extends AWSResourceProperties {
     AuthenticationConfiguration: Skill_AuthenticationConfiguration;

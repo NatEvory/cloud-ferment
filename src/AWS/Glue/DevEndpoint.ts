@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DevEndpoint extends AWSResource<DevEndpoint_ResourceProperties> {
-	constructor(name:string,properties:DevEndpoint_ResourceProperties){
-		super(name,properties,"AWS::Glue::DevEndpoint");
+	constructor(name:string,properties:DevEndpoint_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::DevEndpoint",dependsOn);
 	}
 }
 

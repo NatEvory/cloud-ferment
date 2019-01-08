@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class MaintenanceWindowTask extends AWSResource<MaintenanceWindowTask_ResourceProperties> {
-	constructor(name:string,properties:MaintenanceWindowTask_ResourceProperties){
-		super(name,properties,"AWS::SSM::MaintenanceWindowTask");
+	constructor(name:string,properties:MaintenanceWindowTask_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SSM::MaintenanceWindowTask",dependsOn);
 	}
 }
 

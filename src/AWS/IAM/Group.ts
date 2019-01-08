@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Group extends AWSResource<Group_ResourceProperties> {
-	constructor(name:string,properties:Group_ResourceProperties){
-		super(name,properties,"AWS::IAM::Group");
+	constructor(name:string,properties:Group_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IAM::Group",dependsOn);
 	}
 }
 

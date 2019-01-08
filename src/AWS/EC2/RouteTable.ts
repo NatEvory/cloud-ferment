@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class RouteTable extends AWSResource<RouteTable_ResourceProperties> {
-	constructor(name:string,properties:RouteTable_ResourceProperties){
-		super(name,properties,"AWS::EC2::RouteTable");
+	constructor(name:string,properties:RouteTable_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::RouteTable",dependsOn);
 	}
 }
 

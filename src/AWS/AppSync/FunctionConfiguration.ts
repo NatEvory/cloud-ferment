@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class FunctionConfiguration extends AWSResource<FunctionConfiguration_ResourceProperties> {
-	constructor(name:string,properties:FunctionConfiguration_ResourceProperties){
-		super(name,properties,"AWS::AppSync::FunctionConfiguration");
+	constructor(name:string,properties:FunctionConfiguration_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AppSync::FunctionConfiguration",dependsOn);
 	}
 }
 

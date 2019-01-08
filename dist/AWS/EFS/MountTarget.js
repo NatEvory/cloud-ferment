@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var MountTarget = /** @class */ (function (_super) {
     __extends(MountTarget, _super);
-    function MountTarget(name, properties) {
-        return _super.call(this, name, properties, "AWS::EFS::MountTarget") || this;
+    function MountTarget(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EFS::MountTarget", dependsOn) || this;
     }
     return MountTarget;
 }(AWSResource_1.AWSResource));

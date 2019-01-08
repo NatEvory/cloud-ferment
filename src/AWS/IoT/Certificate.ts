@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Certificate extends AWSResource<Certificate_ResourceProperties> {
-	constructor(name:string,properties:Certificate_ResourceProperties){
-		super(name,properties,"AWS::IoT::Certificate");
+	constructor(name:string,properties:Certificate_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoT::Certificate",dependsOn);
 	}
 }
 

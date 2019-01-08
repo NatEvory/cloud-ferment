@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SecurityGroup = /** @class */ (function (_super) {
     __extends(SecurityGroup, _super);
-    function SecurityGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElastiCache::SecurityGroup") || this;
+    function SecurityGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElastiCache::SecurityGroup", dependsOn) || this;
     }
     return SecurityGroup;
 }(AWSResource_1.AWSResource));

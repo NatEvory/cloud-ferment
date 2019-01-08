@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VPCEndpointConnectionNotification extends AWSResource<VPCEndpointConnectionNotification_ResourceProperties> {
-	constructor(name:string,properties:VPCEndpointConnectionNotification_ResourceProperties){
-		super(name,properties,"AWS::EC2::VPCEndpointConnectionNotification");
+	constructor(name:string,properties:VPCEndpointConnectionNotification_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::VPCEndpointConnectionNotification",dependsOn);
 	}
 }
 

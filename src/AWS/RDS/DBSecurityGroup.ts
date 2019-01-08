@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DBSecurityGroup extends AWSResource<DBSecurityGroup_ResourceProperties> {
-	constructor(name:string,properties:DBSecurityGroup_ResourceProperties){
-		super(name,properties,"AWS::RDS::DBSecurityGroup");
+	constructor(name:string,properties:DBSecurityGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::RDS::DBSecurityGroup",dependsOn);
 	}
 }
 

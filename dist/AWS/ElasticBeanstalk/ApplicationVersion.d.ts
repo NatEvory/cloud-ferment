@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class ApplicationVersion extends AWSResource<ApplicationVersion_ResourceProperties> {
-    constructor(name: string, properties: ApplicationVersion_ResourceProperties);
+    constructor(name: string, properties: ApplicationVersion_ResourceProperties, dependsOn?: string[]);
 }
 export interface ApplicationVersion_ResourceProperties extends AWSResourceProperties {
     ApplicationName: AWSStringProperty;

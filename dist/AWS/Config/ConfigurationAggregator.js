@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ConfigurationAggregator = /** @class */ (function (_super) {
     __extends(ConfigurationAggregator, _super);
-    function ConfigurationAggregator(name, properties) {
-        return _super.call(this, name, properties, "AWS::Config::ConfigurationAggregator") || this;
+    function ConfigurationAggregator(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Config::ConfigurationAggregator", dependsOn) || this;
     }
     return ConfigurationAggregator;
 }(AWSResource_1.AWSResource));

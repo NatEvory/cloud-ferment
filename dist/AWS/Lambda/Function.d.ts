@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Function extends AWSResource<Function_ResourceProperties> {
-    constructor(name: string, properties: Function_ResourceProperties);
+    constructor(name: string, properties: Function_ResourceProperties, dependsOn?: string[]);
 }
 export interface Function_ResourceProperties extends AWSResourceProperties {
     Code: Function_Code;

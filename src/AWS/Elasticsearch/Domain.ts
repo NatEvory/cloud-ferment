@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Domain extends AWSResource<Domain_ResourceProperties> {
-	constructor(name:string,properties:Domain_ResourceProperties){
-		super(name,properties,"AWS::Elasticsearch::Domain");
+	constructor(name:string,properties:Domain_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Elasticsearch::Domain",dependsOn);
 	}
 }
 

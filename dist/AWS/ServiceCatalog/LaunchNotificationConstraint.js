@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var LaunchNotificationConstraint = /** @class */ (function (_super) {
     __extends(LaunchNotificationConstraint, _super);
-    function LaunchNotificationConstraint(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceCatalog::LaunchNotificationConstraint") || this;
+    function LaunchNotificationConstraint(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceCatalog::LaunchNotificationConstraint", dependsOn) || this;
     }
     return LaunchNotificationConstraint;
 }(AWSResource_1.AWSResource));

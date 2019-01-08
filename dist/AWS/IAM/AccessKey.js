@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var AccessKey = /** @class */ (function (_super) {
     __extends(AccessKey, _super);
-    function AccessKey(name, properties) {
-        return _super.call(this, name, properties, "AWS::IAM::AccessKey") || this;
+    function AccessKey(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IAM::AccessKey", dependsOn) || this;
     }
     return AccessKey;
 }(AWSResource_1.AWSResource));

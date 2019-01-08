@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Trigger = /** @class */ (function (_super) {
     __extends(Trigger, _super);
-    function Trigger(name, properties) {
-        return _super.call(this, name, properties, "AWS::Glue::Trigger") || this;
+    function Trigger(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Glue::Trigger", dependsOn) || this;
     }
     return Trigger;
 }(AWSResource_1.AWSResource));

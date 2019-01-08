@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class BucketPolicy extends AWSResource<BucketPolicy_ResourceProperties> {
-	constructor(name:string,properties:BucketPolicy_ResourceProperties){
-		super(name,properties,"AWS::S3::BucketPolicy");
+	constructor(name:string,properties:BucketPolicy_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::S3::BucketPolicy",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class EC2Fleet extends AWSResource<EC2Fleet_ResourceProperties> {
-	constructor(name:string,properties:EC2Fleet_ResourceProperties){
-		super(name,properties,"AWS::EC2::EC2Fleet");
+	constructor(name:string,properties:EC2Fleet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::EC2Fleet",dependsOn);
 	}
 }
 

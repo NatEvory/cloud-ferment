@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Resolver = /** @class */ (function (_super) {
     __extends(Resolver, _super);
-    function Resolver(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppSync::Resolver") || this;
+    function Resolver(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppSync::Resolver", dependsOn) || this;
     }
     return Resolver;
 }(AWSResource_1.AWSResource));

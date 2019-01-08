@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DirectoryConfig = /** @class */ (function (_super) {
     __extends(DirectoryConfig, _super);
-    function DirectoryConfig(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppStream::DirectoryConfig") || this;
+    function DirectoryConfig(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppStream::DirectoryConfig", dependsOn) || this;
     }
     return DirectoryConfig;
 }(AWSResource_1.AWSResource));

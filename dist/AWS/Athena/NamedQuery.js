@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var NamedQuery = /** @class */ (function (_super) {
     __extends(NamedQuery, _super);
-    function NamedQuery(name, properties) {
-        return _super.call(this, name, properties, "AWS::Athena::NamedQuery") || this;
+    function NamedQuery(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Athena::NamedQuery", dependsOn) || this;
     }
     return NamedQuery;
 }(AWSResource_1.AWSResource));

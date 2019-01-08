@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Pipeline extends AWSResource<Pipeline_ResourceProperties> {
-	constructor(name:string,properties:Pipeline_ResourceProperties){
-		super(name,properties,"AWS::IoTAnalytics::Pipeline");
+	constructor(name:string,properties:Pipeline_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoTAnalytics::Pipeline",dependsOn);
 	}
 }
 

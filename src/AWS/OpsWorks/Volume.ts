@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Volume extends AWSResource<Volume_ResourceProperties> {
-	constructor(name:string,properties:Volume_ResourceProperties){
-		super(name,properties,"AWS::OpsWorks::Volume");
+	constructor(name:string,properties:Volume_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::OpsWorks::Volume",dependsOn);
 	}
 }
 

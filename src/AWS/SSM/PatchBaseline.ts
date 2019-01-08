@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class PatchBaseline extends AWSResource<PatchBaseline_ResourceProperties> {
-	constructor(name:string,properties:PatchBaseline_ResourceProperties){
-		super(name,properties,"AWS::SSM::PatchBaseline");
+	constructor(name:string,properties:PatchBaseline_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SSM::PatchBaseline",dependsOn);
 	}
 }
 

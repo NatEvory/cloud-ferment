@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Permission extends AWSResource<Permission_ResourceProperties> {
-	constructor(name:string,properties:Permission_ResourceProperties){
-		super(name,properties,"AWS::Lambda::Permission");
+	constructor(name:string,properties:Permission_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Lambda::Permission",dependsOn);
 	}
 }
 

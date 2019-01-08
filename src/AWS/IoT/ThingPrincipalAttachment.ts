@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ThingPrincipalAttachment extends AWSResource<ThingPrincipalAttachment_ResourceProperties> {
-	constructor(name:string,properties:ThingPrincipalAttachment_ResourceProperties){
-		super(name,properties,"AWS::IoT::ThingPrincipalAttachment");
+	constructor(name:string,properties:ThingPrincipalAttachment_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoT::ThingPrincipalAttachment",dependsOn);
 	}
 }
 

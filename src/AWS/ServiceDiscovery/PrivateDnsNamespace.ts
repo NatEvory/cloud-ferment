@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class PrivateDnsNamespace extends AWSResource<PrivateDnsNamespace_ResourceProperties> {
-	constructor(name:string,properties:PrivateDnsNamespace_ResourceProperties){
-		super(name,properties,"AWS::ServiceDiscovery::PrivateDnsNamespace");
+	constructor(name:string,properties:PrivateDnsNamespace_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ServiceDiscovery::PrivateDnsNamespace",dependsOn);
 	}
 }
 

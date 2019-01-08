@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DBCluster = /** @class */ (function (_super) {
     __extends(DBCluster, _super);
-    function DBCluster(name, properties) {
-        return _super.call(this, name, properties, "AWS::Neptune::DBCluster") || this;
+    function DBCluster(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Neptune::DBCluster", dependsOn) || this;
     }
     return DBCluster;
 }(AWSResource_1.AWSResource));

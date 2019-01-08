@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Destination extends AWSResource<Destination_ResourceProperties> {
-	constructor(name:string,properties:Destination_ResourceProperties){
-		super(name,properties,"AWS::Logs::Destination");
+	constructor(name:string,properties:Destination_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Logs::Destination",dependsOn);
 	}
 }
 

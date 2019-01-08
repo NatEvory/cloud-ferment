@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Repository = /** @class */ (function (_super) {
     __extends(Repository, _super);
-    function Repository(name, properties) {
-        return _super.call(this, name, properties, "AWS::ECR::Repository") || this;
+    function Repository(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ECR::Repository", dependsOn) || this;
     }
     return Repository;
 }(AWSResource_1.AWSResource));

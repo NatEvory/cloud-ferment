@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ClusterSecurityGroupIngress = /** @class */ (function (_super) {
     __extends(ClusterSecurityGroupIngress, _super);
-    function ClusterSecurityGroupIngress(name, properties) {
-        return _super.call(this, name, properties, "AWS::Redshift::ClusterSecurityGroupIngress") || this;
+    function ClusterSecurityGroupIngress(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Redshift::ClusterSecurityGroupIngress", dependsOn) || this;
     }
     return ClusterSecurityGroupIngress;
 }(AWSResource_1.AWSResource));

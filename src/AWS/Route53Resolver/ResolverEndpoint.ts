@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ResolverEndpoint extends AWSResource<ResolverEndpoint_ResourceProperties> {
-	constructor(name:string,properties:ResolverEndpoint_ResourceProperties){
-		super(name,properties,"AWS::Route53Resolver::ResolverEndpoint");
+	constructor(name:string,properties:ResolverEndpoint_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Route53Resolver::ResolverEndpoint",dependsOn);
 	}
 }
 

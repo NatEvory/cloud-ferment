@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ManagedPolicy extends AWSResource<ManagedPolicy_ResourceProperties> {
-    constructor(name: string, properties: ManagedPolicy_ResourceProperties);
+    constructor(name: string, properties: ManagedPolicy_ResourceProperties, dependsOn?: string[]);
 }
 export interface ManagedPolicy_ResourceProperties extends AWSResourceProperties {
     Description?: AWSStringProperty;

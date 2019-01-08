@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var GraphQLApi = /** @class */ (function (_super) {
     __extends(GraphQLApi, _super);
-    function GraphQLApi(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppSync::GraphQLApi") || this;
+    function GraphQLApi(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppSync::GraphQLApi", dependsOn) || this;
     }
     return GraphQLApi;
 }(AWSResource_1.AWSResource));

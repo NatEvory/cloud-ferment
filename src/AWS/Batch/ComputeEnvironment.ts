@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ComputeEnvironment extends AWSResource<ComputeEnvironment_ResourceProperties> {
-	constructor(name:string,properties:ComputeEnvironment_ResourceProperties){
-		super(name,properties,"AWS::Batch::ComputeEnvironment");
+	constructor(name:string,properties:ComputeEnvironment_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Batch::ComputeEnvironment",dependsOn);
 	}
 }
 

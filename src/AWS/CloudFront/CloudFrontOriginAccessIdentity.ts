@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class CloudFrontOriginAccessIdentity extends AWSResource<CloudFrontOriginAccessIdentity_ResourceProperties> {
-	constructor(name:string,properties:CloudFrontOriginAccessIdentity_ResourceProperties){
-		super(name,properties,"AWS::CloudFront::CloudFrontOriginAccessIdentity");
+	constructor(name:string,properties:CloudFrontOriginAccessIdentity_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudFront::CloudFrontOriginAccessIdentity",dependsOn);
 	}
 }
 

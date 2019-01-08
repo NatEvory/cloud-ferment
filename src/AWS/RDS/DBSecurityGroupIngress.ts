@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DBSecurityGroupIngress extends AWSResource<DBSecurityGroupIngress_ResourceProperties> {
-	constructor(name:string,properties:DBSecurityGroupIngress_ResourceProperties){
-		super(name,properties,"AWS::RDS::DBSecurityGroupIngress");
+	constructor(name:string,properties:DBSecurityGroupIngress_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::RDS::DBSecurityGroupIngress",dependsOn);
 	}
 }
 

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class EC2Fleet extends AWSResource<EC2Fleet_ResourceProperties> {
-    constructor(name: string, properties: EC2Fleet_ResourceProperties);
+    constructor(name: string, properties: EC2Fleet_ResourceProperties, dependsOn?: string[]);
 }
 export interface EC2Fleet_ResourceProperties extends AWSResourceProperties {
     TargetCapacitySpecification: EC2Fleet_TargetCapacitySpecificationRequest;

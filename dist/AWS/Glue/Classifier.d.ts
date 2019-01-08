@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Classifier extends AWSResource<Classifier_ResourceProperties> {
-    constructor(name: string, properties: Classifier_ResourceProperties);
+    constructor(name: string, properties: Classifier_ResourceProperties, dependsOn?: string[]);
 }
 export interface Classifier_ResourceProperties extends AWSResourceProperties {
     XMLClassifier?: Classifier_XMLClassifier;

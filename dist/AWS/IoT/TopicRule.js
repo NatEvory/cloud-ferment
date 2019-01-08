@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var TopicRule = /** @class */ (function (_super) {
     __extends(TopicRule, _super);
-    function TopicRule(name, properties) {
-        return _super.call(this, name, properties, "AWS::IoT::TopicRule") || this;
+    function TopicRule(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IoT::TopicRule", dependsOn) || this;
     }
     return TopicRule;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Distribution extends AWSResource<Distribution_ResourceProperties> {
-	constructor(name:string,properties:Distribution_ResourceProperties){
-		super(name,properties,"AWS::CloudFront::Distribution");
+	constructor(name:string,properties:Distribution_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudFront::Distribution",dependsOn);
 	}
 }
 

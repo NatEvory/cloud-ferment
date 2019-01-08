@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Step extends AWSResource<Step_ResourceProperties> {
-    constructor(name: string, properties: Step_ResourceProperties);
+    constructor(name: string, properties: Step_ResourceProperties, dependsOn?: string[]);
 }
 export interface Step_ResourceProperties extends AWSResourceProperties {
     ActionOnFailure: AWSStringProperty;

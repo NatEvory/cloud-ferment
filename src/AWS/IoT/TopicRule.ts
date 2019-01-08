@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class TopicRule extends AWSResource<TopicRule_ResourceProperties> {
-	constructor(name:string,properties:TopicRule_ResourceProperties){
-		super(name,properties,"AWS::IoT::TopicRule");
+	constructor(name:string,properties:TopicRule_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoT::TopicRule",dependsOn);
 	}
 }
 

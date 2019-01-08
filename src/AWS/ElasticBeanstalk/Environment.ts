@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Environment extends AWSResource<Environment_ResourceProperties> {
-	constructor(name:string,properties:Environment_ResourceProperties){
-		super(name,properties,"AWS::ElasticBeanstalk::Environment");
+	constructor(name:string,properties:Environment_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElasticBeanstalk::Environment",dependsOn);
 	}
 }
 

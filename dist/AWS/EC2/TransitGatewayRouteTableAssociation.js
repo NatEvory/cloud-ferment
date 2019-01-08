@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var TransitGatewayRouteTableAssociation = /** @class */ (function (_super) {
     __extends(TransitGatewayRouteTableAssociation, _super);
-    function TransitGatewayRouteTableAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::TransitGatewayRouteTableAssociation") || this;
+    function TransitGatewayRouteTableAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::TransitGatewayRouteTableAssociation", dependsOn) || this;
     }
     return TransitGatewayRouteTableAssociation;
 }(AWSResource_1.AWSResource));

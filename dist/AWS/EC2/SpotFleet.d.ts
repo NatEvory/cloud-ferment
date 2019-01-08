@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class SpotFleet extends AWSResource<SpotFleet_ResourceProperties> {
-    constructor(name: string, properties: SpotFleet_ResourceProperties);
+    constructor(name: string, properties: SpotFleet_ResourceProperties, dependsOn?: string[]);
 }
 export interface SpotFleet_ResourceProperties extends AWSResourceProperties {
     SpotFleetRequestConfigData: SpotFleet_SpotFleetRequestConfigData;

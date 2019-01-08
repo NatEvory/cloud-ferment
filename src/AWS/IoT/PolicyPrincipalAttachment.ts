@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class PolicyPrincipalAttachment extends AWSResource<PolicyPrincipalAttachment_ResourceProperties> {
-	constructor(name:string,properties:PolicyPrincipalAttachment_ResourceProperties){
-		super(name,properties,"AWS::IoT::PolicyPrincipalAttachment");
+	constructor(name:string,properties:PolicyPrincipalAttachment_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoT::PolicyPrincipalAttachment",dependsOn);
 	}
 }
 

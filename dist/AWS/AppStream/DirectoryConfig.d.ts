@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class DirectoryConfig extends AWSResource<DirectoryConfig_ResourceProperties> {
-    constructor(name: string, properties: DirectoryConfig_ResourceProperties);
+    constructor(name: string, properties: DirectoryConfig_ResourceProperties, dependsOn?: string[]);
 }
 export interface DirectoryConfig_ResourceProperties extends AWSResourceProperties {
     OrganizationalUnitDistinguishedNames: AWSStringListProperty;

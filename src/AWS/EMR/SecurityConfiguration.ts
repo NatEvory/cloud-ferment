@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SecurityConfiguration extends AWSResource<SecurityConfiguration_ResourceProperties> {
-	constructor(name:string,properties:SecurityConfiguration_ResourceProperties){
-		super(name,properties,"AWS::EMR::SecurityConfiguration");
+	constructor(name:string,properties:SecurityConfiguration_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EMR::SecurityConfiguration",dependsOn);
 	}
 }
 

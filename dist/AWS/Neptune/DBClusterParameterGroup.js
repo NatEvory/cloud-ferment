@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DBClusterParameterGroup = /** @class */ (function (_super) {
     __extends(DBClusterParameterGroup, _super);
-    function DBClusterParameterGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::Neptune::DBClusterParameterGroup") || this;
+    function DBClusterParameterGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Neptune::DBClusterParameterGroup", dependsOn) || this;
     }
     return DBClusterParameterGroup;
 }(AWSResource_1.AWSResource));

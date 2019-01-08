@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var EIP = /** @class */ (function (_super) {
     __extends(EIP, _super);
-    function EIP(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::EIP") || this;
+    function EIP(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::EIP", dependsOn) || this;
     }
     return EIP;
 }(AWSResource_1.AWSResource));

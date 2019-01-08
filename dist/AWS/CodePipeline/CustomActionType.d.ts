@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class CustomActionType extends AWSResource<CustomActionType_ResourceProperties> {
-    constructor(name: string, properties: CustomActionType_ResourceProperties);
+    constructor(name: string, properties: CustomActionType_ResourceProperties, dependsOn?: string[]);
 }
 export interface CustomActionType_ResourceProperties extends AWSResourceProperties {
     Category: AWSStringProperty;

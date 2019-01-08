@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ClusterParameterGroup = /** @class */ (function (_super) {
     __extends(ClusterParameterGroup, _super);
-    function ClusterParameterGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::Redshift::ClusterParameterGroup") || this;
+    function ClusterParameterGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Redshift::ClusterParameterGroup", dependsOn) || this;
     }
     return ClusterParameterGroup;
 }(AWSResource_1.AWSResource));

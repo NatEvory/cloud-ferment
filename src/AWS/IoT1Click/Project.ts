@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Project extends AWSResource<Project_ResourceProperties> {
-	constructor(name:string,properties:Project_ResourceProperties){
-		super(name,properties,"AWS::IoT1Click::Project");
+	constructor(name:string,properties:Project_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoT1Click::Project",dependsOn);
 	}
 }
 

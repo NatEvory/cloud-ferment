@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Channel extends AWSResource<Channel_ResourceProperties> {
-    constructor(name: string, properties: Channel_ResourceProperties);
+    constructor(name: string, properties: Channel_ResourceProperties, dependsOn?: string[]);
 }
 export interface Channel_ResourceProperties extends AWSResourceProperties {
     ChannelName?: AWSStringProperty;

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class IdentityPool extends AWSResource<IdentityPool_ResourceProperties> {
-    constructor(name: string, properties: IdentityPool_ResourceProperties);
+    constructor(name: string, properties: IdentityPool_ResourceProperties, dependsOn?: string[]);
 }
 export interface IdentityPool_ResourceProperties extends AWSResourceProperties {
     PushSync?: IdentityPool_PushSync;

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var TaskDefinition = /** @class */ (function (_super) {
     __extends(TaskDefinition, _super);
-    function TaskDefinition(name, properties) {
-        return _super.call(this, name, properties, "AWS::ECS::TaskDefinition") || this;
+    function TaskDefinition(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ECS::TaskDefinition", dependsOn) || this;
     }
     return TaskDefinition;
 }(AWSResource_1.AWSResource));

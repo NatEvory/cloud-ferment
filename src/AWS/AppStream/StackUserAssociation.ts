@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class StackUserAssociation extends AWSResource<StackUserAssociation_ResourceProperties> {
-	constructor(name:string,properties:StackUserAssociation_ResourceProperties){
-		super(name,properties,"AWS::AppStream::StackUserAssociation");
+	constructor(name:string,properties:StackUserAssociation_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AppStream::StackUserAssociation",dependsOn);
 	}
 }
 

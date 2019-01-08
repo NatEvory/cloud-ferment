@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Skill extends AWSResource<Skill_ResourceProperties> {
-	constructor(name:string,properties:Skill_ResourceProperties){
-		super(name,properties,"Alexa::ASK::Skill");
+	constructor(name:string,properties:Skill_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"Alexa::ASK::Skill",dependsOn);
 	}
 }
 

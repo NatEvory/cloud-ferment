@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var TrunkInterfaceAssociation = /** @class */ (function (_super) {
     __extends(TrunkInterfaceAssociation, _super);
-    function TrunkInterfaceAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::TrunkInterfaceAssociation") || this;
+    function TrunkInterfaceAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::TrunkInterfaceAssociation", dependsOn) || this;
     }
     return TrunkInterfaceAssociation;
 }(AWSResource_1.AWSResource));

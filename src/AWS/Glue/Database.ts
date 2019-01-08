@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Database extends AWSResource<Database_ResourceProperties> {
-	constructor(name:string,properties:Database_ResourceProperties){
-		super(name,properties,"AWS::Glue::Database");
+	constructor(name:string,properties:Database_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::Database",dependsOn);
 	}
 }
 

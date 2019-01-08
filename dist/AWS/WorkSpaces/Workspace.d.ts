@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Workspace extends AWSResource<Workspace_ResourceProperties> {
-    constructor(name: string, properties: Workspace_ResourceProperties);
+    constructor(name: string, properties: Workspace_ResourceProperties, dependsOn?: string[]);
 }
 export interface Workspace_ResourceProperties extends AWSResourceProperties {
     BundleId: AWSStringProperty;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class RecordSet extends AWSResource<RecordSet_ResourceProperties> {
-	constructor(name:string,properties:RecordSet_ResourceProperties){
-		super(name,properties,"AWS::Route53::RecordSet");
+	constructor(name:string,properties:RecordSet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Route53::RecordSet",dependsOn);
 	}
 }
 

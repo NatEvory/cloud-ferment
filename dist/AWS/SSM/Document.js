@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Document = /** @class */ (function (_super) {
     __extends(Document, _super);
-    function Document(name, properties) {
-        return _super.call(this, name, properties, "AWS::SSM::Document") || this;
+    function Document(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SSM::Document", dependsOn) || this;
     }
     return Document;
 }(AWSResource_1.AWSResource));

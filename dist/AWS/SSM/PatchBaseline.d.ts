@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class PatchBaseline extends AWSResource<PatchBaseline_ResourceProperties> {
-    constructor(name: string, properties: PatchBaseline_ResourceProperties);
+    constructor(name: string, properties: PatchBaseline_ResourceProperties, dependsOn?: string[]);
 }
 export interface PatchBaseline_ResourceProperties extends AWSResourceProperties {
     OperatingSystem?: AWSStringProperty;

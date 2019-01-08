@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Broker extends AWSResource<Broker_ResourceProperties> {
-    constructor(name: string, properties: Broker_ResourceProperties);
+    constructor(name: string, properties: Broker_ResourceProperties, dependsOn?: string[]);
 }
 export interface Broker_ResourceProperties extends AWSResourceProperties {
     SecurityGroups?: AWSStringListProperty;

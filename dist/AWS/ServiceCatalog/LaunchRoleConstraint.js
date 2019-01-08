@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var LaunchRoleConstraint = /** @class */ (function (_super) {
     __extends(LaunchRoleConstraint, _super);
-    function LaunchRoleConstraint(name, properties) {
-        return _super.call(this, name, properties, "AWS::ServiceCatalog::LaunchRoleConstraint") || this;
+    function LaunchRoleConstraint(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ServiceCatalog::LaunchRoleConstraint", dependsOn) || this;
     }
     return LaunchRoleConstraint;
 }(AWSResource_1.AWSResource));

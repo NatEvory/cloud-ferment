@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ScalableTarget extends AWSResource<ScalableTarget_ResourceProperties> {
-	constructor(name:string,properties:ScalableTarget_ResourceProperties){
-		super(name,properties,"AWS::ApplicationAutoScaling::ScalableTarget");
+	constructor(name:string,properties:ScalableTarget_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApplicationAutoScaling::ScalableTarget",dependsOn);
 	}
 }
 

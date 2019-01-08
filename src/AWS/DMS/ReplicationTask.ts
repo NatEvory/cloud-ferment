@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ReplicationTask extends AWSResource<ReplicationTask_ResourceProperties> {
-	constructor(name:string,properties:ReplicationTask_ResourceProperties){
-		super(name,properties,"AWS::DMS::ReplicationTask");
+	constructor(name:string,properties:ReplicationTask_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::DMS::ReplicationTask",dependsOn);
 	}
 }
 

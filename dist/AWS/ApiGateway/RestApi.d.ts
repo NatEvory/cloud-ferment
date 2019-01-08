@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class RestApi extends AWSResource<RestApi_ResourceProperties> {
-    constructor(name: string, properties: RestApi_ResourceProperties);
+    constructor(name: string, properties: RestApi_ResourceProperties, dependsOn?: string[]);
 }
 export interface RestApi_ResourceProperties extends AWSResourceProperties {
     ApiKeySourceType?: AWSStringProperty;

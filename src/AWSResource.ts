@@ -13,7 +13,7 @@ export interface Tag {
 
 export class AWSResource<T extends AWSResourceProperties> {
 
-	constructor( public name:string, private resourceProperties:T, private typeName:string){
+	constructor( public name:string, private resourceProperties:T, private typeName:string, private dependsOn?:string[]){
 
 	}
 
@@ -22,6 +22,10 @@ export class AWSResource<T extends AWSResourceProperties> {
 	}
 	getTypeName(){
 		return this.typeName;
+	}
+
+	getDependencies():string[]{
+		return this.dependsOn;
 	}
 
 }

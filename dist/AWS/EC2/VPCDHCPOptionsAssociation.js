@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VPCDHCPOptionsAssociation = /** @class */ (function (_super) {
     __extends(VPCDHCPOptionsAssociation, _super);
-    function VPCDHCPOptionsAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::VPCDHCPOptionsAssociation") || this;
+    function VPCDHCPOptionsAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::VPCDHCPOptionsAssociation", dependsOn) || this;
     }
     return VPCDHCPOptionsAssociation;
 }(AWSResource_1.AWSResource));

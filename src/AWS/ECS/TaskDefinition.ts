@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class TaskDefinition extends AWSResource<TaskDefinition_ResourceProperties> {
-	constructor(name:string,properties:TaskDefinition_ResourceProperties){
-		super(name,properties,"AWS::ECS::TaskDefinition");
+	constructor(name:string,properties:TaskDefinition_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ECS::TaskDefinition",dependsOn);
 	}
 }
 

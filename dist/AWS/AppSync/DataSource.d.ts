@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class DataSource extends AWSResource<DataSource_ResourceProperties> {
-    constructor(name: string, properties: DataSource_ResourceProperties);
+    constructor(name: string, properties: DataSource_ResourceProperties, dependsOn?: string[]);
 }
 export interface DataSource_ResourceProperties extends AWSResourceProperties {
     Type: AWSStringProperty;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class WaitCondition extends AWSResource<WaitCondition_ResourceProperties> {
-	constructor(name:string,properties:WaitCondition_ResourceProperties){
-		super(name,properties,"AWS::CloudFormation::WaitCondition");
+	constructor(name:string,properties:WaitCondition_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudFormation::WaitCondition",dependsOn);
 	}
 }
 

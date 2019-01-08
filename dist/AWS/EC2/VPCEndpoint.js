@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VPCEndpoint = /** @class */ (function (_super) {
     __extends(VPCEndpoint, _super);
-    function VPCEndpoint(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::VPCEndpoint") || this;
+    function VPCEndpoint(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::VPCEndpoint", dependsOn) || this;
     }
     return VPCEndpoint;
 }(AWSResource_1.AWSResource));

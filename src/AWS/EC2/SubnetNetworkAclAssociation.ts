@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SubnetNetworkAclAssociation extends AWSResource<SubnetNetworkAclAssociation_ResourceProperties> {
-	constructor(name:string,properties:SubnetNetworkAclAssociation_ResourceProperties){
-		super(name,properties,"AWS::EC2::SubnetNetworkAclAssociation");
+	constructor(name:string,properties:SubnetNetworkAclAssociation_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::SubnetNetworkAclAssociation",dependsOn);
 	}
 }
 

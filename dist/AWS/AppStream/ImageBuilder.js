@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ImageBuilder = /** @class */ (function (_super) {
     __extends(ImageBuilder, _super);
-    function ImageBuilder(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppStream::ImageBuilder") || this;
+    function ImageBuilder(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppStream::ImageBuilder", dependsOn) || this;
     }
     return ImageBuilder;
 }(AWSResource_1.AWSResource));

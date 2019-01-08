@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Dashboard extends AWSResource<Dashboard_ResourceProperties> {
-	constructor(name:string,properties:Dashboard_ResourceProperties){
-		super(name,properties,"AWS::CloudWatch::Dashboard");
+	constructor(name:string,properties:Dashboard_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudWatch::Dashboard",dependsOn);
 	}
 }
 

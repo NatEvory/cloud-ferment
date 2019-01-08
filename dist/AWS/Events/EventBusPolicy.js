@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var EventBusPolicy = /** @class */ (function (_super) {
     __extends(EventBusPolicy, _super);
-    function EventBusPolicy(name, properties) {
-        return _super.call(this, name, properties, "AWS::Events::EventBusPolicy") || this;
+    function EventBusPolicy(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Events::EventBusPolicy", dependsOn) || this;
     }
     return EventBusPolicy;
 }(AWSResource_1.AWSResource));

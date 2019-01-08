@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var LifecycleHook = /** @class */ (function (_super) {
     __extends(LifecycleHook, _super);
-    function LifecycleHook(name, properties) {
-        return _super.call(this, name, properties, "AWS::AutoScaling::LifecycleHook") || this;
+    function LifecycleHook(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AutoScaling::LifecycleHook", dependsOn) || this;
     }
     return LifecycleHook;
 }(AWSResource_1.AWSResource));

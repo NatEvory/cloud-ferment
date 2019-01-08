@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class InstanceGroupConfig extends AWSResource<InstanceGroupConfig_ResourceProperties> {
-	constructor(name:string,properties:InstanceGroupConfig_ResourceProperties){
-		super(name,properties,"AWS::EMR::InstanceGroupConfig");
+	constructor(name:string,properties:InstanceGroupConfig_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EMR::InstanceGroupConfig",dependsOn);
 	}
 }
 

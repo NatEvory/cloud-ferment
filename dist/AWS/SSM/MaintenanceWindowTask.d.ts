@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class MaintenanceWindowTask extends AWSResource<MaintenanceWindowTask_ResourceProperties> {
-    constructor(name: string, properties: MaintenanceWindowTask_ResourceProperties);
+    constructor(name: string, properties: MaintenanceWindowTask_ResourceProperties, dependsOn?: string[]);
 }
 export interface MaintenanceWindowTask_ResourceProperties extends AWSResourceProperties {
     MaxErrors: AWSStringProperty;

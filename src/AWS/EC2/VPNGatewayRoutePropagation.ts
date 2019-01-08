@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class VPNGatewayRoutePropagation extends AWSResource<VPNGatewayRoutePropagation_ResourceProperties> {
-	constructor(name:string,properties:VPNGatewayRoutePropagation_ResourceProperties){
-		super(name,properties,"AWS::EC2::VPNGatewayRoutePropagation");
+	constructor(name:string,properties:VPNGatewayRoutePropagation_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::VPNGatewayRoutePropagation",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class EventSourceMapping extends AWSResource<EventSourceMapping_ResourceProperties> {
-	constructor(name:string,properties:EventSourceMapping_ResourceProperties){
-		super(name,properties,"AWS::Lambda::EventSourceMapping");
+	constructor(name:string,properties:EventSourceMapping_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Lambda::EventSourceMapping",dependsOn);
 	}
 }
 

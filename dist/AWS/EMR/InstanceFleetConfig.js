@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var InstanceFleetConfig = /** @class */ (function (_super) {
     __extends(InstanceFleetConfig, _super);
-    function InstanceFleetConfig(name, properties) {
-        return _super.call(this, name, properties, "AWS::EMR::InstanceFleetConfig") || this;
+    function InstanceFleetConfig(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EMR::InstanceFleetConfig", dependsOn) || this;
     }
     return InstanceFleetConfig;
 }(AWSResource_1.AWSResource));

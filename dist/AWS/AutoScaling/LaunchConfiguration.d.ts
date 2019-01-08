@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class LaunchConfiguration extends AWSResource<LaunchConfiguration_ResourceProperties> {
-    constructor(name: string, properties: LaunchConfiguration_ResourceProperties);
+    constructor(name: string, properties: LaunchConfiguration_ResourceProperties, dependsOn?: string[]);
 }
 export interface LaunchConfiguration_ResourceProperties extends AWSResourceProperties {
     AssociatePublicIpAddress?: boolean;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class GraphQLApi extends AWSResource<GraphQLApi_ResourceProperties> {
-	constructor(name:string,properties:GraphQLApi_ResourceProperties){
-		super(name,properties,"AWS::AppSync::GraphQLApi");
+	constructor(name:string,properties:GraphQLApi_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AppSync::GraphQLApi",dependsOn);
 	}
 }
 

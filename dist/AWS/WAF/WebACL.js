@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var WebACL = /** @class */ (function (_super) {
     __extends(WebACL, _super);
-    function WebACL(name, properties) {
-        return _super.call(this, name, properties, "AWS::WAF::WebACL") || this;
+    function WebACL(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::WAF::WebACL", dependsOn) || this;
     }
     return WebACL;
 }(AWSResource_1.AWSResource));

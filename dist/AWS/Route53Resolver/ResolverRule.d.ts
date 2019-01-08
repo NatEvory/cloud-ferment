@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class ResolverRule extends AWSResource<ResolverRule_ResourceProperties> {
-    constructor(name: string, properties: ResolverRule_ResourceProperties);
+    constructor(name: string, properties: ResolverRule_ResourceProperties, dependsOn?: string[]);
 }
 export interface ResolverRule_ResourceProperties extends AWSResourceProperties {
     ResolverEndpointId?: AWSStringProperty;

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var RequestValidator = /** @class */ (function (_super) {
     __extends(RequestValidator, _super);
-    function RequestValidator(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::RequestValidator") || this;
+    function RequestValidator(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::RequestValidator", dependsOn) || this;
     }
     return RequestValidator;
 }(AWSResource_1.AWSResource));

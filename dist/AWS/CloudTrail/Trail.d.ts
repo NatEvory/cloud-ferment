@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Trail extends AWSResource<Trail_ResourceProperties> {
-    constructor(name: string, properties: Trail_ResourceProperties);
+    constructor(name: string, properties: Trail_ResourceProperties, dependsOn?: string[]);
 }
 export interface Trail_ResourceProperties extends AWSResourceProperties {
     CloudWatchLogsLogGroupArn?: AWSStringProperty;

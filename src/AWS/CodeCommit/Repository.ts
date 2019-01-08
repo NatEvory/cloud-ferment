@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Repository extends AWSResource<Repository_ResourceProperties> {
-	constructor(name:string,properties:Repository_ResourceProperties){
-		super(name,properties,"AWS::CodeCommit::Repository");
+	constructor(name:string,properties:Repository_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CodeCommit::Repository",dependsOn);
 	}
 }
 

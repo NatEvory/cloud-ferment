@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VpcLink = /** @class */ (function (_super) {
     __extends(VpcLink, _super);
-    function VpcLink(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::VpcLink") || this;
+    function VpcLink(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::VpcLink", dependsOn) || this;
     }
     return VpcLink;
 }(AWSResource_1.AWSResource));

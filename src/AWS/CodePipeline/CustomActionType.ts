@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class CustomActionType extends AWSResource<CustomActionType_ResourceProperties> {
-	constructor(name:string,properties:CustomActionType_ResourceProperties){
-		super(name,properties,"AWS::CodePipeline::CustomActionType");
+	constructor(name:string,properties:CustomActionType_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CodePipeline::CustomActionType",dependsOn);
 	}
 }
 

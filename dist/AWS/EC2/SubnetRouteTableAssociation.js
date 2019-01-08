@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SubnetRouteTableAssociation = /** @class */ (function (_super) {
     __extends(SubnetRouteTableAssociation, _super);
-    function SubnetRouteTableAssociation(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::SubnetRouteTableAssociation") || this;
+    function SubnetRouteTableAssociation(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::SubnetRouteTableAssociation", dependsOn) || this;
     }
     return SubnetRouteTableAssociation;
 }(AWSResource_1.AWSResource));

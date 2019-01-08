@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class XssMatchSet extends AWSResource<XssMatchSet_ResourceProperties> {
-    constructor(name: string, properties: XssMatchSet_ResourceProperties);
+    constructor(name: string, properties: XssMatchSet_ResourceProperties, dependsOn?: string[]);
 }
 export interface XssMatchSet_ResourceProperties extends AWSResourceProperties {
     Name: AWSStringProperty;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class LifecycleHook extends AWSResource<LifecycleHook_ResourceProperties> {
-	constructor(name:string,properties:LifecycleHook_ResourceProperties){
-		super(name,properties,"AWS::AutoScaling::LifecycleHook");
+	constructor(name:string,properties:LifecycleHook_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AutoScaling::LifecycleHook",dependsOn);
 	}
 }
 

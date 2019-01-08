@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VPCPeeringConnection = /** @class */ (function (_super) {
     __extends(VPCPeeringConnection, _super);
-    function VPCPeeringConnection(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::VPCPeeringConnection") || this;
+    function VPCPeeringConnection(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::VPCPeeringConnection", dependsOn) || this;
     }
     return VPCPeeringConnection;
 }(AWSResource_1.AWSResource));

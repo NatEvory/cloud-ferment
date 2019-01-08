@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class OptionGroup extends AWSResource<OptionGroup_ResourceProperties> {
-    constructor(name: string, properties: OptionGroup_ResourceProperties);
+    constructor(name: string, properties: OptionGroup_ResourceProperties, dependsOn?: string[]);
 }
 export interface OptionGroup_ResourceProperties extends AWSResourceProperties {
     EngineName: AWSStringProperty;

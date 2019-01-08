@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ConfigurationTemplate extends AWSResource<ConfigurationTemplate_ResourceProperties> {
-	constructor(name:string,properties:ConfigurationTemplate_ResourceProperties){
-		super(name,properties,"AWS::ElasticBeanstalk::ConfigurationTemplate");
+	constructor(name:string,properties:ConfigurationTemplate_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElasticBeanstalk::ConfigurationTemplate",dependsOn);
 	}
 }
 

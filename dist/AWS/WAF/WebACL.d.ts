@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class WebACL extends AWSResource<WebACL_ResourceProperties> {
-    constructor(name: string, properties: WebACL_ResourceProperties);
+    constructor(name: string, properties: WebACL_ResourceProperties, dependsOn?: string[]);
 }
 export interface WebACL_ResourceProperties extends AWSResourceProperties {
     DefaultAction: WebACL_WafAction;

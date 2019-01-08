@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DeliveryChannel = /** @class */ (function (_super) {
     __extends(DeliveryChannel, _super);
-    function DeliveryChannel(name, properties) {
-        return _super.call(this, name, properties, "AWS::Config::DeliveryChannel") || this;
+    function DeliveryChannel(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Config::DeliveryChannel", dependsOn) || this;
     }
     return DeliveryChannel;
 }(AWSResource_1.AWSResource));

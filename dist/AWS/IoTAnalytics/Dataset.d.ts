@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Dataset extends AWSResource<Dataset_ResourceProperties> {
-    constructor(name: string, properties: Dataset_ResourceProperties);
+    constructor(name: string, properties: Dataset_ResourceProperties, dependsOn?: string[]);
 }
 export interface Dataset_ResourceProperties extends AWSResourceProperties {
     Actions: Dataset_Action[];

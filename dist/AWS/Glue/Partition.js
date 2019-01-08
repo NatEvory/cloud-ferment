@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Partition = /** @class */ (function (_super) {
     __extends(Partition, _super);
-    function Partition(name, properties) {
-        return _super.call(this, name, properties, "AWS::Glue::Partition") || this;
+    function Partition(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Glue::Partition", dependsOn) || this;
     }
     return Partition;
 }(AWSResource_1.AWSResource));

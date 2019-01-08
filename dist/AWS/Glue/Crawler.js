@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Crawler = /** @class */ (function (_super) {
     __extends(Crawler, _super);
-    function Crawler(name, properties) {
-        return _super.call(this, name, properties, "AWS::Glue::Crawler") || this;
+    function Crawler(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Glue::Crawler", dependsOn) || this;
     }
     return Crawler;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var LifecyclePolicy = /** @class */ (function (_super) {
     __extends(LifecyclePolicy, _super);
-    function LifecyclePolicy(name, properties) {
-        return _super.call(this, name, properties, "AWS::DLM::LifecyclePolicy") || this;
+    function LifecyclePolicy(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::DLM::LifecyclePolicy", dependsOn) || this;
     }
     return LifecyclePolicy;
 }(AWSResource_1.AWSResource));

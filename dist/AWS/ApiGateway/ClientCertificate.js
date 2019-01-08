@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ClientCertificate = /** @class */ (function (_super) {
     __extends(ClientCertificate, _super);
-    function ClientCertificate(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::ClientCertificate") || this;
+    function ClientCertificate(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::ClientCertificate", dependsOn) || this;
     }
     return ClientCertificate;
 }(AWSResource_1.AWSResource));

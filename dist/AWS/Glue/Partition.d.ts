@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Partition extends AWSResource<Partition_ResourceProperties> {
-    constructor(name: string, properties: Partition_ResourceProperties);
+    constructor(name: string, properties: Partition_ResourceProperties, dependsOn?: string[]);
 }
 export interface Partition_ResourceProperties extends AWSResourceProperties {
     TableName: AWSStringProperty;

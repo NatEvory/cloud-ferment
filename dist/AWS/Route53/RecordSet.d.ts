@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class RecordSet extends AWSResource<RecordSet_ResourceProperties> {
-    constructor(name: string, properties: RecordSet_ResourceProperties);
+    constructor(name: string, properties: RecordSet_ResourceProperties, dependsOn?: string[]);
 }
 export interface RecordSet_ResourceProperties extends AWSResourceProperties {
     AliasTarget?: RecordSet_AliasTarget;

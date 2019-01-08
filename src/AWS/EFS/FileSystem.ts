@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class FileSystem extends AWSResource<FileSystem_ResourceProperties> {
-	constructor(name:string,properties:FileSystem_ResourceProperties){
-		super(name,properties,"AWS::EFS::FileSystem");
+	constructor(name:string,properties:FileSystem_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EFS::FileSystem",dependsOn);
 	}
 }
 

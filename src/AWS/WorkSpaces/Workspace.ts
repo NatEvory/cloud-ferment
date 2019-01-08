@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Workspace extends AWSResource<Workspace_ResourceProperties> {
-	constructor(name:string,properties:Workspace_ResourceProperties){
-		super(name,properties,"AWS::WorkSpaces::Workspace");
+	constructor(name:string,properties:Workspace_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::WorkSpaces::Workspace",dependsOn);
 	}
 }
 

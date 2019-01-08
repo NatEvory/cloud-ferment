@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var GraphQLSchema = /** @class */ (function (_super) {
     __extends(GraphQLSchema, _super);
-    function GraphQLSchema(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppSync::GraphQLSchema") || this;
+    function GraphQLSchema(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppSync::GraphQLSchema", dependsOn) || this;
     }
     return GraphQLSchema;
 }(AWSResource_1.AWSResource));

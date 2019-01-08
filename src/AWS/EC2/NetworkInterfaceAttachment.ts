@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class NetworkInterfaceAttachment extends AWSResource<NetworkInterfaceAttachment_ResourceProperties> {
-	constructor(name:string,properties:NetworkInterfaceAttachment_ResourceProperties){
-		super(name,properties,"AWS::EC2::NetworkInterfaceAttachment");
+	constructor(name:string,properties:NetworkInterfaceAttachment_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::NetworkInterfaceAttachment",dependsOn);
 	}
 }
 

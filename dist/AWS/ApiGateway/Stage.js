@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Stage = /** @class */ (function (_super) {
     __extends(Stage, _super);
-    function Stage(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::Stage") || this;
+    function Stage(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::Stage", dependsOn) || this;
     }
     return Stage;
 }(AWSResource_1.AWSResource));

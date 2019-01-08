@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ApiKey = /** @class */ (function (_super) {
     __extends(ApiKey, _super);
-    function ApiKey(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppSync::ApiKey") || this;
+    function ApiKey(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppSync::ApiKey", dependsOn) || this;
     }
     return ApiKey;
 }(AWSResource_1.AWSResource));

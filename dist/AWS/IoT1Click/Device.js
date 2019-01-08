@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Device = /** @class */ (function (_super) {
     __extends(Device, _super);
-    function Device(name, properties) {
-        return _super.call(this, name, properties, "AWS::IoT1Click::Device") || this;
+    function Device(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IoT1Click::Device", dependsOn) || this;
     }
     return Device;
 }(AWSResource_1.AWSResource));

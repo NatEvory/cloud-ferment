@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ThreatIntelSet extends AWSResource<ThreatIntelSet_ResourceProperties> {
-	constructor(name:string,properties:ThreatIntelSet_ResourceProperties){
-		super(name,properties,"AWS::GuardDuty::ThreatIntelSet");
+	constructor(name:string,properties:ThreatIntelSet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::GuardDuty::ThreatIntelSet",dependsOn);
 	}
 }
 

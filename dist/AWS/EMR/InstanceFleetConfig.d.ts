@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class InstanceFleetConfig extends AWSResource<InstanceFleetConfig_ResourceProperties> {
-    constructor(name: string, properties: InstanceFleetConfig_ResourceProperties);
+    constructor(name: string, properties: InstanceFleetConfig_ResourceProperties, dependsOn?: string[]);
 }
 export interface InstanceFleetConfig_ResourceProperties extends AWSResourceProperties {
     ClusterId: AWSStringProperty;

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Cluster extends AWSResource<Cluster_ResourceProperties> {
-	constructor(name:string,properties:Cluster_ResourceProperties){
-		super(name,properties,"AWS::DAX::Cluster");
+	constructor(name:string,properties:Cluster_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::DAX::Cluster",dependsOn);
 	}
 }
 

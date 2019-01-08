@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Resolver extends AWSResource<Resolver_ResourceProperties> {
-	constructor(name:string,properties:Resolver_ResourceProperties){
-		super(name,properties,"AWS::AppSync::Resolver");
+	constructor(name:string,properties:Resolver_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AppSync::Resolver",dependsOn);
 	}
 }
 

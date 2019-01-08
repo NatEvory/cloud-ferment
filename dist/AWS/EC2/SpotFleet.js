@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SpotFleet = /** @class */ (function (_super) {
     __extends(SpotFleet, _super);
-    function SpotFleet(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::SpotFleet") || this;
+    function SpotFleet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::SpotFleet", dependsOn) || this;
     }
     return SpotFleet;
 }(AWSResource_1.AWSResource));

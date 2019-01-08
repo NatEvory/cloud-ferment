@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var EventSourceMapping = /** @class */ (function (_super) {
     __extends(EventSourceMapping, _super);
-    function EventSourceMapping(name, properties) {
-        return _super.call(this, name, properties, "AWS::Lambda::EventSourceMapping") || this;
+    function EventSourceMapping(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Lambda::EventSourceMapping", dependsOn) || this;
     }
     return EventSourceMapping;
 }(AWSResource_1.AWSResource));

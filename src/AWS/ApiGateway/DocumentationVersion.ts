@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class DocumentationVersion extends AWSResource<DocumentationVersion_ResourceProperties> {
-	constructor(name:string,properties:DocumentationVersion_ResourceProperties){
-		super(name,properties,"AWS::ApiGateway::DocumentationVersion");
+	constructor(name:string,properties:DocumentationVersion_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ApiGateway::DocumentationVersion",dependsOn);
 	}
 }
 

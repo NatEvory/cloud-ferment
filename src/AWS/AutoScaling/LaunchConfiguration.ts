@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class LaunchConfiguration extends AWSResource<LaunchConfiguration_ResourceProperties> {
-	constructor(name:string,properties:LaunchConfiguration_ResourceProperties){
-		super(name,properties,"AWS::AutoScaling::LaunchConfiguration");
+	constructor(name:string,properties:LaunchConfiguration_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AutoScaling::LaunchConfiguration",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Connection extends AWSResource<Connection_ResourceProperties> {
-	constructor(name:string,properties:Connection_ResourceProperties){
-		super(name,properties,"AWS::Glue::Connection");
+	constructor(name:string,properties:Connection_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::Connection",dependsOn);
 	}
 }
 

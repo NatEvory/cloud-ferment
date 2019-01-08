@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DBParameterGroup = /** @class */ (function (_super) {
     __extends(DBParameterGroup, _super);
-    function DBParameterGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::Neptune::DBParameterGroup") || this;
+    function DBParameterGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Neptune::DBParameterGroup", dependsOn) || this;
     }
     return DBParameterGroup;
 }(AWSResource_1.AWSResource));

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Alarm extends AWSResource<Alarm_ResourceProperties> {
-    constructor(name: string, properties: Alarm_ResourceProperties);
+    constructor(name: string, properties: Alarm_ResourceProperties, dependsOn?: string[]);
 }
 export interface Alarm_ResourceProperties extends AWSResourceProperties {
     ActionsEnabled?: boolean;

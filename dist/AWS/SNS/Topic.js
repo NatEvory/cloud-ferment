@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Topic = /** @class */ (function (_super) {
     __extends(Topic, _super);
-    function Topic(name, properties) {
-        return _super.call(this, name, properties, "AWS::SNS::Topic") || this;
+    function Topic(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SNS::Topic", dependsOn) || this;
     }
     return Topic;
 }(AWSResource_1.AWSResource));

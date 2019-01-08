@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class HttpNamespace extends AWSResource<HttpNamespace_ResourceProperties> {
-	constructor(name:string,properties:HttpNamespace_ResourceProperties){
-		super(name,properties,"AWS::ServiceDiscovery::HttpNamespace");
+	constructor(name:string,properties:HttpNamespace_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ServiceDiscovery::HttpNamespace",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var CloudFrontOriginAccessIdentity = /** @class */ (function (_super) {
     __extends(CloudFrontOriginAccessIdentity, _super);
-    function CloudFrontOriginAccessIdentity(name, properties) {
-        return _super.call(this, name, properties, "AWS::CloudFront::CloudFrontOriginAccessIdentity") || this;
+    function CloudFrontOriginAccessIdentity(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CloudFront::CloudFrontOriginAccessIdentity", dependsOn) || this;
     }
     return CloudFrontOriginAccessIdentity;
 }(AWSResource_1.AWSResource));

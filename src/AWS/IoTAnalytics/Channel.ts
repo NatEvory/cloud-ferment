@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Channel extends AWSResource<Channel_ResourceProperties> {
-	constructor(name:string,properties:Channel_ResourceProperties){
-		super(name,properties,"AWS::IoTAnalytics::Channel");
+	constructor(name:string,properties:Channel_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::IoTAnalytics::Channel",dependsOn);
 	}
 }
 

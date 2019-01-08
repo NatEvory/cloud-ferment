@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var VolumeAttachment = /** @class */ (function (_super) {
     __extends(VolumeAttachment, _super);
-    function VolumeAttachment(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::VolumeAttachment") || this;
+    function VolumeAttachment(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::VolumeAttachment", dependsOn) || this;
     }
     return VolumeAttachment;
 }(AWSResource_1.AWSResource));

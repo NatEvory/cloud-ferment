@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class NotebookInstance extends AWSResource<NotebookInstance_ResourceProperties> {
-    constructor(name: string, properties: NotebookInstance_ResourceProperties);
+    constructor(name: string, properties: NotebookInstance_ResourceProperties, dependsOn?: string[]);
 }
 export interface NotebookInstance_ResourceProperties extends AWSResourceProperties {
     KmsKeyId?: AWSStringProperty;

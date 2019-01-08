@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DBSubnetGroup = /** @class */ (function (_super) {
     __extends(DBSubnetGroup, _super);
-    function DBSubnetGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::RDS::DBSubnetGroup") || this;
+    function DBSubnetGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::RDS::DBSubnetGroup", dependsOn) || this;
     }
     return DBSubnetGroup;
 }(AWSResource_1.AWSResource));

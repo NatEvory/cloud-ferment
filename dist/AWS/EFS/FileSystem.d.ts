@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class FileSystem extends AWSResource<FileSystem_ResourceProperties> {
-    constructor(name: string, properties: FileSystem_ResourceProperties);
+    constructor(name: string, properties: FileSystem_ResourceProperties, dependsOn?: string[]);
 }
 export interface FileSystem_ResourceProperties extends AWSResourceProperties {
     Encrypted?: boolean;

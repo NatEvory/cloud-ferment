@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class AggregationAuthorization extends AWSResource<AggregationAuthorization_ResourceProperties> {
-	constructor(name:string,properties:AggregationAuthorization_ResourceProperties){
-		super(name,properties,"AWS::Config::AggregationAuthorization");
+	constructor(name:string,properties:AggregationAuthorization_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Config::AggregationAuthorization",dependsOn);
 	}
 }
 

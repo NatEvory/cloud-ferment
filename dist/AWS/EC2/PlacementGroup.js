@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var PlacementGroup = /** @class */ (function (_super) {
     __extends(PlacementGroup, _super);
-    function PlacementGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::PlacementGroup") || this;
+    function PlacementGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::PlacementGroup", dependsOn) || this;
     }
     return PlacementGroup;
 }(AWSResource_1.AWSResource));

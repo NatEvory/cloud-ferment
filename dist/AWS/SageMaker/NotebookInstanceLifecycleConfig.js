@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var NotebookInstanceLifecycleConfig = /** @class */ (function (_super) {
     __extends(NotebookInstanceLifecycleConfig, _super);
-    function NotebookInstanceLifecycleConfig(name, properties) {
-        return _super.call(this, name, properties, "AWS::SageMaker::NotebookInstanceLifecycleConfig") || this;
+    function NotebookInstanceLifecycleConfig(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SageMaker::NotebookInstanceLifecycleConfig", dependsOn) || this;
     }
     return NotebookInstanceLifecycleConfig;
 }(AWSResource_1.AWSResource));

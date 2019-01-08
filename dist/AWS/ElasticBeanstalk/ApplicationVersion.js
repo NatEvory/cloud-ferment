@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ApplicationVersion = /** @class */ (function (_super) {
     __extends(ApplicationVersion, _super);
-    function ApplicationVersion(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElasticBeanstalk::ApplicationVersion") || this;
+    function ApplicationVersion(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElasticBeanstalk::ApplicationVersion", dependsOn) || this;
     }
     return ApplicationVersion;
 }(AWSResource_1.AWSResource));

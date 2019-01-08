@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class ListenerRule extends AWSResource<ListenerRule_ResourceProperties> {
-    constructor(name: string, properties: ListenerRule_ResourceProperties);
+    constructor(name: string, properties: ListenerRule_ResourceProperties, dependsOn?: string[]);
 }
 export interface ListenerRule_ResourceProperties extends AWSResourceProperties {
     Actions: ListenerRule_Action[];

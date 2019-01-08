@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Broker = /** @class */ (function (_super) {
     __extends(Broker, _super);
-    function Broker(name, properties) {
-        return _super.call(this, name, properties, "AWS::AmazonMQ::Broker") || this;
+    function Broker(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AmazonMQ::Broker", dependsOn) || this;
     }
     return Broker;
 }(AWSResource_1.AWSResource));

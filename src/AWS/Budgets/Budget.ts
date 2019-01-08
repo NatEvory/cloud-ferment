@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Budget extends AWSResource<Budget_ResourceProperties> {
-	constructor(name:string,properties:Budget_ResourceProperties){
-		super(name,properties,"AWS::Budgets::Budget");
+	constructor(name:string,properties:Budget_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Budgets::Budget",dependsOn);
 	}
 }
 

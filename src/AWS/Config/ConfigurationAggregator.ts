@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ConfigurationAggregator extends AWSResource<ConfigurationAggregator_ResourceProperties> {
-	constructor(name:string,properties:ConfigurationAggregator_ResourceProperties){
-		super(name,properties,"AWS::Config::ConfigurationAggregator");
+	constructor(name:string,properties:ConfigurationAggregator_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Config::ConfigurationAggregator",dependsOn);
 	}
 }
 

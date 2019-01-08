@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class RotationSchedule extends AWSResource<RotationSchedule_ResourceProperties> {
-	constructor(name:string,properties:RotationSchedule_ResourceProperties){
-		super(name,properties,"AWS::SecretsManager::RotationSchedule");
+	constructor(name:string,properties:RotationSchedule_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SecretsManager::RotationSchedule",dependsOn);
 	}
 }
 

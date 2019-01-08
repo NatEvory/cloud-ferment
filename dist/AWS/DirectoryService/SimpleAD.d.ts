@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class SimpleAD extends AWSResource<SimpleAD_ResourceProperties> {
-    constructor(name: string, properties: SimpleAD_ResourceProperties);
+    constructor(name: string, properties: SimpleAD_ResourceProperties, dependsOn?: string[]);
 }
 export interface SimpleAD_ResourceProperties extends AWSResourceProperties {
     CreateAlias?: boolean;

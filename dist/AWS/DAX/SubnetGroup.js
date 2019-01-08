@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SubnetGroup = /** @class */ (function (_super) {
     __extends(SubnetGroup, _super);
-    function SubnetGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::DAX::SubnetGroup") || this;
+    function SubnetGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::DAX::SubnetGroup", dependsOn) || this;
     }
     return SubnetGroup;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class CustomResource extends AWSResource<CustomResource_ResourceProperties> {
-	constructor(name:string,properties:CustomResource_ResourceProperties){
-		super(name,properties,"AWS::CloudFormation::CustomResource");
+	constructor(name:string,properties:CustomResource_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudFormation::CustomResource",dependsOn);
 	}
 }
 

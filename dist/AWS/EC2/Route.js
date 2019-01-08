@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Route = /** @class */ (function (_super) {
     __extends(Route, _super);
-    function Route(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::Route") || this;
+    function Route(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::Route", dependsOn) || this;
     }
     return Route;
 }(AWSResource_1.AWSResource));

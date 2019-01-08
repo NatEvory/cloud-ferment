@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ParameterGroup extends AWSResource<ParameterGroup_ResourceProperties> {
-	constructor(name:string,properties:ParameterGroup_ResourceProperties){
-		super(name,properties,"AWS::ElastiCache::ParameterGroup");
+	constructor(name:string,properties:ParameterGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElastiCache::ParameterGroup",dependsOn);
 	}
 }
 

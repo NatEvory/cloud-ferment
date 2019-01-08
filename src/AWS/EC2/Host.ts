@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Host extends AWSResource<Host_ResourceProperties> {
-	constructor(name:string,properties:Host_ResourceProperties){
-		super(name,properties,"AWS::EC2::Host");
+	constructor(name:string,properties:Host_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::Host",dependsOn);
 	}
 }
 

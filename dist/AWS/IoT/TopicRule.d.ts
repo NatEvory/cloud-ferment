@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class TopicRule extends AWSResource<TopicRule_ResourceProperties> {
-    constructor(name: string, properties: TopicRule_ResourceProperties);
+    constructor(name: string, properties: TopicRule_ResourceProperties, dependsOn?: string[]);
 }
 export interface TopicRule_ResourceProperties extends AWSResourceProperties {
     RuleName?: AWSStringProperty;

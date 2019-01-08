@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class MountTarget extends AWSResource<MountTarget_ResourceProperties> {
-    constructor(name: string, properties: MountTarget_ResourceProperties);
+    constructor(name: string, properties: MountTarget_ResourceProperties, dependsOn?: string[]);
 }
 export interface MountTarget_ResourceProperties extends AWSResourceProperties {
     FileSystemId: AWSStringProperty;

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class ByteMatchSet extends AWSResource<ByteMatchSet_ResourceProperties> {
-    constructor(name: string, properties: ByteMatchSet_ResourceProperties);
+    constructor(name: string, properties: ByteMatchSet_ResourceProperties, dependsOn?: string[]);
 }
 export interface ByteMatchSet_ResourceProperties extends AWSResourceProperties {
     ByteMatchTuples?: ByteMatchSet_ByteMatchTuple[];

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Crawler extends AWSResource<Crawler_ResourceProperties> {
-	constructor(name:string,properties:Crawler_ResourceProperties){
-		super(name,properties,"AWS::Glue::Crawler");
+	constructor(name:string,properties:Crawler_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Glue::Crawler",dependsOn);
 	}
 }
 

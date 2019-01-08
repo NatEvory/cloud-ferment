@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Queue extends AWSResource<Queue_ResourceProperties> {
-	constructor(name:string,properties:Queue_ResourceProperties){
-		super(name,properties,"AWS::SQS::Queue");
+	constructor(name:string,properties:Queue_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SQS::Queue",dependsOn);
 	}
 }
 

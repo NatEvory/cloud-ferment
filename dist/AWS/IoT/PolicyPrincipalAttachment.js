@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var PolicyPrincipalAttachment = /** @class */ (function (_super) {
     __extends(PolicyPrincipalAttachment, _super);
-    function PolicyPrincipalAttachment(name, properties) {
-        return _super.call(this, name, properties, "AWS::IoT::PolicyPrincipalAttachment") || this;
+    function PolicyPrincipalAttachment(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IoT::PolicyPrincipalAttachment", dependsOn) || this;
     }
     return PolicyPrincipalAttachment;
 }(AWSResource_1.AWSResource));

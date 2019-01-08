@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class PlacementGroup extends AWSResource<PlacementGroup_ResourceProperties> {
-	constructor(name:string,properties:PlacementGroup_ResourceProperties){
-		super(name,properties,"AWS::EC2::PlacementGroup");
+	constructor(name:string,properties:PlacementGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::PlacementGroup",dependsOn);
 	}
 }
 

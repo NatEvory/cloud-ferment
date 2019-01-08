@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Key extends AWSResource<Key_ResourceProperties> {
-	constructor(name:string,properties:Key_ResourceProperties){
-		super(name,properties,"AWS::KMS::Key");
+	constructor(name:string,properties:Key_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::KMS::Key",dependsOn);
 	}
 }
 

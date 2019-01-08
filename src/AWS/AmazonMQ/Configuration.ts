@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Configuration extends AWSResource<Configuration_ResourceProperties> {
-	constructor(name:string,properties:Configuration_ResourceProperties){
-		super(name,properties,"AWS::AmazonMQ::Configuration");
+	constructor(name:string,properties:Configuration_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AmazonMQ::Configuration",dependsOn);
 	}
 }
 

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DataSource = /** @class */ (function (_super) {
     __extends(DataSource, _super);
-    function DataSource(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppSync::DataSource") || this;
+    function DataSource(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppSync::DataSource", dependsOn) || this;
     }
     return DataSource;
 }(AWSResource_1.AWSResource));

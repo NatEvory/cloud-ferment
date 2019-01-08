@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var DBSecurityGroupIngress = /** @class */ (function (_super) {
     __extends(DBSecurityGroupIngress, _super);
-    function DBSecurityGroupIngress(name, properties) {
-        return _super.call(this, name, properties, "AWS::RDS::DBSecurityGroupIngress") || this;
+    function DBSecurityGroupIngress(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::RDS::DBSecurityGroupIngress", dependsOn) || this;
     }
     return DBSecurityGroupIngress;
 }(AWSResource_1.AWSResource));

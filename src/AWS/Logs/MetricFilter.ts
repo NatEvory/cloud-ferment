@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class MetricFilter extends AWSResource<MetricFilter_ResourceProperties> {
-	constructor(name:string,properties:MetricFilter_ResourceProperties){
-		super(name,properties,"AWS::Logs::MetricFilter");
+	constructor(name:string,properties:MetricFilter_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Logs::MetricFilter",dependsOn);
 	}
 }
 

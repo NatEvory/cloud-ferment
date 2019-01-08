@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Volume = /** @class */ (function (_super) {
     __extends(Volume, _super);
-    function Volume(name, properties) {
-        return _super.call(this, name, properties, "AWS::OpsWorks::Volume") || this;
+    function Volume(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::OpsWorks::Volume", dependsOn) || this;
     }
     return Volume;
 }(AWSResource_1.AWSResource));

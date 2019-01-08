@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var UsagePlanKey = /** @class */ (function (_super) {
     __extends(UsagePlanKey, _super);
-    function UsagePlanKey(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::UsagePlanKey") || this;
+    function UsagePlanKey(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::UsagePlanKey", dependsOn) || this;
     }
     return UsagePlanKey;
 }(AWSResource_1.AWSResource));

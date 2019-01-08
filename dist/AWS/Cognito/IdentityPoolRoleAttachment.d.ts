@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class IdentityPoolRoleAttachment extends AWSResource<IdentityPoolRoleAttachment_ResourceProperties> {
-    constructor(name: string, properties: IdentityPoolRoleAttachment_ResourceProperties);
+    constructor(name: string, properties: IdentityPoolRoleAttachment_ResourceProperties, dependsOn?: string[]);
 }
 export interface IdentityPoolRoleAttachment_ResourceProperties extends AWSResourceProperties {
     RoleMappings?: any;

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var NatGateway = /** @class */ (function (_super) {
     __extends(NatGateway, _super);
-    function NatGateway(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::NatGateway") || this;
+    function NatGateway(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::NatGateway", dependsOn) || this;
     }
     return NatGateway;
 }(AWSResource_1.AWSResource));

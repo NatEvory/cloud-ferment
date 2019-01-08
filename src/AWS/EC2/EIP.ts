@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class EIP extends AWSResource<EIP_ResourceProperties> {
-	constructor(name:string,properties:EIP_ResourceProperties){
-		super(name,properties,"AWS::EC2::EIP");
+	constructor(name:string,properties:EIP_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::EC2::EIP",dependsOn);
 	}
 }
 

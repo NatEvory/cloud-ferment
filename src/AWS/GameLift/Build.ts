@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Build extends AWSResource<Build_ResourceProperties> {
-	constructor(name:string,properties:Build_ResourceProperties){
-		super(name,properties,"AWS::GameLift::Build");
+	constructor(name:string,properties:Build_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::GameLift::Build",dependsOn);
 	}
 }
 

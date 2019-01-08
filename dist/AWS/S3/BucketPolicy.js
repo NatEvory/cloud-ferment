@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var BucketPolicy = /** @class */ (function (_super) {
     __extends(BucketPolicy, _super);
-    function BucketPolicy(name, properties) {
-        return _super.call(this, name, properties, "AWS::S3::BucketPolicy") || this;
+    function BucketPolicy(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::S3::BucketPolicy", dependsOn) || this;
     }
     return BucketPolicy;
 }(AWSResource_1.AWSResource));

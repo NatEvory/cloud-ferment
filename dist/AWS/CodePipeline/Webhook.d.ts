@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Webhook extends AWSResource<Webhook_ResourceProperties> {
-    constructor(name: string, properties: Webhook_ResourceProperties);
+    constructor(name: string, properties: Webhook_ResourceProperties, dependsOn?: string[]);
 }
 export interface Webhook_ResourceProperties extends AWSResourceProperties {
     AuthenticationConfiguration: Webhook_WebhookAuthConfiguration;

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ComputeEnvironment = /** @class */ (function (_super) {
     __extends(ComputeEnvironment, _super);
-    function ComputeEnvironment(name, properties) {
-        return _super.call(this, name, properties, "AWS::Batch::ComputeEnvironment") || this;
+    function ComputeEnvironment(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Batch::ComputeEnvironment", dependsOn) || this;
     }
     return ComputeEnvironment;
 }(AWSResource_1.AWSResource));

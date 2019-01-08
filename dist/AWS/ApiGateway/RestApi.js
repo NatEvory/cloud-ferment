@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var RestApi = /** @class */ (function (_super) {
     __extends(RestApi, _super);
-    function RestApi(name, properties) {
-        return _super.call(this, name, properties, "AWS::ApiGateway::RestApi") || this;
+    function RestApi(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ApiGateway::RestApi", dependsOn) || this;
     }
     return RestApi;
 }(AWSResource_1.AWSResource));

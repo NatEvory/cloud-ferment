@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ScalingPlan extends AWSResource<ScalingPlan_ResourceProperties> {
-	constructor(name:string,properties:ScalingPlan_ResourceProperties){
-		super(name,properties,"AWS::AutoScalingPlans::ScalingPlan");
+	constructor(name:string,properties:ScalingPlan_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AutoScalingPlans::ScalingPlan",dependsOn);
 	}
 }
 

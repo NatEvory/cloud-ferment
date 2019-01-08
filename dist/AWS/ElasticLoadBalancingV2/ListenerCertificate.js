@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ListenerCertificate = /** @class */ (function (_super) {
     __extends(ListenerCertificate, _super);
-    function ListenerCertificate(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElasticLoadBalancingV2::ListenerCertificate") || this;
+    function ListenerCertificate(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElasticLoadBalancingV2::ListenerCertificate", dependsOn) || this;
     }
     return ListenerCertificate;
 }(AWSResource_1.AWSResource));

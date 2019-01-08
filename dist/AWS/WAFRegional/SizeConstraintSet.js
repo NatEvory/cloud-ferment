@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SizeConstraintSet = /** @class */ (function (_super) {
     __extends(SizeConstraintSet, _super);
-    function SizeConstraintSet(name, properties) {
-        return _super.call(this, name, properties, "AWS::WAFRegional::SizeConstraintSet") || this;
+    function SizeConstraintSet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::WAFRegional::SizeConstraintSet", dependsOn) || this;
     }
     return SizeConstraintSet;
 }(AWSResource_1.AWSResource));

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class StateMachine extends AWSResource<StateMachine_ResourceProperties> {
-    constructor(name: string, properties: StateMachine_ResourceProperties);
+    constructor(name: string, properties: StateMachine_ResourceProperties, dependsOn?: string[]);
 }
 export interface StateMachine_ResourceProperties extends AWSResourceProperties {
     DefinitionString: AWSStringProperty;

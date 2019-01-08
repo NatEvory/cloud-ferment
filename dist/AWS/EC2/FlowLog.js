@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var FlowLog = /** @class */ (function (_super) {
     __extends(FlowLog, _super);
-    function FlowLog(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::FlowLog") || this;
+    function FlowLog(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::FlowLog", dependsOn) || this;
     }
     return FlowLog;
 }(AWSResource_1.AWSResource));

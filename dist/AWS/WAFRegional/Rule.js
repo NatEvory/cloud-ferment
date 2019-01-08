@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Rule = /** @class */ (function (_super) {
     __extends(Rule, _super);
-    function Rule(name, properties) {
-        return _super.call(this, name, properties, "AWS::WAFRegional::Rule") || this;
+    function Rule(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::WAFRegional::Rule", dependsOn) || this;
     }
     return Rule;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ClusterSubnetGroup extends AWSResource<ClusterSubnetGroup_ResourceProperties> {
-	constructor(name:string,properties:ClusterSubnetGroup_ResourceProperties){
-		super(name,properties,"AWS::Redshift::ClusterSubnetGroup");
+	constructor(name:string,properties:ClusterSubnetGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Redshift::ClusterSubnetGroup",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Broker extends AWSResource<Broker_ResourceProperties> {
-	constructor(name:string,properties:Broker_ResourceProperties){
-		super(name,properties,"AWS::AmazonMQ::Broker");
+	constructor(name:string,properties:Broker_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::AmazonMQ::Broker",dependsOn);
 	}
 }
 

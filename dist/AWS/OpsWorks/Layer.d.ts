@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Layer extends AWSResource<Layer_ResourceProperties> {
-    constructor(name: string, properties: Layer_ResourceProperties);
+    constructor(name: string, properties: Layer_ResourceProperties, dependsOn?: string[]);
 }
 export interface Layer_ResourceProperties extends AWSResourceProperties {
     Attributes?: {

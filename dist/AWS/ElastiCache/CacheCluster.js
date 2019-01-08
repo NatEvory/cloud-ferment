@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var CacheCluster = /** @class */ (function (_super) {
     __extends(CacheCluster, _super);
-    function CacheCluster(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElastiCache::CacheCluster") || this;
+    function CacheCluster(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElastiCache::CacheCluster", dependsOn) || this;
     }
     return CacheCluster;
 }(AWSResource_1.AWSResource));

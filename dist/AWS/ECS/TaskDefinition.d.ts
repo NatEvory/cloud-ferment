@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class TaskDefinition extends AWSResource<TaskDefinition_ResourceProperties> {
-    constructor(name: string, properties: TaskDefinition_ResourceProperties);
+    constructor(name: string, properties: TaskDefinition_ResourceProperties, dependsOn?: string[]);
 }
 export interface TaskDefinition_ResourceProperties extends AWSResourceProperties {
     ContainerDefinitions?: TaskDefinition_ContainerDefinition[];

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var CustomResource = /** @class */ (function (_super) {
     __extends(CustomResource, _super);
-    function CustomResource(name, properties) {
-        return _super.call(this, name, properties, "AWS::CloudFormation::CustomResource") || this;
+    function CustomResource(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::CloudFormation::CustomResource", dependsOn) || this;
     }
     return CustomResource;
 }(AWSResource_1.AWSResource));

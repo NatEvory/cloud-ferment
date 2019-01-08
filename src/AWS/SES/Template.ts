@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Template extends AWSResource<Template_ResourceProperties> {
-	constructor(name:string,properties:Template_ResourceProperties){
-		super(name,properties,"AWS::SES::Template");
+	constructor(name:string,properties:Template_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SES::Template",dependsOn);
 	}
 }
 

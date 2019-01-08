@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Detector extends AWSResource<Detector_ResourceProperties> {
-	constructor(name:string,properties:Detector_ResourceProperties){
-		super(name,properties,"AWS::GuardDuty::Detector");
+	constructor(name:string,properties:Detector_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::GuardDuty::Detector",dependsOn);
 	}
 }
 

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ReceiptRuleSet extends AWSResource<ReceiptRuleSet_ResourceProperties> {
-	constructor(name:string,properties:ReceiptRuleSet_ResourceProperties){
-		super(name,properties,"AWS::SES::ReceiptRuleSet");
+	constructor(name:string,properties:ReceiptRuleSet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SES::ReceiptRuleSet",dependsOn);
 	}
 }
 

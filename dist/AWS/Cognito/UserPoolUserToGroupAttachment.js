@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var UserPoolUserToGroupAttachment = /** @class */ (function (_super) {
     __extends(UserPoolUserToGroupAttachment, _super);
-    function UserPoolUserToGroupAttachment(name, properties) {
-        return _super.call(this, name, properties, "AWS::Cognito::UserPoolUserToGroupAttachment") || this;
+    function UserPoolUserToGroupAttachment(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Cognito::UserPoolUserToGroupAttachment", dependsOn) || this;
     }
     return UserPoolUserToGroupAttachment;
 }(AWSResource_1.AWSResource));

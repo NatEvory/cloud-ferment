@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Document extends AWSResource<Document_ResourceProperties> {
-	constructor(name:string,properties:Document_ResourceProperties){
-		super(name,properties,"AWS::SSM::Document");
+	constructor(name:string,properties:Document_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SSM::Document",dependsOn);
 	}
 }
 

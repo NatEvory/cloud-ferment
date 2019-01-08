@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Resolver extends AWSResource<Resolver_ResourceProperties> {
-    constructor(name: string, properties: Resolver_ResourceProperties);
+    constructor(name: string, properties: Resolver_ResourceProperties, dependsOn?: string[]);
 }
 export interface Resolver_ResourceProperties extends AWSResourceProperties {
     ResponseMappingTemplateS3Location?: AWSStringProperty;

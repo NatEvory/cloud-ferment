@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Template = /** @class */ (function (_super) {
     __extends(Template, _super);
-    function Template(name, properties) {
-        return _super.call(this, name, properties, "AWS::SES::Template") || this;
+    function Template(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::SES::Template", dependsOn) || this;
     }
     return Template;
 }(AWSResource_1.AWSResource));

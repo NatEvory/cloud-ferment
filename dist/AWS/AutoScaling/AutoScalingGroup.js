@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var AutoScalingGroup = /** @class */ (function (_super) {
     __extends(AutoScalingGroup, _super);
-    function AutoScalingGroup(name, properties) {
-        return _super.call(this, name, properties, "AWS::AutoScaling::AutoScalingGroup") || this;
+    function AutoScalingGroup(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AutoScaling::AutoScalingGroup", dependsOn) || this;
     }
     return AutoScalingGroup;
 }(AWSResource_1.AWSResource));

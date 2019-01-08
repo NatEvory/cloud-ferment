@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class Deployment extends AWSResource<Deployment_ResourceProperties> {
-    constructor(name: string, properties: Deployment_ResourceProperties);
+    constructor(name: string, properties: Deployment_ResourceProperties, dependsOn?: string[]);
 }
 export interface Deployment_ResourceProperties extends AWSResourceProperties {
     DeploymentCanarySettings?: Deployment_DeploymentCanarySettings;

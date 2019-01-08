@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Listener = /** @class */ (function (_super) {
     __extends(Listener, _super);
-    function Listener(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElasticLoadBalancingV2::Listener") || this;
+    function Listener(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElasticLoadBalancingV2::Listener", dependsOn) || this;
     }
     return Listener;
 }(AWSResource_1.AWSResource));

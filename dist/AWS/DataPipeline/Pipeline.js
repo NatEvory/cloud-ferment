@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Pipeline = /** @class */ (function (_super) {
     __extends(Pipeline, _super);
-    function Pipeline(name, properties) {
-        return _super.call(this, name, properties, "AWS::DataPipeline::Pipeline") || this;
+    function Pipeline(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::DataPipeline::Pipeline", dependsOn) || this;
     }
     return Pipeline;
 }(AWSResource_1.AWSResource));

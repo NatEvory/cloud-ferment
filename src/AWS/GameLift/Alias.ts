@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Alias extends AWSResource<Alias_ResourceProperties> {
-	constructor(name:string,properties:Alias_ResourceProperties){
-		super(name,properties,"AWS::GameLift::Alias");
+	constructor(name:string,properties:Alias_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::GameLift::Alias",dependsOn);
 	}
 }
 

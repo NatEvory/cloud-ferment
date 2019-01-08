@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var InternetGateway = /** @class */ (function (_super) {
     __extends(InternetGateway, _super);
-    function InternetGateway(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::InternetGateway") || this;
+    function InternetGateway(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::InternetGateway", dependsOn) || this;
     }
     return InternetGateway;
 }(AWSResource_1.AWSResource));

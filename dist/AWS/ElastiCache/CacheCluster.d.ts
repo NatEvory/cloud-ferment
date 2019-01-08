@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class CacheCluster extends AWSResource<CacheCluster_ResourceProperties> {
-    constructor(name: string, properties: CacheCluster_ResourceProperties);
+    constructor(name: string, properties: CacheCluster_ResourceProperties, dependsOn?: string[]);
 }
 export interface CacheCluster_ResourceProperties extends AWSResourceProperties {
     AZMode?: AWSStringProperty;

@@ -36,6 +36,10 @@ var CloudFormationTemplate = /** @class */ (function () {
                 "Type": resource.getTypeName(),
                 "Properties": resource.getResourceProperties()
             };
+            var dependsOn = resource.getDependencies();
+            if (dependsOn && dependsOn.length > 0) {
+                output.DependsOn = dependsOn;
+            }
         });
         return output;
     };

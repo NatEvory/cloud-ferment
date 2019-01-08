@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SecurityGroup extends AWSResource<SecurityGroup_ResourceProperties> {
-	constructor(name:string,properties:SecurityGroup_ResourceProperties){
-		super(name,properties,"AWS::ElastiCache::SecurityGroup");
+	constructor(name:string,properties:SecurityGroup_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ElastiCache::SecurityGroup",dependsOn);
 	}
 }
 

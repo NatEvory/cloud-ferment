@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class SqlInjectionMatchSet extends AWSResource<SqlInjectionMatchSet_ResourceProperties> {
-    constructor(name: string, properties: SqlInjectionMatchSet_ResourceProperties);
+    constructor(name: string, properties: SqlInjectionMatchSet_ResourceProperties, dependsOn?: string[]);
 }
 export interface SqlInjectionMatchSet_ResourceProperties extends AWSResourceProperties {
     Name: AWSStringProperty;

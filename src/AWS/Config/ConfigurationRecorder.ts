@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ConfigurationRecorder extends AWSResource<ConfigurationRecorder_ResourceProperties> {
-	constructor(name:string,properties:ConfigurationRecorder_ResourceProperties){
-		super(name,properties,"AWS::Config::ConfigurationRecorder");
+	constructor(name:string,properties:ConfigurationRecorder_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Config::ConfigurationRecorder",dependsOn);
 	}
 }
 

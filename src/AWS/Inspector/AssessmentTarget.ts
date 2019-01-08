@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class AssessmentTarget extends AWSResource<AssessmentTarget_ResourceProperties> {
-	constructor(name:string,properties:AssessmentTarget_ResourceProperties){
-		super(name,properties,"AWS::Inspector::AssessmentTarget");
+	constructor(name:string,properties:AssessmentTarget_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Inspector::AssessmentTarget",dependsOn);
 	}
 }
 

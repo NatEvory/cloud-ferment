@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Bucket extends AWSResource<Bucket_ResourceProperties> {
-    constructor(name: string, properties: Bucket_ResourceProperties);
+    constructor(name: string, properties: Bucket_ResourceProperties, dependsOn?: string[]);
 }
 export interface Bucket_ResourceProperties extends AWSResourceProperties {
     AccelerateConfiguration?: Bucket_AccelerateConfiguration;

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class DeploymentGroup extends AWSResource<DeploymentGroup_ResourceProperties> {
-    constructor(name: string, properties: DeploymentGroup_ResourceProperties);
+    constructor(name: string, properties: DeploymentGroup_ResourceProperties, dependsOn?: string[]);
 }
 export interface DeploymentGroup_ResourceProperties extends AWSResourceProperties {
     AlarmConfiguration?: DeploymentGroup_AlarmConfiguration;

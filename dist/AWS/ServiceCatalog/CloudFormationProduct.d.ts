@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class CloudFormationProduct extends AWSResource<CloudFormationProduct_ResourceProperties> {
-    constructor(name: string, properties: CloudFormationProduct_ResourceProperties);
+    constructor(name: string, properties: CloudFormationProduct_ResourceProperties, dependsOn?: string[]);
 }
 export interface CloudFormationProduct_ResourceProperties extends AWSResourceProperties {
     Owner: AWSStringProperty;

@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class ScalingPolicy extends AWSResource<ScalingPolicy_ResourceProperties> {
-    constructor(name: string, properties: ScalingPolicy_ResourceProperties);
+    constructor(name: string, properties: ScalingPolicy_ResourceProperties, dependsOn?: string[]);
 }
 export interface ScalingPolicy_ResourceProperties extends AWSResourceProperties {
     AdjustmentType?: AWSStringProperty;

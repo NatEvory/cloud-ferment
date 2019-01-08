@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var SecurityGroupEgress = /** @class */ (function (_super) {
     __extends(SecurityGroupEgress, _super);
-    function SecurityGroupEgress(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::SecurityGroupEgress") || this;
+    function SecurityGroupEgress(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::SecurityGroupEgress", dependsOn) || this;
     }
     return SecurityGroupEgress;
 }(AWSResource_1.AWSResource));

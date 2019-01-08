@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Alias = /** @class */ (function (_super) {
     __extends(Alias, _super);
-    function Alias(name, properties) {
-        return _super.call(this, name, properties, "AWS::GameLift::Alias") || this;
+    function Alias(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::GameLift::Alias", dependsOn) || this;
     }
     return Alias;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var UserToGroupAddition = /** @class */ (function (_super) {
     __extends(UserToGroupAddition, _super);
-    function UserToGroupAddition(name, properties) {
-        return _super.call(this, name, properties, "AWS::IAM::UserToGroupAddition") || this;
+    function UserToGroupAddition(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IAM::UserToGroupAddition", dependsOn) || this;
     }
     return UserToGroupAddition;
 }(AWSResource_1.AWSResource));

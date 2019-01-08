@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class GraphQLApi extends AWSResource<GraphQLApi_ResourceProperties> {
-    constructor(name: string, properties: GraphQLApi_ResourceProperties);
+    constructor(name: string, properties: GraphQLApi_ResourceProperties, dependsOn?: string[]);
 }
 export interface GraphQLApi_ResourceProperties extends AWSResourceProperties {
     OpenIDConnectConfig?: GraphQLApi_OpenIDConnectConfig;

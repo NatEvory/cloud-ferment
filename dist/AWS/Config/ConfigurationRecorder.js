@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var ConfigurationRecorder = /** @class */ (function (_super) {
     __extends(ConfigurationRecorder, _super);
-    function ConfigurationRecorder(name, properties) {
-        return _super.call(this, name, properties, "AWS::Config::ConfigurationRecorder") || this;
+    function ConfigurationRecorder(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Config::ConfigurationRecorder", dependsOn) || this;
     }
     return ConfigurationRecorder;
 }(AWSResource_1.AWSResource));

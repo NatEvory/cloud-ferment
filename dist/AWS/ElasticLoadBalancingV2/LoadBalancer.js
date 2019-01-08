@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var LoadBalancer = /** @class */ (function (_super) {
     __extends(LoadBalancer, _super);
-    function LoadBalancer(name, properties) {
-        return _super.call(this, name, properties, "AWS::ElasticLoadBalancingV2::LoadBalancer") || this;
+    function LoadBalancer(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::ElasticLoadBalancingV2::LoadBalancer", dependsOn) || this;
     }
     return LoadBalancer;
 }(AWSResource_1.AWSResource));

@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Version = /** @class */ (function (_super) {
     __extends(Version, _super);
-    function Version(name, properties) {
-        return _super.call(this, name, properties, "AWS::Lambda::Version") || this;
+    function Version(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::Lambda::Version", dependsOn) || this;
     }
     return Version;
 }(AWSResource_1.AWSResource));

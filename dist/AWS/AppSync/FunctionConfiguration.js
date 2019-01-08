@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var FunctionConfiguration = /** @class */ (function (_super) {
     __extends(FunctionConfiguration, _super);
-    function FunctionConfiguration(name, properties) {
-        return _super.call(this, name, properties, "AWS::AppSync::FunctionConfiguration") || this;
+    function FunctionConfiguration(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::AppSync::FunctionConfiguration", dependsOn) || this;
     }
     return FunctionConfiguration;
 }(AWSResource_1.AWSResource));

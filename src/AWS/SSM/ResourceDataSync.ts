@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class ResourceDataSync extends AWSResource<ResourceDataSync_ResourceProperties> {
-	constructor(name:string,properties:ResourceDataSync_ResourceProperties){
-		super(name,properties,"AWS::SSM::ResourceDataSync");
+	constructor(name:string,properties:ResourceDataSync_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SSM::ResourceDataSync",dependsOn);
 	}
 }
 

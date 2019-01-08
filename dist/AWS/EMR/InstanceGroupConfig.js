@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var InstanceGroupConfig = /** @class */ (function (_super) {
     __extends(InstanceGroupConfig, _super);
-    function InstanceGroupConfig(name, properties) {
-        return _super.call(this, name, properties, "AWS::EMR::InstanceGroupConfig") || this;
+    function InstanceGroupConfig(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EMR::InstanceGroupConfig", dependsOn) || this;
     }
     return InstanceGroupConfig;
 }(AWSResource_1.AWSResource));

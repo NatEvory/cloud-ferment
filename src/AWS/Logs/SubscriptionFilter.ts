@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class SubscriptionFilter extends AWSResource<SubscriptionFilter_ResourceProperties> {
-	constructor(name:string,properties:SubscriptionFilter_ResourceProperties){
-		super(name,properties,"AWS::Logs::SubscriptionFilter");
+	constructor(name:string,properties:SubscriptionFilter_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Logs::SubscriptionFilter",dependsOn);
 	}
 }
 

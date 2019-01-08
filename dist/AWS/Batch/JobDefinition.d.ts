@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class JobDefinition extends AWSResource<JobDefinition_ResourceProperties> {
-    constructor(name: string, properties: JobDefinition_ResourceProperties);
+    constructor(name: string, properties: JobDefinition_ResourceProperties, dependsOn?: string[]);
 }
 export interface JobDefinition_ResourceProperties extends AWSResourceProperties {
     Type: AWSStringProperty;

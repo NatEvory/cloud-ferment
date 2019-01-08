@@ -1,6 +1,6 @@
 import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class StreamingDistribution extends AWSResource<StreamingDistribution_ResourceProperties> {
-    constructor(name: string, properties: StreamingDistribution_ResourceProperties);
+    constructor(name: string, properties: StreamingDistribution_ResourceProperties, dependsOn?: string[]);
 }
 export interface StreamingDistribution_ResourceProperties extends AWSResourceProperties {
     StreamingDistributionConfig: StreamingDistribution_StreamingDistributionConfig;

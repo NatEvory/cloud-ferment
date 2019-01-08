@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class LaunchRoleConstraint extends AWSResource<LaunchRoleConstraint_ResourceProperties> {
-	constructor(name:string,properties:LaunchRoleConstraint_ResourceProperties){
-		super(name,properties,"AWS::ServiceCatalog::LaunchRoleConstraint");
+	constructor(name:string,properties:LaunchRoleConstraint_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ServiceCatalog::LaunchRoleConstraint",dependsOn);
 	}
 }
 

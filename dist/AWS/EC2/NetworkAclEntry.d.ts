@@ -1,6 +1,6 @@
 import { AWSResource, AWSResourceProperties, AWSStringProperty } from '../../AWSResource';
 export declare class NetworkAclEntry extends AWSResource<NetworkAclEntry_ResourceProperties> {
-    constructor(name: string, properties: NetworkAclEntry_ResourceProperties);
+    constructor(name: string, properties: NetworkAclEntry_ResourceProperties, dependsOn?: string[]);
 }
 export interface NetworkAclEntry_ResourceProperties extends AWSResourceProperties {
     CidrBlock: AWSStringProperty;

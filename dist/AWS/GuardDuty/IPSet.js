@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var IPSet = /** @class */ (function (_super) {
     __extends(IPSet, _super);
-    function IPSet(name, properties) {
-        return _super.call(this, name, properties, "AWS::GuardDuty::IPSet") || this;
+    function IPSet(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::GuardDuty::IPSet", dependsOn) || this;
     }
     return IPSet;
 }(AWSResource_1.AWSResource));

@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class NamedQuery extends AWSResource<NamedQuery_ResourceProperties> {
-	constructor(name:string,properties:NamedQuery_ResourceProperties){
-		super(name,properties,"AWS::Athena::NamedQuery");
+	constructor(name:string,properties:NamedQuery_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::Athena::NamedQuery",dependsOn);
 	}
 }
 

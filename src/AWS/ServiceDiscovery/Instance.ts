@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Instance extends AWSResource<Instance_ResourceProperties> {
-	constructor(name:string,properties:Instance_ResourceProperties){
-		super(name,properties,"AWS::ServiceDiscovery::Instance");
+	constructor(name:string,properties:Instance_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::ServiceDiscovery::Instance",dependsOn);
 	}
 }
 

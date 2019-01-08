@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Layer = /** @class */ (function (_super) {
     __extends(Layer, _super);
-    function Layer(name, properties) {
-        return _super.call(this, name, properties, "AWS::OpsWorks::Layer") || this;
+    function Layer(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::OpsWorks::Layer", dependsOn) || this;
     }
     return Layer;
 }(AWSResource_1.AWSResource));

@@ -26,8 +26,8 @@ export function generateResourceClass(resourceNamespace:SpecificationNamespace, 
 	let classOut =
 	`export class ${className} extends AWSResource<${className}_ResourceProperties> {\n`+
 
-		`\tconstructor(name:string,properties:${className}_ResourceProperties){\n`+
-			`\t\tsuper(name,properties,"${resourceNamespace.fullyQualifiedNamespace}");\n`+
+		`\tconstructor(name:string,properties:${className}_ResourceProperties,dependsOn?:string[]){\n`+
+			`\t\tsuper(name,properties,"${resourceNamespace.fullyQualifiedNamespace}",dependsOn);\n`+
 		`\t}\n`+
 	'}\n'
 	return classOut;

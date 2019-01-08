@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class IPSet extends AWSResource<IPSet_ResourceProperties> {
-	constructor(name:string,properties:IPSet_ResourceProperties){
-		super(name,properties,"AWS::WAF::IPSet");
+	constructor(name:string,properties:IPSet_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::WAF::IPSet",dependsOn);
 	}
 }
 

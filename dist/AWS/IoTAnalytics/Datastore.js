@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var Datastore = /** @class */ (function (_super) {
     __extends(Datastore, _super);
-    function Datastore(name, properties) {
-        return _super.call(this, name, properties, "AWS::IoTAnalytics::Datastore") || this;
+    function Datastore(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::IoTAnalytics::Datastore", dependsOn) || this;
     }
     return Datastore;
 }(AWSResource_1.AWSResource));

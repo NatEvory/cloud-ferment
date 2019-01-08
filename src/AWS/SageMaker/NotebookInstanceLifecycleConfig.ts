@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class NotebookInstanceLifecycleConfig extends AWSResource<NotebookInstanceLifecycleConfig_ResourceProperties> {
-	constructor(name:string,properties:NotebookInstanceLifecycleConfig_ResourceProperties){
-		super(name,properties,"AWS::SageMaker::NotebookInstanceLifecycleConfig");
+	constructor(name:string,properties:NotebookInstanceLifecycleConfig_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::SageMaker::NotebookInstanceLifecycleConfig",dependsOn);
 	}
 }
 

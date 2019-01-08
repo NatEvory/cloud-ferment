@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AWSResource_1 = require("../../AWSResource");
 var NetworkAcl = /** @class */ (function (_super) {
     __extends(NetworkAcl, _super);
-    function NetworkAcl(name, properties) {
-        return _super.call(this, name, properties, "AWS::EC2::NetworkAcl") || this;
+    function NetworkAcl(name, properties, dependsOn) {
+        return _super.call(this, name, properties, "AWS::EC2::NetworkAcl", dependsOn) || this;
     }
     return NetworkAcl;
 }(AWSResource_1.AWSResource));

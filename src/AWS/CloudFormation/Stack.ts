@@ -2,8 +2,8 @@ import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringLi
 import { CloudFormationFunctionResult } from '../../CloudFormationFunctionResult'
 
 export class Stack extends AWSResource<Stack_ResourceProperties> {
-	constructor(name:string,properties:Stack_ResourceProperties){
-		super(name,properties,"AWS::CloudFormation::Stack");
+	constructor(name:string,properties:Stack_ResourceProperties,dependsOn?:string[]){
+		super(name,properties,"AWS::CloudFormation::Stack",dependsOn);
 	}
 }
 
