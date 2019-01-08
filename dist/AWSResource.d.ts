@@ -11,7 +11,9 @@ export declare class AWSResource<T extends AWSResourceProperties> {
     name: string;
     private resourceProperties;
     private typeName;
-    constructor(name: string, resourceProperties: T, typeName: string);
+    private dependsOn?;
+    constructor(name: string, resourceProperties: T, typeName: string, dependsOn?: string[]);
     getResourceProperties(): T;
     getTypeName(): string;
+    getDependencies(): string[];
 }

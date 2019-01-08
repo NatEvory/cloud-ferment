@@ -40,6 +40,10 @@ export class CloudFormationTemplate{
 				"Type":resource.getTypeName(),
 				"Properties":resource.getResourceProperties()
 			}
+			let dependsOn = resource.getDependencies();
+			if(dependsOn && dependsOn.length>0){
+				output.DependsOn = dependsOn;
+			}
 		})
 		return output;
 	}
