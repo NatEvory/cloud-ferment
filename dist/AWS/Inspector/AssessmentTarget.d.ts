@@ -4,5 +4,5 @@ export declare class AssessmentTarget extends AWSResource<AssessmentTarget_Resou
 }
 export interface AssessmentTarget_ResourceProperties extends AWSResourceProperties {
     AssessmentTargetName?: AWSStringProperty;
-    ResourceGroupArn: AWSStringProperty;
+    ResourceGroupArn?: AWSStringProperty;
 }

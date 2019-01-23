@@ -16,6 +16,7 @@ export interface Broker_ResourceProperties extends AWSResourceProperties {
     DeploymentMode: AWSStringProperty;
     EngineType: AWSStringProperty;
     PubliclyAccessible: boolean;
+    Tags?: Broker_TagsEntry[];
 }
 export interface Broker_User {
     Username: AWSStringProperty;
@@ -31,6 +32,10 @@ export interface Broker_MaintenanceWindow {
 export interface Broker_LogList {
     Audit?: boolean;
     General?: boolean;
+}
+export interface Broker_TagsEntry {
+    Value: AWSStringProperty;
+    Key: AWSStringProperty;
 }
 export interface Broker_ConfigurationId {
     Revision: number;

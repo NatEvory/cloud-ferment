@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //SSM exports
 __export(require("./Document"));
 __export(require("./PatchBaseline"));
+__export(require("./MaintenanceWindowTarget"));
 __export(require("./MaintenanceWindow"));
 __export(require("./Parameter"));
 __export(require("./ResourceDataSync"));

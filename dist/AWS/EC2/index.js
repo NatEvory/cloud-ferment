@@ -5,20 +5,19 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 //EC2 exports
 __export(require("./RouteTable"));
-__export(require("./PlacementGroup"));
 __export(require("./VPCPeeringConnection"));
+__export(require("./PlacementGroup"));
 __export(require("./TransitGateway"));
 __export(require("./VPCEndpointServicePermissions"));
 __export(require("./NetworkAclEntry"));
 __export(require("./InternetGateway"));
 __export(require("./LaunchTemplate"));
-__export(require("./TransitGatewayRouteTableAssociation"));
 __export(require("./Volume"));
+__export(require("./TransitGatewayRouteTableAssociation"));
 __export(require("./SpotFleet"));
 __export(require("./VPNConnectionRoute"));
 __export(require("./NetworkInterfacePermission"));
 __export(require("./EIP"));
-__export(require("./VPCEndpointConnectionNotification"));
 __export(require("./SecurityGroupIngress"));
 __export(require("./SubnetRouteTableAssociation"));
 __export(require("./Route"));

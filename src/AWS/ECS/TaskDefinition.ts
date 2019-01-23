@@ -16,6 +16,7 @@ export interface TaskDefinition_ResourceProperties extends AWSResourceProperties
 	NetworkMode?:AWSStringProperty;
 	PlacementConstraints?:TaskDefinition_TaskDefinitionPlacementConstraint[];
 	RequiresCompatibilities?:AWSStringListProperty;
+	Tags?:Tag[];
 	TaskRoleArn?:AWSStringProperty;
 	Volumes?:TaskDefinition_Volume[];
 

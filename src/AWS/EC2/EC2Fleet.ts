@@ -14,11 +14,11 @@ export interface EC2Fleet_ResourceProperties extends AWSResourceProperties {
 	ExcessCapacityTerminationPolicy?:AWSStringProperty;
 	TagSpecifications?:EC2Fleet_TagSpecification[];
 	SpotOptions?:EC2Fleet_SpotOptionsRequest;
-	ValidFrom?:number;
+	ValidFrom?:AWSStringProperty;
 	ReplaceUnhealthyInstances?:boolean;
 	LaunchTemplateConfigs:EC2Fleet_FleetLaunchTemplateConfigRequest[];
 	TerminateInstancesWithExpiration?:boolean;
-	ValidUntil?:number;
+	ValidUntil?:AWSStringProperty;
 
 }
 export interface EC2Fleet_FleetLaunchTemplateSpecificationRequest {

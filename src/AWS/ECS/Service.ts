@@ -22,6 +22,7 @@ export interface Service_ResourceProperties extends AWSResourceProperties {
 	SchedulingStrategy?:AWSStringProperty;
 	ServiceName?:AWSStringProperty;
 	ServiceRegistries?:Service_ServiceRegistry[];
+	Tags?:Tag[];
 	TaskDefinition:AWSStringProperty;
 
 }

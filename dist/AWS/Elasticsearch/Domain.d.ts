@@ -12,6 +12,7 @@ export interface Domain_ResourceProperties extends AWSResourceProperties {
     ElasticsearchClusterConfig?: Domain_ElasticsearchClusterConfig;
     ElasticsearchVersion?: AWSStringProperty;
     EncryptionAtRestOptions?: Domain_EncryptionAtRestOptions;
+    NodeToNodeEncryptionOptions?: Domain_NodeToNodeEncryptionOptions;
     SnapshotOptions?: Domain_SnapshotOptions;
     Tags?: Tag[];
     VPCOptions?: Domain_VPCOptions;
@@ -19,6 +20,9 @@ export interface Domain_ResourceProperties extends AWSResourceProperties {
 export interface Domain_VPCOptions {
     SecurityGroupIds?: AWSStringListProperty;
     SubnetIds?: AWSStringListProperty;
+}
+export interface Domain_NodeToNodeEncryptionOptions {
+    Enabled?: boolean;
 }
 export interface Domain_ElasticsearchClusterConfig {
     DedicatedMasterCount?: number;
