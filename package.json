@@ -1,6 +1,6 @@
 {
   "name": "cloud-ferment",
-  "version": "0.0.4",
+  "version": "0.0.5-SNAPSHOT",
   "description": "A library to make AWS Cloud Formation easier",
   "homepage":"https://github.com/NatEvory/cloud-ferment",
   "main": "dist/index.js",
