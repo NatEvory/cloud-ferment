@@ -50,6 +50,7 @@ export interface DBInstance_ResourceProperties extends AWSResourceProperties {
     StorageType?: AWSStringProperty;
     Tags?: Tag[];
     Timezone?: AWSStringProperty;
+    UseDefaultProcessorFeatures?: boolean;
     VPCSecurityGroups?: AWSStringListProperty;
 }
 export interface DBInstance_ProcessorFeature {

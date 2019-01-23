@@ -9,6 +9,7 @@ export interface ApiKey_ResourceProperties extends AWSResourceProperties {
     GenerateDistinctId?: boolean;
     Name?: AWSStringProperty;
     StageKeys?: ApiKey_StageKey[];
+    Value?: AWSStringProperty;
 }
 export interface ApiKey_StageKey {
     RestApiId?: AWSStringProperty;

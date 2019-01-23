@@ -1,4 +1,4 @@
-import { AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
+import { Tag, AWSResource, AWSResourceProperties, AWSStringProperty, AWSStringListProperty } from '../../AWSResource';
 export declare class Service extends AWSResource<Service_ResourceProperties> {
     constructor(name: string, properties: Service_ResourceProperties, dependsOn?: string[]);
 }
@@ -17,6 +17,7 @@ export interface Service_ResourceProperties extends AWSResourceProperties {
     SchedulingStrategy?: AWSStringProperty;
     ServiceName?: AWSStringProperty;
     ServiceRegistries?: Service_ServiceRegistry[];
+    Tags?: Tag[];
     TaskDefinition: AWSStringProperty;
 }
 export interface Service_LoadBalancer {

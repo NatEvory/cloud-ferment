@@ -30,6 +30,7 @@ export interface DBCluster_ResourceProperties extends AWSResourceProperties {
 	ReplicationSourceIdentifier?:AWSStringProperty;
 	ScalingConfiguration?:DBCluster_ScalingConfiguration;
 	SnapshotIdentifier?:AWSStringProperty;
+	SourceRegion?:AWSStringProperty;
 	StorageEncrypted?:boolean;
 	Tags?:Tag[];
 	VpcSecurityGroupIds?:AWSStringListProperty;

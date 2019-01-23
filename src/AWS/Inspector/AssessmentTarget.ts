@@ -9,6 +9,6 @@ export class AssessmentTarget extends AWSResource<AssessmentTarget_ResourcePrope
 
 export interface AssessmentTarget_ResourceProperties extends AWSResourceProperties {
 	AssessmentTargetName?:AWSStringProperty;
-	ResourceGroupArn:AWSStringProperty;
+	ResourceGroupArn?:AWSStringProperty;
 
 }

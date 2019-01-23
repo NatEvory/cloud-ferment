@@ -12,6 +12,12 @@ export interface Configuration_ResourceProperties extends AWSResourceProperties 
 	Description?:AWSStringProperty;
 	EngineType:AWSStringProperty;
 	Data:AWSStringProperty;
+	Tags?:Configuration_TagsEntry[];
 	Name:AWSStringProperty;
+
+}
+export interface Configuration_TagsEntry {
+	Value:AWSStringProperty;
+	Key:AWSStringProperty;
 
 }

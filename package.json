@@ -1,11 +1,13 @@
 {
   "name": "cloud-ferment",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A library to make AWS Cloud Formation easier",
+  "homepage":"https://github.com/NatEvory/cloud-ferment",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "generate":"npm run build && node dist/generator/GeneratorUtil.js && npm run build",
     "build": "tsc"
   },
   "devDependencies": {
@@ -18,5 +20,9 @@
     "typescript": "^2.9.2"
   },
   "author": "Nat Evory <nat.evory@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/NatEvory/cloud-ferment.git"
+  }
 }

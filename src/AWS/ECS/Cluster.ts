@@ -9,5 +9,6 @@ export class Cluster extends AWSResource<Cluster_ResourceProperties> {
 
 export interface Cluster_ResourceProperties extends AWSResourceProperties {
 	ClusterName?:AWSStringProperty;
+	Tags?:Tag[];
 
 }

@@ -5,5 +5,6 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 //Route53Resolver exports
 __export(require("./ResolverRule"));
+__export(require("./ResolverRuleAssociation"));
 __export(require("./ResolverEndpoint"));
 //# sourceMappingURL=index.js.map
